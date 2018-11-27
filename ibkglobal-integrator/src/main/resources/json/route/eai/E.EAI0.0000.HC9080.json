@@ -1,0 +1,28 @@
+{
+ "instanceType"      : "EAI",
+ "instanceRouteType" : "ADAPTER",
+ "sysCd"             : "",
+ "bizCd"             : "",
+ "orgCd"             : "",
+ "routeDescription"  : "EAI ADAPTER OUT",
+ 
+ "routeId"           : "E.EAI0.0000.HC9080",
+ "routeType"         : "EAI_DEFAULT_ADAPTER_OUT",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+    "endpointType"   : "DIRECT",
+ 	"endpointDirect" : "M.EAI0.0000.ROUTE.OUT"
+ },
+ "toEndpoint"                : 
+ { 
+    "endpointType" : "HTTP",
+ 	"endpointIp"   : "10.104.162.83",
+ 	"endpointPort" : "8080",
+ 	"pathNm"       : "/ClipReport4/ibk_test.jsp"
+ },
+ 
+ "logName"           : "EAI"
+}

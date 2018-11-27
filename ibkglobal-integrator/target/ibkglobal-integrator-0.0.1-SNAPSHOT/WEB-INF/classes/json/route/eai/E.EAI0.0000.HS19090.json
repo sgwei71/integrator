@@ -1,0 +1,28 @@
+{
+ "instanceType"      : "EAI",
+ "instanceRouteType" : "ADAPTER",
+ "sysCd"             : "",
+ "bizCd"             : "",
+ "orgCd"             : "",
+ "routeDescription"  : "EAI ADAPTER IN",
+ 
+ "routeId"           : "E.EAI0.0000.HS19090",
+ "routeType"         : "EAI_DEFAULT_ADAPTER_IN",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+    "endpointType" : "HTTP",
+ 	"endpointIp"   : "{{server.address}}",
+ 	"endpointPort" : "19090",
+ 	"pathNm"       : "/httpin"
+ },
+ "toEndpoint"                : 
+ {
+    "endpointType"   : "DIRECT",
+ 	"endpointDirect" : "E.EAI0.0000.ROUTE.IN"
+ },
+ 
+ "logName"           : "EAI"
+}

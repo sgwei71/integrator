@@ -1,0 +1,62 @@
+{
+	"modified": "2010/12/20 11:22:335:051",
+	"ioInfo": [
+		{
+			"clazz": "ARSN_KFTC_ECommonHeaderHSB",
+			"comment": "순위확인서 발급 대외 타겟",
+			"jlid": "ARSN",
+			"trid": "",
+			"xcid": "S00000000055"
+		},
+		{
+	      "clazz": "ARSN_KFTC_H0200_304000_02",
+	      "comment": "순위확인서 발급 대내 소스",
+	      "jlid": "ARSN",
+	      "trid": "",
+	      "xcid": "S00000000053"
+	    },
+	    {
+	      "clazz": "ARSN_KFTC_E0200_304000_02",
+	      "comment": "순위확인서 발급 대외 타겟",
+	      "jlid": "ARSN",
+	      "trid": "",
+	      "xcid": "S00000000050"
+	    },
+	    {
+	      "clazz": "ARSN_KFTC_HCommonHeaderHSB",
+	      "comment": "순위확인서 발급 대내 소스",
+	      "jlid": "ARSN",
+	      "trid": "",
+	      "xcid": "S00000000056"
+	    },
+	    
+	    {
+	      "clazz": "IGAT_IGAT_ECommonHeader",
+	      "comment": "대외 헤더 전문",
+	      "jlid": "IGAT",
+	      "trid": "",
+	      "xcid": "H00000004314"
+	    },
+	    {
+	      "clazz": "IGAT_IGAT_HCommonHeader",
+	      "comment": "순위확인서 발급 대내 소스",
+	      "jlid": "IGAT",
+	      "trid": "",
+	      "xcid": "H00000004316"
+	    },
+	    {
+	      "clazz": "IGAT_IGAT_E0200__",
+	      "comment": "인니 ATM 전문 대외 개별부",
+	      "jlid": "IGAT",
+	      "trid": "",
+	      "xcid": "S00000004142"
+	    },
+	    {
+	      "clazz": "IGAT_IGAT_H0200__",
+	      "comment": "인니 ATM 전문 대외 개별부",
+	      "jlid": "IGAT",
+	      "trid": "",
+	      "xcid": "S00000004304"
+	    }
+	]
+}

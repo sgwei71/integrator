@@ -1,0 +1,67 @@
+#Common
+server.port: 80
+server:
+  address: 127.0.0.1
+#Log
+logging:
+  config: classpath:logback-spring.xml
+  file: logs
+  level: debug
+
+#integrator
+integrator:
+  config:
+    route-base-type : file
+    json-file-url   : classpath:json
+    instance-type   :
+    - MCA
+    - EAI
+    custom-loader:
+      MCA: 
+        - /custom/mca/EtcLoaderMCA.json
+    
+#Message
+message:
+  config:
+    repository-type: file
+    
+#Camel
+camel:
+  springboot:
+    use-mdc-logging: true      
+    jmx-enabled: true
+  dataformat:
+    json-jackson:
+      enabled: true
+
+#ActiveMQ
+spring:
+  activemq:
+    broker-url: tcp://10.104.162.77:61616
+    user: admin
+    password: admin
+    packages:
+      trust-all: true
+    
+#ehcache
+  cache:
+    ehcache:
+      config: classpath:ehcache.xml
+
+#jackson     
+  jackson:
+    serialization:
+      indent-output: true
+    deserialization:
+      fail-on-unknown-properties: false
+    default-property-inclusion: non-null
+    
+#thymeleaf
+  thymeleaf:
+    cache: false
+    
+    
+#logger
+
+
+  

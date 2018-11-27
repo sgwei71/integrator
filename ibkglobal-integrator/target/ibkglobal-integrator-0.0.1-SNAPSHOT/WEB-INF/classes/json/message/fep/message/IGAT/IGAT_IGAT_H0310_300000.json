@@ -1,0 +1,64 @@
+{
+	"inopId": "EGCBS0002180",
+	"inopIdnNm": "IGAT_IGAT_H0310_300000",
+	"inopVrsnVl": "1",
+	"inopNm": "ATM대내소스",
+	"common": {
+		"inopDescCon": "ATM대내소스",
+		"system": {
+			"code": "GCB",
+			"name": "계정계시스템"
+		},
+		"bwcd": {
+			"code": "CHC"
+		},
+		"wrtnTs": "2018-05-24 14:36:58",
+		"mkrEmn": "S01173"
+	},
+	"processType": {
+		"online": {
+			"mtvCd": {
+				"code": " "
+			},
+			"tcslInfoTrknCd": {
+				"code": "000",
+				"name": "고객X 마케팅X"
+			},
+			"external": {
+				"otisCd": {
+					"code": "IGAT",
+					"name": "인니 Prima (ATM)망"
+				},
+				"extBwcd": {
+					"code": "IGAT",
+					"name": "인니 Prima (ATM)망"
+				},
+				"extTlgrIttcdCon": "0210",
+				"extTrnDcdCon": "304000",
+				"extEtcDcdCon": "02",
+				"inaoCd": {
+					"code": "2",
+					"name": "대외기관"
+				},
+				"anenVlCon": "KSC5601"
+			}
+		}
+	},
+	"data": {
+		"name": "IGAT_IGAT_H0310_300000",
+		"sequence": [
+			{
+				"seq": 1,
+				"name": "Header1",
+				"elementCd": "HEADER",
+				"type": "IGAT_IGAT_HCommonHeader"
+			},
+			{
+				"seq": 2,
+				"name": "Entity1",
+				"elementCd": "ENTITY",
+				"type": "IGAT_IGAT_H0200__"
+			}
+		]
+	}
+}

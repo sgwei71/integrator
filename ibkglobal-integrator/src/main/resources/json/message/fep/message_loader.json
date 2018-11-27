@@ -1,0 +1,76 @@
+{
+  "modified": "2010/12/20 11:23:319:051",
+  "messageInfo": [
+    {
+      "clazz": "ARSN_KFTC_E0210_304000_02",
+      "comment": "",
+      "jlid": "ARSN",
+      "trid": "",
+      "xcid": "EFEPT0000009"
+    },
+    {
+      "clazz": "ARSN_KFTC_H0210_304000_02",
+      "comment": "",
+      "jlid": "ARSN",
+      "trid": "",
+      "xcid": "ECBKS0000008"
+    },    
+    {
+      "clazz": "IGAT_IGAT_E0200_300000",
+      "comment": "",
+      "jlid": "IGAT",
+      "trid": "",
+      "xcid": "EFEPS0001178"
+    },
+    {
+      "clazz": "IGAT_IGAT_H0210_300000",
+      "comment": "",
+      "jlid": "IGAT",
+      "trid": "",
+      "xcid": "EGCBS0001180"
+    },
+    {
+      "clazz": "IGAT_IGAT_E0210_300000",
+      "comment": "",
+      "jlid": "IGAT",
+      "trid": "",
+      "xcid": "EFEPT0001181"
+    },
+    {
+      "clazz": "IGAT_IGAT_H0200_300000",
+      "comment": "",
+      "jlid": "IGAT",
+      "trid": "",
+      "xcid": "EGCBT0001179"
+    },
+    
+    {
+      "clazz": "IGAT_IGAT_E0300_300000",
+      "comment": "",
+      "jlid": "IGAT",
+      "trid": "",
+      "xcid": "EFEPS0002178"
+    },
+    {
+      "clazz": "IGAT_IGAT_H0310_300000",
+      "comment": "",
+      "jlid": "IGAT",
+      "trid": "",
+      "xcid": "EGCBS0002180"
+    },
+    {
+      "clazz": "IGAT_IGAT_E0310_300000",
+      "comment": "",
+      "jlid": "IGAT",
+      "trid": "",
+      "xcid": "EFEPT0002181"
+    },
+    {
+      "clazz": "IGAT_IGAT_H0300_300000",
+      "comment": "",
+      "jlid": "IGAT",
+      "trid": "",
+      "xcid": "EGCBT0002179"
+    }
+  ]
+}

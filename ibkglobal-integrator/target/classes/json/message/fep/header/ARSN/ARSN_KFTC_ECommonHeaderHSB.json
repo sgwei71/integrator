@@ -1,0 +1,61 @@
+{
+	"utInopId": "H00000000051",
+	"utInopIdnNm": "ARSN_KFTC_ECommonHeaderHSB",
+	"utInopVrsnVl": "1",
+	"common": {
+		"inopDescCon": "순위확인서 발급 대외 타겟",
+		"system": {
+			"code": "CBK",
+			"name": "계정계시스템"
+		},
+		"bwcd": {
+			"code": "AGN"
+		},
+		"wrtnTs": "2018-05-24 14:36:58",
+		"mkrEmn": "S01173"
+	},
+	"processType": {
+		"online": {
+			"mtvCd": {
+				"code": " "
+			},
+			"tcslInfoTrknCd": {
+				"code": "000",
+				"name": "고객X 마케팅X"
+			},
+			"external": {
+				"otisCd": {
+					"code": "KFTC",
+					"name": "금융결제원"
+				},
+				"extBwcd": {
+					"code": "ARSN",
+					"name": "ARS공동망"
+				},
+				"extTlgrIttcdCon": "0210",
+				"extTrnDcdCon": "304000",
+				"extEtcDcdCon": "02",
+				"inaoCd": {
+					"code": "2",
+					"name": "대외기관"
+				},
+				"anenVlCon": "KSC5601"
+			}
+		}
+	},
+	"data": {
+		"extTrnDcdCon": "TX_CODE",
+		"extTlgrIttcdCon": "MSG_CODE",
+		"msgKey": "TX_CODE",
+		"extBwcd": "ARSN",
+		"workCode": "'ARSN_KFTC_H+MSG_CODE+TX_CODE+MNTG_DCD",
+		"sequence": [
+			{
+				"seq": 1,
+				"name": "entity1",
+				"elementCd": "ENTITY",
+				"type": "ARSN_KFTC_ECommonHeaderHSB"
+			}
+		]
+	}
+}

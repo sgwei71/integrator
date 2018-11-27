@@ -1,0 +1,27 @@
+{
+  "loaderName" : "FEP 업무 라우터",
+  "routeCreateInfoList" : [
+    {
+     "instanceType"      : "FEP",
+     "sysCd"             : "",
+     "bizCd"             : "SIM",
+     "orgCd"             : "SIM",
+     "routeId"           : "SIM0.SIM0.HROUTE",
+     "description"       : "FEP 시뮬레이터 당발 라우터",
+     "routeType"         : "CUSTOM",
+     "className"         : "com.ibkglobal.integrator.engine.builder.route.fep.custom.FEPInboundH",
+     "logName"           : "SIM.HSIM"
+    },
+    {
+     "instanceType"      : "FEP",
+     "sysCd"             : "",
+     "bizCd"             : "SIM",
+     "orgCd"             : "SIM",
+     "routeId"           : "SIM0.SIM0.EROUTE",
+     "description"       : "FEP 시뮬레이터 타발 라우터",
+     "routeType"         : "CUSTOM",
+     "className"         : "com.ibkglobal.integrator.engine.builder.route.fep.custom.FEPInboundE",
+     "logName"           : "SIM.ESIM"
+    }
+  ]
+}

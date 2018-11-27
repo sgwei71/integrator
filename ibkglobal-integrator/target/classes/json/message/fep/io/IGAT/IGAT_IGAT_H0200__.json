@@ -1,0 +1,103 @@
+{
+	"utInopId": "S00000004304",
+	"utInopIdnNm": "IGAT_IGAT_H0200__",
+	"common": {
+		"inopDescCon": "인니 ATM 전문 대외 개별부",
+		"system": {
+			"code": "GCB",
+			"name": "계정계시스템"
+		},
+		"bwcd": {
+			"code": "CHC"
+		},
+		"wrtnTs": "2018-05-24 14:36:58",
+		"mkrEmn": "S01173"
+	},
+	"processType": {
+		"online": {
+			"mtvCd": {
+				"code": " "
+			},
+			"tcslInfoTrknCd": {
+				"code": "000",
+				"name": "고객X 마케팅X"
+			},
+			"external": {
+				"otisCd": {
+					"code": "IGAT",
+					"name": "금융결제원"
+				},
+				"extBwcd": {
+					"code": "IGAT",
+					"name": "ARS공동망"
+				},
+				"extTlgrIttcdCon": "0210",
+				"extTrnDcdCon": "304000",
+				"extEtcDcdCon": "02",
+				"inaoCd": {
+					"code": "2",
+					"name": "대외기관"
+				},
+				"anenVlCon": "KSC5601"
+			}
+		}
+	},
+	"data": {
+		"utInopId": "S00000004304",
+		"utInopNm": "IGAT_IGAT_H0200__",
+		"utInopDescCon": "인니 ATM 전문 대외 개별부",
+		"utInopIdnNm": "IGAT_IGAT_E0200__",
+		"fieldList": [
+			{
+				"tlgrSqc": 1,
+				"lvlNo": "1",
+				"fldNm": "카드번호",
+				"ensnFldNm": "CARD_NO",
+				"tlgrDescCon": "카드번호",
+				"dataTypeNm": "STRING",
+				"allDataLenCon": "20",
+				"inptMndrYn": "N",
+				"vrfcYn": " ",
+				"dcfrDataLen": 0,
+				"vldtInspYn": "N",
+				"encpYn": "Y",
+				"trcKeyUseYn": " ",
+				"msgKeyUseYn": " ",
+				"extTlgrIttcdUseYn": " ",
+				"trnDcdUseYn": " ",
+				"extEtcDcdUseYn": " ",
+				"rpcdUseYn": " ",
+				"vrbnYn": "N",
+				"mskgUseYn": " ",
+				"logKeyUseYn": " ",
+				"ebccdDIcCdUseYn": " ",
+				"dbCsUseYn": " "
+			},
+			{
+				"tlgrSqc": 2,
+				"lvlNo": "1",
+				"fldNm": "GMT일시내용",
+				"ensnFldNm": "GMT_TS_CON",
+				"tlgrDescCon": "일시내용",
+				"dataTypeNm": "STRING",
+				"allDataLenCon": "8",
+				"inptMndrYn": "N",
+				"vrfcYn": " ",
+				"dcfrDataLen": 0,
+				"vldtInspYn": "N",
+				"encpYn": "Y",
+				"trcKeyUseYn": " ",
+				"msgKeyUseYn": " ",
+				"extTlgrIttcdUseYn": " ",
+				"trnDcdUseYn": " ",
+				"extEtcDcdUseYn": " ",
+				"rpcdUseYn": " ",
+				"vrbnYn": "N",
+				"mskgUseYn": " ",
+				"logKeyUseYn": " ",
+				"ebccdDIcCdUseYn": " ",
+				"dbCsUseYn": " "
+			}
+		]
+	}
+}

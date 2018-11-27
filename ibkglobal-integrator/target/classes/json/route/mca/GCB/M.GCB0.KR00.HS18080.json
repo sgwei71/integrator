@@ -1,0 +1,28 @@
+{
+ "instanceType"      : "MCA",
+ "instanceRouteType" : "ADAPTER",
+ "sysCd"             : "GCB",
+ "bizCd"             : "KR",
+ "orgCd"             : "",
+ "routeDescription"  : "계정계 ADAPTER IN",
+ 
+ "routeId"           : "M.GCB0.KR00.HS18080",
+ "routeType"         : "MCA_DEFAULT_ADAPTER_IN",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+    "endpointType" : "HTTP",
+ 	"endpointIp"   : "{{server.address}}",
+ 	"endpointPort" : "18080",
+ 	"pathNm"       : "/httpin"
+ },
+ "toEndpoint"                : 
+ {
+ 	"endpointType"   : "DIRECT",
+ 	"endpointDirect" : "GCB0.KR00.ROUTE"
+ },
+ 
+ "logName"           : "GCB.KR"
+}

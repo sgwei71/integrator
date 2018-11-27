@@ -1,0 +1,83 @@
+{
+	"intfId": "ITRO00000035",
+	"intfIdnNm": " ",
+	"inndOtbnCd": "I",
+	"sorcInopId": "MTCHS0000093",
+	"sorcInopNm": "MTCHS0000093_INBOUND",
+	"tgtInopId": "MTCHT0000092",
+	"tgtInopNm": "MTCHT0000092_INBOUND",
+	"mappingList": [
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "TEST_CD",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "TEST_CD",
+					"fldPara": "",
+					"lvlNo": "1"
+				}
+			],
+			"userParaCon": " "
+		},
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "TEST_ARRAY_ROWCOUNT",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "TEST_ARRAY_ROWCOUNT",
+					"fldPara": "",
+					"lvlNo": "1"
+				}
+			],
+			"userParaCon": " "
+		},
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "CHILD_TEST_CD",
+					"fldPara": "0",
+					"lvlNo": "2"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "CHILD_TEST_CD",
+					"fldPara": "",
+					"lvlNo": "2"
+				}
+			],
+			"userParaCon": " "
+		},
+		{
+	      "fnctNm": "MOVE",
+	      "sourceNm": [
+	        {
+	          "fldNm": "CHILD_TEST_NM",
+	          "fldPara": "0",
+	          "lvlNo": "2"
+	        }
+	      ],
+	      "targetNm": [
+	        {
+	          "fldNm": "CHILD_TEST_NM",
+	          "fldPara": "",
+	          "lvlNo": "2"
+	        }
+	      ],
+	      "userParaCon": " "
+	    }
+	]
+}

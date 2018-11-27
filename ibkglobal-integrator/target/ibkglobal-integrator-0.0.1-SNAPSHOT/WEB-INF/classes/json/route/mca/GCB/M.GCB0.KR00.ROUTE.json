@@ -1,0 +1,26 @@
+{
+ "instanceType"      : "MCA",
+ "instanceRouteType" : "ROUTER",
+ "sysCd"             : "GCB",
+ "bizCd"             : "KR",
+ "orgCd"             : "",
+ "routeDescription"  : "계정계 ROUTE",
+ 
+ "routeId"           : "M.GCB0.KR00.ROUTE",
+ "routeType"         : "MCA_INBOUND",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+    "endpointType"   : "DIRECT",
+ 	"endpointDirect" : "GCB0.KR00.ROUTE"
+ },
+ "toEndpoint"                : 
+ {
+    "endpointType"   : "DIRECT",
+ 	"endpointDirect" : "GCB0.KR00.HC9080"
+ },
+ 
+ "logName"           : "GCB.KR"
+}

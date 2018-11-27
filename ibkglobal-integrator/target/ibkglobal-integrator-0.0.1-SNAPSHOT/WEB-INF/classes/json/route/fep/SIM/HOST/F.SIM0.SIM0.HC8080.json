@@ -1,0 +1,28 @@
+{
+ "instanceType"      : "FEP",
+ "instanceRouteType" : "ADAPTER",
+ "sysCd"             : "",
+ "bizCd"             : "SIM",
+ "orgCd"             : "SIM",
+ "routeDescription"  : "시뮬레이터 당발 동기 ADAPTER OUT",
+ 
+ "routeId"           : "F.SIM0.SIM0.HC8080",
+ "routeType"         : "FEP_DEFAULT_ADAPTER_OUT",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+ 	"endpointType"   : "DIRECT",
+ 	"endpointDirect" : "SIM0.SIM0.HC8080"
+ },
+ "toEndpoint"                : 
+ {
+ 	"endpointType" : "HTTP",
+ 	"endpointIp"   : "{{server.address}}",
+ 	"endpointPort" : "80",
+ 	"pathNm"       : "/integrator/1.0/fepe"
+ },
+ 
+ "logName"           : "SIM.HSIM"
+}

@@ -1,0 +1,28 @@
+{
+	"intfId": "FEPO00000033",
+	"intfIdnNm": "ARSN_KFTC_H0210_304000_05",
+	"inndOtbnCd": "I",
+	"sorcInopId": "ECBKS0000008",
+	"sorcInopNm": "ARSN_KFTC_H0210_304000_02",
+	"tgtInopId": "EFEPT0000009",
+	"tgtInopNm": "ARSN_KFTC_E0210_304000_02",
+	"mappingList": [
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "TLBN_PWD",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "TLBN_PWD",
+					"fldPara": "",
+					"lvlNo": "1"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"intfId": "ITRO00000035",
+	"intfIdnNm": " ",
+	"inndOtbnCd": "O",
+	"sorcInopId": "MTCHS0000093",
+	"sorcInopNm": "MTCHS0000093_OUTBOUND",
+	"tgtInopId": "MTCHT0000092",
+	"tgtInopNm": "MTCHS0000093_OUTBOUND",
+	"mappingList": [
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "TEST_NM",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "TEST_NM",
+					"fldPara": "",
+					"lvlNo": "1"
+				}
+			],
+			"userParaCon": " "
+		}
+	]
+}

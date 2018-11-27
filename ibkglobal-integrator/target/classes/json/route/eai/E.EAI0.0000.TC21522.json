@@ -1,0 +1,27 @@
+{
+ "instanceType"      : "EAI",
+ "instanceRouteType" : "ADAPTER",
+ "sysCd"             : "",
+ "bizCd"             : "",
+ "orgCd"             : "",
+ "routeDescription"  : "EAI ADAPTER OUT",
+ 
+ "routeId"           : "E.EAI0.0000.TC21522",
+ "routeType"         : "EAI_DEFAULT_ADAPTER_OUT",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+    "endpointType"   : "DIRECT",
+ 	"endpointDirect" : "M.EAI1.0000.ROUTE.OUT"
+ },
+ "toEndpoint"                : 
+ { 
+    "endpointType" : "TCP",
+ 	"endpointIp"   : "{{server.address}}",
+ 	"endpointPort" : "21522"
+ },
+ 
+ "logName"           : "EAI"
+}

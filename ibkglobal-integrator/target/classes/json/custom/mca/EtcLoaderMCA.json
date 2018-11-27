@@ -1,0 +1,16 @@
+{
+  "loaderName" : "MCA 업무 라우터",
+  "routeCreateInfoList" : [
+    {
+     "instanceType"      : "MCA",
+     "sysCd"             : "ETC",
+     "bizCd"             : "ETC",
+     "orgCd"             : "ETC",
+     "routeId"           : "MCAHealthCheckTimer",
+     "description"       : "MCA HealthCheck Timer",
+     "routeType"         : "CUSTOM",
+     "className"         : "com.ibkglobal.integrator.engine.builder.route.timer.MCAHealthCheckTimer",
+     "logName"           : "MCAHealthCheck"
+    }
+  ]
+}

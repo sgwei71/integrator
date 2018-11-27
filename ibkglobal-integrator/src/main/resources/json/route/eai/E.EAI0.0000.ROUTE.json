@@ -1,0 +1,26 @@
+{
+ "instanceType"      : "EAI",
+ "instanceRouteType" : "ROUTER",
+ "sysCd"             : "",
+ "bizCd"             : "",
+ "orgCd"             : "",
+ "routeDescription"  : "EAI ROUTE",
+ 
+ "routeId"           : "E.EAI0.0000.ROUTE",
+ "routeType"         : "EAI_INBOUND",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+ 	"endpointType"    : "DIRECT",
+ 	"endpointDirect"  : "E.EAI0.0000.ROUTE.IN"
+ },
+ "toEndpoint"                : 
+ {
+ 	"endpointType"    : "DIRECT",
+ 	"endpointDirect"  : "M.EAI1.0000.ROUTE.OUT"
+ },
+ 
+ "logName"           : "EAI"
+}

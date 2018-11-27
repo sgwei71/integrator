@@ -1,0 +1,61 @@
+{
+	"utInopId": "H00000004316",
+	"utInopIdnNm": "IGAT_IGAT_HCommonHeader",
+	"utInopVrsnVl": "1",
+	"common": {
+		"inopDescCon": "Prima 연동",
+		"system": {
+			"code": "GCB",
+			"name": "계정계시스템"
+		},
+		"bwcd": {
+			"code": "CHC"
+		},
+		"wrtnTs": "2018-05-24 14:36:58",
+		"mkrEmn": "S01173"
+	},
+	"processType": {
+		"online": {
+			"mtvCd": {
+				"code": " "
+			},
+			"tcslInfoTrknCd": {
+				"code": "000",
+				"name": "고객X 마케팅X"
+			},
+			"external": {
+				"otisCd": {
+					"code": "IGAT",
+					"name": "인니 Prima (ATM)망"
+				},
+				"extBwcd": {
+					"code": "IGAT",
+					"name": "인니 Prima (ATM)망"
+				},
+				"extTlgrIttcdCon": "0210",
+				"extTrnDcdCon": "304000",
+				"extEtcDcdCon": "02",
+				"inaoCd": {
+					"code": "2",
+					"name": "대외기관"
+				},
+				"anenVlCon": "KSC5601"
+			}
+		}
+	},
+	"data": {
+		"extTrnDcdCon": "TX_CODE",
+		"extTlgrIttcdCon": "MSG_CODE",
+		"msgKey": "TX_CODE",
+		"extBwcd": "ARSN",
+		"workCode": "'IGAT_IGAT_H'+MSG_CODE+'_'+TX_CODE",
+		"sequence": [
+			{
+				"seq": 1,
+				"name": "entity1",
+				"elementCd": "ENTITY",
+				"type": "IGAT_IGAT_HCommonHeader"
+			}
+		]
+	}
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+	updateCheck="false">
+
+	<!-- <diskStore path="/dat/mca/ehcache" /> -->
+	<diskStore path="C:\ehcache" />
+
+	<cacheManagerPeerListenerFactory class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory"
+		properties="port=9090, socketTimeoutMillis=20000" />
+
+	<!-- Default -->
+	<defaultCache maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000" diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</defaultCache>
+
+	<!-- MCA Interface -->
+	<cache name="IBKInterface" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000"
+		diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+	
+	<!-- EAI Interface -->
+	<cache name="IBKInterfaceEAI" maxEntriesLocalHeap="10000" maxEntriesLocalDisk="10000" eternal="true" overflowToDisk="true"
+		diskPersistent="true" diskSpoolBufferSizeMB="20" memoryStoreEvictionPolicy="LFU">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- EAI RecoveryKey -->
+	<cache name="IBKInterfaceEAIKey" maxEntriesLocalHeap="10000" maxEntriesLocalDisk="10000" eternal="true" overflowToDisk="true"
+		diskPersistent="true" diskSpoolBufferSizeMB="20" memoryStoreEvictionPolicy="LFU">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- MCA/EAI SourceIo -->
+	<cache name="IBKSourceIo" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000"
+		diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- MCA/EAI TargetIo -->
+	<cache name="IBKTargetIo" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000"
+		diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- MCA/EAI InMapping -->
+	<cache name="IBKMappingIn" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000"
+		diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- MCA/EAI OutMapping -->
+	<cache name="IBKMappingOut" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000"
+		diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- FEP Interface -->
+	<cache name="IBKInterfaceExt" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000"
+		diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- FEP Interface Key -->
+	<cache name="IBKInterfaceKey" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000"
+		diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- FEP Message -->
+	<cache name="IBKMessage" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000" diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- FEP Header -->
+	<cache name="IBKHeaderMessage" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000"
+		diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- FEP Unit(HeaderUnit + Unit) -->
+	<cache name="IBKUnit" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000" diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+	<!-- FEP Mapping -->
+	<cache name="IBKFEPMapping" maxElementsInMemory="10000" eternal="true" overflowToDisk="true" maxEntriesLocalHeap="10000"
+		diskPersistent="true">
+		<cacheEventListenerFactory class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+	</cache>
+
+</ehcache>

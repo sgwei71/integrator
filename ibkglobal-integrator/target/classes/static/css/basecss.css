@@ -1,0 +1,40 @@
+.main-area {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.top-area {
+  height: 350px;
+}
+
+.left-area {
+  float: left;
+  width: 70%;
+}
+
+.right-area {
+  float: right;
+  width: 28%;
+}
+
+.left-sendarea {
+  float: left;
+  width: 50%;
+}
+
+.button-padding {
+  padding: 3px;
+}
+
+.max-heightsize {
+	height : 330px;
+/*   height : 256px; */
+}
+
+.y-scroll {
+  overflow: auto;
+}
+
+.label-width {
+  width: 150px;
+}
