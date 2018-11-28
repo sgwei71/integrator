@@ -152,18 +152,6 @@ public class APIDefaultAdapterIn extends RouteCreateDefault {
 //			
 //		});
 		this.bean(com.ibkglobal.integrator.engine.bean.api.log.LoggingAPI.class, "logging");
-		
-//		this.process(new Processor() {
-//
-//			@Override
-//			public void process(Exchange exchange) throws Exception {
-//				// TODO Auto-generated method stub
-//				byte[] ibkMessage = exchange.getIn().getBody(byte[].class);
-//				System.out.println("logAdapterIn="+new String(ibkMessage));
-//			
-//			}
-//			
-//		});
 		this.bean(com.ibkglobal.integrator.engine.bean.api.common.ComposingAPI.class, "composingFromHost");
 		
 		

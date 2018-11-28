@@ -33,17 +33,9 @@ public class APIInbound extends RouteCreateDefault {
 		//.bean(com.ibkglobal.integrator.engine.bean.mca.common.MappingMCA.class, "mappingExecute");
 		
 		createEndpoint("to");
-		this.process(new Processor() {
-
-			@Override
-			public void process(Exchange exchange) throws Exception {
-				// TODO Auto-generated method stub
-				System.out.println("createEndPoint to ");
-			}
-			
-		})
+		
 		// 라우터 후 처리 : 헤더 설정 & 파싱 & IBKMessage 생성
-		.bean(com.ibkglobal.integrator.engine.bean.api.common.ProcessAfterAPI.class, "afterProcess")
+		this.bean(com.ibkglobal.integrator.engine.bean.api.common.ProcessAfterAPI.class, "afterProcess")
 		 
 		.bean(com.ibkglobal.integrator.engine.bean.api.log.LoggingAPI.class, "logging");
 		

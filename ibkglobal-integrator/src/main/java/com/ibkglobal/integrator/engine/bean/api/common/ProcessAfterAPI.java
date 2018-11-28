@@ -27,7 +27,7 @@ public class ProcessAfterAPI {
 		message.setHeader(ConstantCode.IBK_NORMAL_MESSAGE_YN, "Y");
 		message.setHeader(ConstantCode.INFRA_TYPE, InfraType.MCA);
 	}
-
+	//flat to Telegram 
 	protected void init(Exchange exchange) throws Exception {
 		parsingAPI.parsingFromHost(exchange);
 	}

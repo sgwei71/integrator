@@ -88,7 +88,7 @@ public class ComposingAPI {
 			throw new IBKExceptionMCA(ErrorType.COMPOSING, e.getMessage(), e);
 		}
 	}
-public void composingFromHost(Exchange exchange)  {
+	public void composingFromHost(Exchange exchange)  {
 		
 		
 		Message message = exchange.getIn();
@@ -97,12 +97,9 @@ public void composingFromHost(Exchange exchange)  {
 		//message.setHeader(ConstantCode.IBK_NORMAL_HEADER, standardTelegram);
 		
 		
-		System.out.println("tele=composingFromHost");
-
+		
 		StandardTelegram telegram = message.getHeader(ConstantCode.IBK_NORMAL_HEADER,StandardTelegram.class);
 				//.getStandardTelegram();
-		System.out.println("tele4=composingFromHost");
-
 		System.out.println("tele="+telegram);
 		byte[] result;
 		try {
