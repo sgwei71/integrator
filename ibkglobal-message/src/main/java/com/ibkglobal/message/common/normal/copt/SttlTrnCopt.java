@@ -24,11 +24,11 @@ import lombok.Data;
 @JsonInclude(Include.NON_NULL)
 public class SttlTrnCopt implements Serializable {
 
-	@SttlField(fieldName = "NTCD", length = 2, groups = {Request.class, Reply.class}, defaultValue = "00")
-	private String ntcd; // 국가코드
-
-	@SttlField(fieldName = "BNCD", length = 2, groups = {Request.class, Reply.class}, defaultValue = "00")
-	private String bncd; // 은행코드
+//	@SttlField(fieldName = "NTCD", length = 2, groups = {Request.class, Reply.class}, defaultValue = "")
+//	private String ntcd; // 국가코드
+//
+//	@SttlField(fieldName = "BNCD", length = 2, groups = {Request.class, Reply.class}, defaultValue = "")
+//	private String bncd; // 은행코드
 
 	@SttlField(fieldName = "TRN_CHNL_DCD", length = 3, groups = {Request.class, Reply.class}, defaultValue = "OLT")
 	private String trnChnlDcd; // 거래채널구분코드
@@ -66,24 +66,28 @@ public class SttlTrnCopt implements Serializable {
 	@SttlField(fieldName = "BLNG_FNCM_CD", length = 3, groups = {Request.class, Reply.class}, defaultValue = "")
 	private String blngFncmCd; // 소속금융회사코드
 
+	//2018.11.27 추가 
+	@SttlField(fieldName = "TCSL_INFO_TRN_KCD", length = 3, groups = {Request.class, Reply.class}, defaultValue = "0")
+	private Integer tcslInfoTrnKcd; // 접촉정보거래종류코드
+
 	@SttlField(fieldName = "EXT_TRN_BSWR_DCD", length = 4, groups = {Request.class, Reply.class}, valueCheck = false, defaultValue = "")
 	private String extTrnBswrDcd; // 대외거래업무구분코드
 
-	@SttlField(fieldName = "EXT_TRN_INTT_DCD", length = 4, groups = {Request.class, Reply.class}, valueCheck = false, defaultValue = "")
+	@SttlField(fieldName = "EXT_TRN_INTT_DCD", length = 4, groups = {Request.class, Reply.class}, valueCheck = false, defaultValue = "1")
 	private String extTrnInttDcd; // 대외거래기관구분코드
 
-	@SttlField(fieldName = "EXT_TRN_UNQ_ID", length = 48, groups = {Request.class, Reply.class}, valueCheck = false, defaultValue = "")
+	@SttlField(fieldName = "EXT_TRN_UNQ_ID", length = 48, groups = {Request.class, Reply.class}, valueCheck = false, defaultValue = "1")
 	private String extTrnUnqId; // 대외거래고유ID
 
-	@SttlField(fieldName = "EXT_LNK_INTF_ID", length = 51, groups = {Request.class, Reply.class}, valueCheck = false, defaultValue = "")
+	@SttlField(fieldName = "EXT_LNK_INTF_ID", length = 51, groups = {Request.class, Reply.class}, valueCheck = false, defaultValue = "1")
 	private String extLnkIntfId; // 대외연계인터페이스ID
 
-	@SttlField(fieldName = "EXT_TRN_SSN_ID", length = 30, groups = {Request.class, Reply.class}, valueCheck = false, defaultValue = "")
+	@SttlField(fieldName = "EXT_TRN_SSN_ID", length = 30, groups = {Request.class, Reply.class}, valueCheck = false, defaultValue = "1")
 	private String extTrnSsnId; // 대외거래세션ID
 
-	@SttlField(fieldName = "EXT_TRN_RUTN_ID", length = 5, defaultValue = "")
+	@SttlField(fieldName = "EXT_TRN_RUTN_ID", length = 5, defaultValue = "1")
 	private String extTrnRutnId; // 대외거래라우팅ID
 
-	@SttlField(fieldName = "TRN_COPT_FLOP", length = 50, defaultValue = "")
+	@SttlField(fieldName = "TRN_COPT_FLOP", length = 50, defaultValue = "1")
 	private String trnCoptFlop; // 거래공통부예비필드
 }

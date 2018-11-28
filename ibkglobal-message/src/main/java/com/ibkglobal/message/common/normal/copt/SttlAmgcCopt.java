@@ -35,6 +35,10 @@ public class SttlAmgcCopt extends AbstractFlexibleDataSet implements Serializabl
 	@SttlField(fieldName = "IDCR_SCAN_SRN", length = 2, defaultValue = "")
 	private String idcrScanSrn; // 신분증스캔일련번호
 
+	//2018.11.27
+	@SttlField(fieldName = "INGN_SQN_MCTL_SRN", length = 4, defaultValue = "0")
+	private Integer ingnSqnMctlSrn; // 지능형순번기기일련번호
+
 	@SttlField(fieldName = "TLN", length = 8, defaultValue = "CHFEP000")
 	private String tln; // 텔러번호
 

@@ -36,7 +36,7 @@ public class SttlSysCopt implements Serializable {
 	@SttlField(fieldName = "STTL_LNGG_DCD", length = 2, groups = { Request.class, Reply.class }, defaultValue = "KO")
 	private String sttlLnggDcd; // 표준전문언어구분코드
 
-	@SttlField(fieldName = "STTL_VER_DSNC", length = 3, groups = { Request.class, Reply.class })
+	@SttlField(fieldName = "STTL_VER_DSNC", length = 3, groups = { Request.class, Reply.class }, defaultValue = "024")
 	private String sttlVerDsnc; // 표준전문버전구분값
 
 	@SttlField(fieldName = "WHBN_STTL_WRTN_YMD", length = 8, groups = { Request.class, Reply.class })
@@ -168,7 +168,7 @@ public class SttlSysCopt implements Serializable {
 	@SttlField(fieldName = "RQST_CHNL_SSN_ID", length = 23, groups = { Request.class, Reply.class }, valueCheck = false)
 	private String rqstChnlSsnId; // 요청채널세션ID
 
-	@SttlField(fieldName = "SSO_USE_YN", length = 1, groups = { Request.class, Reply.class }, valueCheck = false)
+	@SttlField(fieldName = "SSO_USE_YN", length = 1, groups = { Request.class, Reply.class },  defaultValue = "N")
 	private String ssoUseYn; // SSO사용여부
 
 	@SttlField(fieldName = "LRQN_INOP_TRN_GLBL_ID", length = 30, groups = { Request.class, Reply.class })

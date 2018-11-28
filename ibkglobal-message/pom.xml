@@ -25,14 +25,7 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-	      <groupId>com.ibk.ibkglobal</groupId>
-	      <artifactId>ibkglobal-mms</artifactId>
-	      <version>0.0.1-SNAPSHOT</version>
-	      <systemPath>${lib.location}/ibkglobal-mms/target/ibkglobal-mms-0.0.1-SNAPSHOT.jar</systemPath>
-	      <scope>system</scope>
-	    </dependency>
-	    
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
