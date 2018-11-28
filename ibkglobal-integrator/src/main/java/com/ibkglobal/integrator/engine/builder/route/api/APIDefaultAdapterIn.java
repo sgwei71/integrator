@@ -2,6 +2,8 @@ package com.ibkglobal.integrator.engine.builder.route.api;
 
 import static org.apache.camel.model.rest.RestParamType.body;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
@@ -56,8 +58,6 @@ public class APIDefaultAdapterIn extends RouteCreateDefault {
 				   	//.setBindingMode(RestConfiguration.RestBindingMode.off);
 				    	restConfiguration()
 						.component("jetty")
-
-	//					.bindingMode(RestBindingMode.json)
 						.bindingMode(RestBindingMode.json.off)
 						
 						.dataFormatProperty("prettyPrint", "true")
@@ -68,87 +68,18 @@ public class APIDefaultAdapterIn extends RouteCreateDefault {
 						.apiProperty("api.title", "IBK기업은행 API")
 						.apiProperty("api.version", "1.0.0");
 
-						rest(path).description("TEST")
+						rest(path).description("콜롬버스")
 						.tag("[IBK Bank API] bank")
 						.consumes("application/json")
 						.produces("application/json")
-						.post().description("계좌잔액조회 서비스")
-						//.type(RequestAccount.class)
-				/*		.param().name("X-IBMHEADERID").type(header).description(" APIKey : '00112233-4455-6677-8899-aabbccddeeff' ").endParam()
-						.param().name("ORIGINID").type(header).description("ORIGINID : 'GA000001' ").endParam()*/
-						.param().name("body").type(body).description("계죄잔액조회 서비스").endParam()
+						.post().description("IBK BOX 콜롬버스")
+						.param().name("body").type(body).endParam()
+						.to("log:process?level=DEBUG&showAll=true&multiline=true")			
 						
-				//		.responseMessage().code(204).responseModel(ResponseAccount.class).endResponseMessage()
-						.to("log:process?level=DEBUG&showAll=true&multiline=true")
+						.to("direct:"+endpointTo);
 						
-						.to("direct:findAccount");
-
 						
-						from("direct:findAccount")
-
-							.process(new Processor() {
-								public void process(Exchange exchange) throws Exception {
-
-									String reqAcc = exchange.getIn().getBody(String.class);
-									System.out.println("fromEndpoint:::::"+reqAcc);
-
-//									ResponseAccount resAcc = new ResponseAccount();
-//									resAcc.setAccountBal(10000);
-//									resAcc.setAccountLimit(1000);
-//									resAcc.setAccountNum(reqAcc.getAccountNum());
-//									resAcc.setBankCD(reqAcc.getBankCD());
-//									exchange.getIn().setBody(resAcc);
-
-								}
-							}).to("direct:"+endpointTo);
-
-						//	.end();
-//						rest("/api/")
-//						.id("api-route")
-//						.consumes("application/json")
-//						.produces("application/json")
-//						.post("/bean")
-//						.type(RequestAccount.class)
-//						.to("direct:remoteService");
-//					
-//					from("direct:remoteService")
-//						.routeId("direct-route")
-//						.tracing()
-//						.log(">>> ${body.id}")
-//						.log(">>> ${body.name}")
-//						.transform().simple("Hello ${in.body.name}")
-//						.setHeader(Exchange.HTTP_RESPONSE_CODE, constant(200));
-//				
-//				    	
-//				    	
-//
-//				    	restConfiguration()
-//						.contextPath("/rest")
-//						.port(8089)
-//						.enableCORS(true)
-//						.apiContextPath("api-doc")
-//						.apiProperty("api.title", "Test REST API")
-//						.apiProperty("api.version", "V1")
-//						.component("jetty")
-//						.bindingMode(RestBindingMode.json);
-//					//for (int i = 0; i <10; i++) {
-//						rest("/api").id("interfaceId").consumes("application/json").post("/interfaceId")
-//						//.route().transform().constant("Hello World");
-//						.setBody( constant("Rod, Jane, Freddy"));
-//					//	.to("direct:defaultAPI");
-//				//	}
-//					
-//					from("direct:defaultAPI").to("netty-http://127.0.0.1:8090/abc");
-//					
-//					from("netty-http://127.0.0.1:8090/abc").process(new Processor() {
-//						
-//						@Override
-//						public void process(Exchange exchange) throws Exception {
-//							System.out.println(exchange.getIn().getBody().toString());
-//							exchange.getOut().setBody("afadfsasdfadfasfdasfd");
-//						}
-//					});
-				    }
+					    }
 				});
 			  
 			  
@@ -177,25 +108,6 @@ public class APIDefaultAdapterIn extends RouteCreateDefault {
 	
 		
 		setDefaultHeader("1");
-		this.process(new Processor() {
-
-			@Override
-			public void process(Exchange exchange) throws Exception {
-				// TODO Auto-generated method stub
-				System.out.println("확인");
-				String reqAcc = exchange.getIn().getBody(String.class);
-				System.out.println("requestBody:::::"+reqAcc);
-
-//				ResponseAccount resAcc = new ResponseAccount();
-//				resAcc.setAccountBal(10000);
-//				resAcc.setAccountLimit(1000);
-//				resAcc.setAccountNum(reqAcc.getAccountNum());
-//				resAcc.setBankCD(reqAcc.getBankCD());
-//				exchange.getIn().setBody(resAcc);
-
-				
-			}}
-		);
 		this.setHeader(ConstantCode.COMPOSING_HEADER, Builder.constant(getEndpointType(getBuilderInfo().getFromEndpoint())));
 		//this.bean(com.ibkglobal.integrator.engine.bean.api.log.LoggingAPI.class, "logging");
 

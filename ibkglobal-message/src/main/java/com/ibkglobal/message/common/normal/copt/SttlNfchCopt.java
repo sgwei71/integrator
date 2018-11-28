@@ -84,12 +84,12 @@ public class SttlNfchCopt extends AbstractFlexibleDataSet implements Serializabl
 
 	@SttlField(fieldName = "OTP_VRFC_MSGCD", length = 12, defaultValue = "")
 	private String otpVrfcMsgcd; // OTP검증메시지코드
-
-	@SttlField(fieldName = "BRCD", length = 4, defaultValue = "")
-	private String brcd; // 부점코드
-
-	@SttlField(fieldName = "TLN", length = 8, defaultValue = "")
-	private String tln; // 텔러번호
+//
+//	@SttlField(fieldName = "BRCD", length = 4, defaultValue = "")
+//	private String brcd; // 부점코드
+//
+//	@SttlField(fieldName = "TLN", length = 8, defaultValue = "")
+//	private String tln; // 텔러번호
 
 	@SttlField(fieldName = "SRVR_OTPT_RQST_NBI", length = 5, defaultValue = "")
 	private Integer srvrOtptRqstNbi; // 서버출력요청건수

@@ -75,7 +75,7 @@ public class FlatToTelegramAPI extends FlatToTelegram{
 	public static void setFieldAPI(ByteBuffer buffer, Object data, Field[] fields, StandardTelegram standardTelegram, List<Tlgr> fieldList) throws Exception {
 		for (Field field : fields) {
 			field.setAccessible(true);
-			System.out.println("setField:"+field.getName());
+			//System.out.println("setField:"+field.getName());
 			// 제외 할 필드명 검사
 			if (!CommonConverter.excludeFieldList().contains(CommonConverter.getCheckKey(data, field.getName()))) {
 				if (field.getAnnotation(SttlField.class) != null) {
@@ -83,7 +83,7 @@ public class FlatToTelegramAPI extends FlatToTelegram{
 					getNormalField(buffer, data, field);
 				} else if (field.getName().equals("data")) {
 					// 개별부 데이터
-					System.out.println("setField:"+buffer+":"+fieldList);
+				//	System.out.println("setField:"+buffer+":"+fieldList);
 
 					LinkedHashMap<String, Object> userData = ConverterByte.byteArrayToMap(buffer, fieldList);					
 					standardTelegram.getUserData().setData(userData);

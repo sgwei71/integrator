@@ -5,7 +5,7 @@ import java.util.Arrays;
 import lombok.Getter;
 
 public enum InfraType {
-	MCA("1"), EAI("2"), FEP("3");
+	MCA("1"), EAI("2"), FEP("3"), API("4");
 	
 	@Getter
 	private String code;
