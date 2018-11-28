@@ -21,7 +21,7 @@ import com.ibkglobal.message.converter.service.ConverterService;
 import com.ibkglobal.message.struct.resource.ResourceEAI;
 
 public class ComposingEAI {
-
+ 
 	@Autowired
 	ConverterService converterService;
 
@@ -29,7 +29,7 @@ public class ComposingEAI {
 	ResourceEAI resourceEAI;
 
 	public void composing(Exchange exchange) throws IBKExceptionEAI {
-
+		//TEST
 		try {
 			Message message = exchange.getIn();
 
