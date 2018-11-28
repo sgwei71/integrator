@@ -33,5 +33,7 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/ibkglobal-message"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ibkglobal-mms"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

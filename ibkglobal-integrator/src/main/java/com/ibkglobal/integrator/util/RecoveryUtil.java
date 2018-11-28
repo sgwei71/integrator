@@ -706,9 +706,9 @@ public class RecoveryUtil {
 			// OTP검증메시지코드
 			ibkNormalHeader.getSttlNfchCopt().setOtpVrfcMsgcd("            ");
 			// 부점코드
-			ibkNormalHeader.getSttlNfchCopt().setBrcd("    ");
+		//	ibkNormalHeader.getSttlNfchCopt().setBrcd("    ");
 			// 텔러번호
-			ibkNormalHeader.getSttlNfchCopt().setTln("        ");
+		//	ibkNormalHeader.getSttlNfchCopt().setTln("        ");
 			// 서버출력요청건수
 			ibkNormalHeader.getSttlNfchCopt().setSrvrOtptRqstNbi(0);
 			// 전문메시지코드

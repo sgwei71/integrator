@@ -7,5 +7,6 @@ public enum EndpointType {
 	QUEUE,       // QUEUE
 	BEAN,        // BEAN
 	LOADBALANCE, // 로드밸런스
-	DYNAMIC      // DYNAMIC
+	DYNAMIC,      // DYNAMIC
+	REST          // REST
 }

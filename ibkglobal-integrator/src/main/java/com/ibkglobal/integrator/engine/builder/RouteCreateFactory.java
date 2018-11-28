@@ -1,9 +1,14 @@
 package com.ibkglobal.integrator.engine.builder;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.ibkglobal.integrator.config.CamelConfig;
 import com.ibkglobal.integrator.engine.builder.model.RouteCreateInfo;
 import com.ibkglobal.integrator.engine.builder.route.RouteCreate;
+import com.ibkglobal.integrator.engine.builder.route.api.APIDefaultAdapterIn;
+import com.ibkglobal.integrator.engine.builder.route.api.APIDefaultAdapterOut;
+import com.ibkglobal.integrator.engine.builder.route.api.APIInbound;
 import com.ibkglobal.integrator.engine.builder.route.eai.EAIBatchAdapterIn;
 import com.ibkglobal.integrator.engine.builder.route.eai.EAIDefaultAdapterIn;
 import com.ibkglobal.integrator.engine.builder.route.eai.EAIDefaultAdapterOut;
@@ -21,6 +26,8 @@ import com.ibkglobal.integrator.engine.builder.route.mca.bid.MCABidProcess;
 
 @Component
 public class RouteCreateFactory {
+	@Autowired
+	CamelConfig camelConfig;
 
 	public RouteCreate getCreate(RouteCreateInfo builderInfo) {
 
@@ -41,6 +48,15 @@ public class RouteCreateFactory {
 			return new MCALocalAdapterOut(builderInfo);
 		}
 
+		//rest DSL을 사용하기 위해 camelContext를 전달 
+		if (builderInfo.getRouteType() == RouteType.API_DEFAULT_ADAPTER_IN) {
+			return new APIDefaultAdapterIn(builderInfo,camelConfig.getCamelContext());
+		} else if (builderInfo.getRouteType() == RouteType.API_DEFAULT_ADAPTER_OUT) {
+			return new APIDefaultAdapterOut(builderInfo);
+		} else if (builderInfo.getRouteType() == RouteType.API_INBOUND) {
+			return new APIInbound(builderInfo);
+		} 
+		
 		// FEP
 		else if (builderInfo.getRouteType() == RouteType.FEP_DEFAULT_ADAPTER_IN) {
 			return new FEPDefaultAdapterIn(builderInfo);

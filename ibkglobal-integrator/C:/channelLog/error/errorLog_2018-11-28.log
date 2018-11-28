@@ -1,0 +1,930 @@
+2018-11-28 18:43:54 [ERROR] qtp1671214396-123 c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : "ITRO00000035",
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : "20181128HyunJoui-MacBook-Pro.localre184353997001",
+  "rqstRspnDcd" : "S",
+  "rspnPcrsDcd" : "1",
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "Y",
+  "msg" : {
+    "sttlSysCopt" : {
+      "sttlCmrsYn" : "N",
+      "sttlEncpDcd" : "0",
+      "sttlLnggDcd" : "KO",
+      "sttlVerDsnc" : "024",
+      "whbnSttlWrtnYmd" : "20181128",
+      "whbnSttlCretSysNm" : "HyunJoui-MacBook-Pro.local",
+      "whbnSttlSrn" : "re184353997001",
+      "whbnSttlPgrsDsncNo" : 0,
+      "whbnSttlPgrsNo" : 0,
+      "sttlIntfAnunId" : "20181128HyunJoui-MacBook-Pro.localre1843539970010000",
+      "sttlIp" : "172.20.10.2",
+      "sttlMacAdrVl" : "D6A33D39F547",
+      "sysEnvrInfoDcd" : "D",
+      "frstRqstTs" : "20181128184353997",
+      "sttlMctmUseYn" : "N",
+      "sttlMctmSecVl" : 0,
+      "trnmSysDcd" : "GMC",
+      "trnmTs" : "20181128184353997",
+      "rqstRspnDcd" : "S",
+      "sttlIdprVrsnSrn" : 0,
+      "rqstSysDcd" : "APB",
+      "rqstSysBswrDcd" : "APB",
+      "sttlIntfId" : "ITRO00000035",
+      "syncRspnWaitDcd" : "S",
+      "etahTrnYn" : "N",
+      "inptTmgtDcd" : "0",
+      "sttlRqstTs" : "20181128184353997",
+      "rqstRcvSvcId" : "CBKCOM915000",
+      "rspnRcvSvcId" : "CBKCOM915000",
+      "erorRspnSvcId" : "",
+      "rspnPcrsDcd" : "1",
+      "erocSysDcd" : "GMC",
+      "sttlErcd" : "EGMCGMC00004",
+      "rqstChptDcd" : "APB",
+      "rqstChptDtlsDcd" : "APB",
+      "rqstChbsDcd" : "APB",
+      "lrqnInopTrnGlblId" : "20181128HyunJoui-MacBook-Pro.localre184353997001",
+      "lrqnInopCtntNo" : 0
+    },
+    "sttlTrnCopt" : {
+      "ntcd" : "00",
+      "bncd" : "00",
+      "trnChnlDcd" : "OLT",
+      "trrqBswrDcd" : "APB",
+      "sttlXcd" : "CBKCOM915000",
+      "cnclDcd" : "1",
+      "ctntTrnDcd" : 0,
+      "inptTrnSrn" : "0000000000",
+      "blngFncmCd" : "001"
+    },
+    "sttlAmgcCopt" : {
+      "dtstDcd" : "MC",
+      "dtstLen" : 597,
+      "tln" : "CHFEP000",
+      "acitRnlModeDcd" : "1",
+      "baclDcd" : "1",
+      "ynbkDcd" : "2",
+      "caalDcd" : "2",
+      "bnkbSrn" : 0,
+      "smatInqSrn" : 0,
+      "brcd" : "9301"
+    },
+    "sttlNfchCopt" : {
+      "dtstDcd" : "NC"
+    },
+    "sttlSvatCopt" : { },
+    "sttlMsgCopt" : {
+      "dtstDcd" : "MS",
+      "msgRpsnDcd" : "0",
+      "pnmgInfo" : [ {
+        "pnmgCd" : "EGMCGMC00004",
+        "pnmgDsncPgrsNo" : 1
+      } ],
+      "msgErifItrnNbt" : 1,
+      "msgErrorInfo" : [ {
+        "pnmgInkyVl" : 2
+      } ]
+    },
+    "sttlOpatCopt" : { },
+    "sttlOtfxCopt" : { },
+    "userData" : {
+      "data" : {
+        "TEST_CD" : "TEST",
+        "INQ_YMD" : "20181121",
+        "BASE_CRCD" : "KRW"
+      }
+    },
+    "endSignal" : "@@"
+  }
+}
+2018-11-28 18:44:42 [ERROR] qtp1786238014-223 c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : "ITRO00000035",
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : "20181128HyunJoui-MacBook-Pro.localre184442759001",
+  "rqstRspnDcd" : "S",
+  "rspnPcrsDcd" : "1",
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "Y",
+  "msg" : {
+    "sttlSysCopt" : {
+      "sttlCmrsYn" : "N",
+      "sttlEncpDcd" : "0",
+      "sttlLnggDcd" : "KO",
+      "sttlVerDsnc" : "024",
+      "whbnSttlWrtnYmd" : "20181128",
+      "whbnSttlCretSysNm" : "HyunJoui-MacBook-Pro.local",
+      "whbnSttlSrn" : "re184442759001",
+      "whbnSttlPgrsDsncNo" : 0,
+      "whbnSttlPgrsNo" : 0,
+      "sttlIntfAnunId" : "20181128HyunJoui-MacBook-Pro.localre1844427590010000",
+      "sttlIp" : "172.20.10.2",
+      "sttlMacAdrVl" : "D6A33D39F547",
+      "sysEnvrInfoDcd" : "D",
+      "frstRqstTs" : "20181128184442759",
+      "sttlMctmUseYn" : "N",
+      "sttlMctmSecVl" : 0,
+      "trnmSysDcd" : "GMC",
+      "trnmTs" : "20181128184442759",
+      "rqstRspnDcd" : "S",
+      "sttlIdprVrsnSrn" : 0,
+      "rqstSysDcd" : "APB",
+      "rqstSysBswrDcd" : "APB",
+      "sttlIntfId" : "ITRO00000035",
+      "syncRspnWaitDcd" : "S",
+      "etahTrnYn" : "N",
+      "inptTmgtDcd" : "0",
+      "sttlRqstTs" : "20181128184442759",
+      "rqstRcvSvcId" : "CBKCOM915000",
+      "rspnRcvSvcId" : "CBKCOM915000",
+      "erorRspnSvcId" : "",
+      "rspnPcrsDcd" : "1",
+      "erocSysDcd" : "GMC",
+      "sttlErcd" : "EGMCGMC00004",
+      "rqstChptDcd" : "APB",
+      "rqstChptDtlsDcd" : "APB",
+      "rqstChbsDcd" : "APB",
+      "lrqnInopTrnGlblId" : "20181128HyunJoui-MacBook-Pro.localre184442759001",
+      "lrqnInopCtntNo" : 0
+    },
+    "sttlTrnCopt" : {
+      "ntcd" : "00",
+      "bncd" : "00",
+      "trnChnlDcd" : "OLT",
+      "trrqBswrDcd" : "APB",
+      "sttlXcd" : "CBKCOM915000",
+      "cnclDcd" : "1",
+      "ctntTrnDcd" : 0,
+      "inptTrnSrn" : "0000000000",
+      "blngFncmCd" : "001"
+    },
+    "sttlAmgcCopt" : {
+      "dtstDcd" : "MC",
+      "dtstLen" : 597,
+      "tln" : "CHFEP000",
+      "acitRnlModeDcd" : "1",
+      "baclDcd" : "1",
+      "ynbkDcd" : "2",
+      "caalDcd" : "2",
+      "bnkbSrn" : 0,
+      "smatInqSrn" : 0,
+      "brcd" : "9301"
+    },
+    "sttlNfchCopt" : {
+      "dtstDcd" : "NC"
+    },
+    "sttlSvatCopt" : { },
+    "sttlMsgCopt" : {
+      "dtstDcd" : "MS",
+      "msgRpsnDcd" : "0",
+      "pnmgInfo" : [ {
+        "pnmgCd" : "EGMCGMC00004",
+        "pnmgDsncPgrsNo" : 1
+      } ],
+      "msgErifItrnNbt" : 1,
+      "msgErrorInfo" : [ {
+        "pnmgInkyVl" : 2
+      } ]
+    },
+    "sttlOpatCopt" : { },
+    "sttlOtfxCopt" : { },
+    "userData" : {
+      "data" : {
+        "TEST_CD" : "TEST",
+        "INQ_YMD" : "20181121",
+        "BASE_CRCD" : "KRW"
+      }
+    },
+    "endSignal" : "@@"
+  }
+}
+2018-11-28 18:44:51 [ERROR] qtp1786238014-225 c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : "ITRO00000035",
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : "20181128HyunJoui-MacBook-Pro.localre184451009002",
+  "rqstRspnDcd" : "S",
+  "rspnPcrsDcd" : "1",
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "Y",
+  "msg" : {
+    "sttlSysCopt" : {
+      "sttlCmrsYn" : "N",
+      "sttlEncpDcd" : "0",
+      "sttlLnggDcd" : "KO",
+      "sttlVerDsnc" : "024",
+      "whbnSttlWrtnYmd" : "20181128",
+      "whbnSttlCretSysNm" : "HyunJoui-MacBook-Pro.local",
+      "whbnSttlSrn" : "re184451009002",
+      "whbnSttlPgrsDsncNo" : 0,
+      "whbnSttlPgrsNo" : 0,
+      "sttlIntfAnunId" : "20181128HyunJoui-MacBook-Pro.localre1844510090020000",
+      "sttlIp" : "172.20.10.2",
+      "sttlMacAdrVl" : "D6A33D39F547",
+      "sysEnvrInfoDcd" : "D",
+      "frstRqstTs" : "20181128184451009",
+      "sttlMctmUseYn" : "N",
+      "sttlMctmSecVl" : 0,
+      "trnmSysDcd" : "GMC",
+      "trnmTs" : "20181128184451009",
+      "rqstRspnDcd" : "S",
+      "sttlIdprVrsnSrn" : 0,
+      "rqstSysDcd" : "APB",
+      "rqstSysBswrDcd" : "APB",
+      "sttlIntfId" : "ITRO00000035",
+      "syncRspnWaitDcd" : "S",
+      "etahTrnYn" : "N",
+      "inptTmgtDcd" : "0",
+      "sttlRqstTs" : "20181128184451009",
+      "rqstRcvSvcId" : "CBKCOM915000",
+      "rspnRcvSvcId" : "CBKCOM915000",
+      "erorRspnSvcId" : "",
+      "rspnPcrsDcd" : "1",
+      "erocSysDcd" : "GMC",
+      "sttlErcd" : "EGMCGMC00004",
+      "rqstChptDcd" : "APB",
+      "rqstChptDtlsDcd" : "APB",
+      "rqstChbsDcd" : "APB",
+      "lrqnInopTrnGlblId" : "20181128HyunJoui-MacBook-Pro.localre184451009002",
+      "lrqnInopCtntNo" : 0
+    },
+    "sttlTrnCopt" : {
+      "ntcd" : "00",
+      "bncd" : "00",
+      "trnChnlDcd" : "OLT",
+      "trrqBswrDcd" : "APB",
+      "sttlXcd" : "CBKCOM915000",
+      "cnclDcd" : "1",
+      "ctntTrnDcd" : 0,
+      "inptTrnSrn" : "0000000000",
+      "blngFncmCd" : "001"
+    },
+    "sttlAmgcCopt" : {
+      "dtstDcd" : "MC",
+      "dtstLen" : 597,
+      "tln" : "CHFEP000",
+      "acitRnlModeDcd" : "1",
+      "baclDcd" : "1",
+      "ynbkDcd" : "2",
+      "caalDcd" : "2",
+      "bnkbSrn" : 0,
+      "smatInqSrn" : 0,
+      "brcd" : "9301"
+    },
+    "sttlNfchCopt" : {
+      "dtstDcd" : "NC"
+    },
+    "sttlSvatCopt" : { },
+    "sttlMsgCopt" : {
+      "dtstDcd" : "MS",
+      "msgRpsnDcd" : "0",
+      "pnmgInfo" : [ {
+        "pnmgCd" : "EGMCGMC00004",
+        "pnmgDsncPgrsNo" : 1
+      } ],
+      "msgErifItrnNbt" : 1,
+      "msgErrorInfo" : [ {
+        "pnmgInkyVl" : 2
+      } ]
+    },
+    "sttlOpatCopt" : { },
+    "sttlOtfxCopt" : { },
+    "userData" : {
+      "data" : {
+        "TEST_CD" : "TEST",
+        "INQ_YMD" : "20181121",
+        "BASE_CRCD" : "KRW"
+      }
+    },
+    "endSignal" : "@@"
+  }
+}
+2018-11-28 18:45:27 [ERROR] qtp32658478-331 c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : "ITRO00000035",
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : "20181128HyunJoui-MacBook-Pro.localre184527301001",
+  "rqstRspnDcd" : "S",
+  "rspnPcrsDcd" : "1",
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "Y",
+  "msg" : {
+    "sttlSysCopt" : {
+      "sttlCmrsYn" : "N",
+      "sttlEncpDcd" : "0",
+      "sttlLnggDcd" : "KO",
+      "sttlVerDsnc" : "024",
+      "whbnSttlWrtnYmd" : "20181128",
+      "whbnSttlCretSysNm" : "HyunJoui-MacBook-Pro.local",
+      "whbnSttlSrn" : "re184527301001",
+      "whbnSttlPgrsDsncNo" : 0,
+      "whbnSttlPgrsNo" : 0,
+      "sttlIntfAnunId" : "20181128HyunJoui-MacBook-Pro.localre1845273010010000",
+      "sttlIp" : "172.20.10.2",
+      "sttlMacAdrVl" : "D6A33D39F547",
+      "sysEnvrInfoDcd" : "D",
+      "frstRqstTs" : "20181128184527301",
+      "sttlMctmUseYn" : "N",
+      "sttlMctmSecVl" : 0,
+      "trnmSysDcd" : "GMC",
+      "trnmTs" : "20181128184527301",
+      "rqstRspnDcd" : "S",
+      "sttlIdprVrsnSrn" : 0,
+      "rqstSysDcd" : "APB",
+      "rqstSysBswrDcd" : "APB",
+      "sttlIntfId" : "ITRO00000035",
+      "syncRspnWaitDcd" : "S",
+      "etahTrnYn" : "N",
+      "inptTmgtDcd" : "0",
+      "sttlRqstTs" : "20181128184527301",
+      "rqstRcvSvcId" : "CBKCOM915000",
+      "rspnRcvSvcId" : "CBKCOM915000",
+      "erorRspnSvcId" : "",
+      "rspnPcrsDcd" : "1",
+      "erocSysDcd" : "GMC",
+      "sttlErcd" : "EGMCGMC00004",
+      "rqstChptDcd" : "APB",
+      "rqstChptDtlsDcd" : "APB",
+      "rqstChbsDcd" : "APB",
+      "lrqnInopTrnGlblId" : "20181128HyunJoui-MacBook-Pro.localre184527301001",
+      "lrqnInopCtntNo" : 0
+    },
+    "sttlTrnCopt" : {
+      "ntcd" : "00",
+      "bncd" : "00",
+      "trnChnlDcd" : "OLT",
+      "trrqBswrDcd" : "APB",
+      "sttlXcd" : "CBKCOM915000",
+      "cnclDcd" : "1",
+      "ctntTrnDcd" : 0,
+      "inptTrnSrn" : "0000000000",
+      "blngFncmCd" : "001"
+    },
+    "sttlAmgcCopt" : {
+      "dtstDcd" : "MC",
+      "dtstLen" : 597,
+      "tln" : "CHFEP000",
+      "acitRnlModeDcd" : "1",
+      "baclDcd" : "1",
+      "ynbkDcd" : "2",
+      "caalDcd" : "2",
+      "bnkbSrn" : 0,
+      "smatInqSrn" : 0,
+      "brcd" : "9301"
+    },
+    "sttlNfchCopt" : {
+      "dtstDcd" : "NC"
+    },
+    "sttlSvatCopt" : { },
+    "sttlMsgCopt" : {
+      "dtstDcd" : "MS",
+      "msgRpsnDcd" : "0",
+      "pnmgInfo" : [ {
+        "pnmgCd" : "EGMCGMC00004",
+        "pnmgDsncPgrsNo" : 1
+      } ],
+      "msgErifItrnNbt" : 1,
+      "msgErrorInfo" : [ {
+        "pnmgInkyVl" : 2
+      } ]
+    },
+    "sttlOpatCopt" : { },
+    "sttlOtfxCopt" : { },
+    "userData" : {
+      "data" : {
+        "TEST_CD" : "TEST",
+        "INQ_YMD" : "20181121",
+        "BASE_CRCD" : "KRW"
+      }
+    },
+    "endSignal" : "@@"
+  }
+}
+2018-11-28 18:52:15 [ERROR] qtp1713936099-1076 c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : "ITRO00000035",
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : "20181128HyunJoui-MacBook-Pro.localre185215208001",
+  "rqstRspnDcd" : "S",
+  "rspnPcrsDcd" : "1",
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "Y",
+  "msg" : {
+    "sttlSysCopt" : {
+      "sttlCmrsYn" : "N",
+      "sttlEncpDcd" : "0",
+      "sttlLnggDcd" : "KO",
+      "sttlVerDsnc" : "024",
+      "whbnSttlWrtnYmd" : "20181128",
+      "whbnSttlCretSysNm" : "HyunJoui-MacBook-Pro.local",
+      "whbnSttlSrn" : "re185215208001",
+      "whbnSttlPgrsDsncNo" : 0,
+      "whbnSttlPgrsNo" : 0,
+      "sttlIntfAnunId" : "20181128HyunJoui-MacBook-Pro.localre1852152080010000",
+      "sttlIp" : "172.20.10.2",
+      "sttlMacAdrVl" : "D6A33D39F547",
+      "sysEnvrInfoDcd" : "D",
+      "frstRqstTs" : "20181128185215208",
+      "sttlMctmUseYn" : "N",
+      "sttlMctmSecVl" : 0,
+      "trnmSysDcd" : "GMC",
+      "trnmTs" : "20181128185215208",
+      "rqstRspnDcd" : "S",
+      "sttlIdprVrsnSrn" : 0,
+      "rqstSysDcd" : "APB",
+      "rqstSysBswrDcd" : "APB",
+      "sttlIntfId" : "ITRO00000035",
+      "syncRspnWaitDcd" : "S",
+      "etahTrnYn" : "N",
+      "inptTmgtDcd" : "0",
+      "sttlRqstTs" : "20181128185215208",
+      "rqstRcvSvcId" : "CBKCOM915000",
+      "rspnRcvSvcId" : "CBKCOM915000",
+      "erorRspnSvcId" : "",
+      "rspnPcrsDcd" : "1",
+      "erocSysDcd" : "SYS",
+      "sttlErcd" : "ESYSSYS99999",
+      "rqstChptDcd" : "APB",
+      "rqstChptDtlsDcd" : "APB",
+      "rqstChbsDcd" : "APB",
+      "lrqnInopTrnGlblId" : "20181128HyunJoui-MacBook-Pro.localre185215208001",
+      "lrqnInopCtntNo" : 0
+    },
+    "sttlTrnCopt" : {
+      "ntcd" : "00",
+      "bncd" : "00",
+      "trnChnlDcd" : "OLT",
+      "trrqBswrDcd" : "APB",
+      "sttlXcd" : "CBKCOM915000",
+      "cnclDcd" : "1",
+      "ctntTrnDcd" : 0,
+      "inptTrnSrn" : "0000000000",
+      "blngFncmCd" : "001"
+    },
+    "sttlAmgcCopt" : {
+      "dtstDcd" : "MC",
+      "dtstLen" : 597,
+      "tln" : "CHFEP000",
+      "acitRnlModeDcd" : "1",
+      "baclDcd" : "1",
+      "ynbkDcd" : "2",
+      "caalDcd" : "2",
+      "bnkbSrn" : 0,
+      "smatInqSrn" : 0,
+      "brcd" : "9301"
+    },
+    "sttlNfchCopt" : {
+      "dtstDcd" : "NC"
+    },
+    "sttlSvatCopt" : { },
+    "sttlMsgCopt" : {
+      "dtstDcd" : "MS",
+      "msgRpsnDcd" : "0",
+      "pnmgInfo" : [ {
+        "pnmgCd" : "ESYSSYS99999",
+        "pnmgDsncPgrsNo" : 1,
+        "pnmgCon" : "Exception occurred during execution on the exchange: Exchange[ID-HyunJoui-MacBook-Pro-local-1543398191849-10-1]"
+      } ],
+      "msgErifItrnNbt" : 1,
+      "msgErrorInfo" : [ {
+        "pnmgInkyVl" : 2,
+        "msgErifCon" : "Exception occurred during execution on the exchange: Exchange[ID-HyunJoui-MacBook-Pro-local-1543398191849-10-1]"
+      } ]
+    },
+    "sttlOpatCopt" : { },
+    "sttlOtfxCopt" : { },
+    "userData" : {
+      "data" : {
+        "TEST_CD" : "TEST",
+        "INQ_YMD" : "20181121",
+        "BASE_CRCD" : "KRW"
+      }
+    },
+    "endSignal" : "@@"
+  }
+}
+2018-11-28 18:59:06 [ERROR] qtp621682785-1933 c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : "ITRO00000035",
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : "20181128HyunJoui-MacBook-Pro.localre185906004001",
+  "rqstRspnDcd" : "S",
+  "rspnPcrsDcd" : "1",
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "Y",
+  "msg" : {
+    "sttlSysCopt" : {
+      "sttlCmrsYn" : "N",
+      "sttlEncpDcd" : "0",
+      "sttlLnggDcd" : "KO",
+      "sttlVerDsnc" : "024",
+      "whbnSttlWrtnYmd" : "20181128",
+      "whbnSttlCretSysNm" : "HyunJoui-MacBook-Pro.local",
+      "whbnSttlSrn" : "re185906004001",
+      "whbnSttlPgrsDsncNo" : 0,
+      "whbnSttlPgrsNo" : 0,
+      "sttlIntfAnunId" : "20181128HyunJoui-MacBook-Pro.localre1859060040010000",
+      "sttlIp" : "172.20.10.2",
+      "sttlMacAdrVl" : "D6A33D39F547",
+      "sysEnvrInfoDcd" : "D",
+      "frstRqstTs" : "20181128185906004",
+      "sttlMctmUseYn" : "N",
+      "sttlMctmSecVl" : 0,
+      "trnmSysDcd" : "GMC",
+      "trnmTs" : "20181128185906004",
+      "rqstRspnDcd" : "S",
+      "sttlIdprVrsnSrn" : 0,
+      "rqstSysDcd" : "APB",
+      "rqstSysBswrDcd" : "APB",
+      "sttlIntfId" : "ITRO00000035",
+      "syncRspnWaitDcd" : "S",
+      "etahTrnYn" : "N",
+      "inptTmgtDcd" : "0",
+      "sttlRqstTs" : "20181128185906004",
+      "rqstRcvSvcId" : "CBKCOM915000",
+      "rspnRcvSvcId" : "CBKCOM915000",
+      "erorRspnSvcId" : "",
+      "rspnPcrsDcd" : "1",
+      "erocSysDcd" : "GMC",
+      "sttlErcd" : "EGMCGMC00004",
+      "rqstChptDcd" : "APB",
+      "rqstChptDtlsDcd" : "APB",
+      "rqstChbsDcd" : "APB",
+      "lrqnInopTrnGlblId" : "20181128HyunJoui-MacBook-Pro.localre185906004001",
+      "lrqnInopCtntNo" : 0
+    },
+    "sttlTrnCopt" : {
+      "ntcd" : "00",
+      "bncd" : "00",
+      "trnChnlDcd" : "OLT",
+      "trrqBswrDcd" : "APB",
+      "sttlXcd" : "CBKCOM915000",
+      "cnclDcd" : "1",
+      "ctntTrnDcd" : 0,
+      "inptTrnSrn" : "0000000000",
+      "blngFncmCd" : "001"
+    },
+    "sttlAmgcCopt" : {
+      "dtstDcd" : "MC",
+      "dtstLen" : 597,
+      "tln" : "CHFEP000",
+      "acitRnlModeDcd" : "1",
+      "baclDcd" : "1",
+      "ynbkDcd" : "2",
+      "caalDcd" : "2",
+      "bnkbSrn" : 0,
+      "smatInqSrn" : 0,
+      "brcd" : "9301"
+    },
+    "sttlNfchCopt" : {
+      "dtstDcd" : "NC"
+    },
+    "sttlSvatCopt" : { },
+    "sttlMsgCopt" : {
+      "dtstDcd" : "MS",
+      "msgRpsnDcd" : "0",
+      "pnmgInfo" : [ {
+        "pnmgCd" : "EGMCGMC00004",
+        "pnmgDsncPgrsNo" : 1
+      } ],
+      "msgErifItrnNbt" : 1,
+      "msgErrorInfo" : [ {
+        "pnmgInkyVl" : 2
+      } ]
+    },
+    "sttlOpatCopt" : { },
+    "sttlOtfxCopt" : { },
+    "userData" : {
+      "data" : {
+        "TEST_CD" : "TEST",
+        "INQ_YMD" : "20181121",
+        "BASE_CRCD" : "KRW"
+      }
+    },
+    "endSignal" : "@@"
+  }
+}
+2018-11-28 19:00:04 [ERROR] qtp159449098-2042 c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : "ITRO00000035",
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : "20181128HyunJoui-MacBook-Pro.localre190003944001",
+  "rqstRspnDcd" : "S",
+  "rspnPcrsDcd" : "1",
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "Y",
+  "msg" : {
+    "sttlSysCopt" : {
+      "sttlCmrsYn" : "N",
+      "sttlEncpDcd" : "0",
+      "sttlLnggDcd" : "KO",
+      "sttlVerDsnc" : "024",
+      "whbnSttlWrtnYmd" : "20181128",
+      "whbnSttlCretSysNm" : "HyunJoui-MacBook-Pro.local",
+      "whbnSttlSrn" : "re190003944001",
+      "whbnSttlPgrsDsncNo" : 0,
+      "whbnSttlPgrsNo" : 0,
+      "sttlIntfAnunId" : "20181128HyunJoui-MacBook-Pro.localre1900039440010000",
+      "sttlIp" : "172.20.10.2",
+      "sttlMacAdrVl" : "D6A33D39F547",
+      "sysEnvrInfoDcd" : "D",
+      "frstRqstTs" : "20181128190003944",
+      "sttlMctmUseYn" : "N",
+      "sttlMctmSecVl" : 0,
+      "trnmSysDcd" : "GMC",
+      "trnmTs" : "20181128190003944",
+      "rqstRspnDcd" : "S",
+      "sttlIdprVrsnSrn" : 0,
+      "rqstSysDcd" : "APB",
+      "rqstSysBswrDcd" : "APB",
+      "sttlIntfId" : "ITRO00000035",
+      "syncRspnWaitDcd" : "S",
+      "etahTrnYn" : "N",
+      "inptTmgtDcd" : "0",
+      "sttlRqstTs" : "20181128190003944",
+      "rqstRcvSvcId" : "CBKCOM915000",
+      "rspnRcvSvcId" : "CBKCOM915000",
+      "erorRspnSvcId" : "",
+      "rspnPcrsDcd" : "1",
+      "erocSysDcd" : "GMC",
+      "sttlErcd" : "EGMCGMC00004",
+      "rqstChptDcd" : "APB",
+      "rqstChptDtlsDcd" : "APB",
+      "rqstChbsDcd" : "APB",
+      "lrqnInopTrnGlblId" : "20181128HyunJoui-MacBook-Pro.localre190003944001",
+      "lrqnInopCtntNo" : 0
+    },
+    "sttlTrnCopt" : {
+      "ntcd" : "00",
+      "bncd" : "00",
+      "trnChnlDcd" : "OLT",
+      "trrqBswrDcd" : "APB",
+      "sttlXcd" : "CBKCOM915000",
+      "cnclDcd" : "1",
+      "ctntTrnDcd" : 0,
+      "inptTrnSrn" : "0000000000",
+      "blngFncmCd" : "001"
+    },
+    "sttlAmgcCopt" : {
+      "dtstDcd" : "MC",
+      "dtstLen" : 597,
+      "tln" : "CHFEP000",
+      "acitRnlModeDcd" : "1",
+      "baclDcd" : "1",
+      "ynbkDcd" : "2",
+      "caalDcd" : "2",
+      "bnkbSrn" : 0,
+      "smatInqSrn" : 0,
+      "brcd" : "9301"
+    },
+    "sttlNfchCopt" : {
+      "dtstDcd" : "NC"
+    },
+    "sttlSvatCopt" : { },
+    "sttlMsgCopt" : {
+      "dtstDcd" : "MS",
+      "msgRpsnDcd" : "0",
+      "pnmgInfo" : [ {
+        "pnmgCd" : "EGMCGMC00004",
+        "pnmgDsncPgrsNo" : 1
+      } ],
+      "msgErifItrnNbt" : 1,
+      "msgErrorInfo" : [ {
+        "pnmgInkyVl" : 2
+      } ]
+    },
+    "sttlOpatCopt" : { },
+    "sttlOtfxCopt" : { },
+    "userData" : {
+      "data" : {
+        "TEST_CD" : "TEST",
+        "INQ_YMD" : "20181121",
+        "BASE_CRCD" : "KRW"
+      }
+    },
+    "endSignal" : "@@"
+  }
+}
+2018-11-28 19:01:24 [ERROR] qtp211739100-2150 c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : "ITRO00000035",
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : "20181128HyunJoui-MacBook-Pro.localre190124834001",
+  "rqstRspnDcd" : "S",
+  "rspnPcrsDcd" : "1",
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "Y",
+  "msg" : {
+    "sttlSysCopt" : {
+      "sttlCmrsYn" : "N",
+      "sttlEncpDcd" : "0",
+      "sttlLnggDcd" : "KO",
+      "sttlVerDsnc" : "024",
+      "whbnSttlWrtnYmd" : "20181128",
+      "whbnSttlCretSysNm" : "HyunJoui-MacBook-Pro.local",
+      "whbnSttlSrn" : "re190124834001",
+      "whbnSttlPgrsDsncNo" : 0,
+      "whbnSttlPgrsNo" : 0,
+      "sttlIntfAnunId" : "20181128HyunJoui-MacBook-Pro.localre1901248340010000",
+      "sttlIp" : "172.20.10.2",
+      "sttlMacAdrVl" : "D6A33D39F547",
+      "sysEnvrInfoDcd" : "D",
+      "frstRqstTs" : "20181128190124834",
+      "sttlMctmUseYn" : "N",
+      "sttlMctmSecVl" : 0,
+      "trnmSysDcd" : "GMC",
+      "trnmTs" : "20181128190124834",
+      "rqstRspnDcd" : "S",
+      "sttlIdprVrsnSrn" : 0,
+      "rqstSysDcd" : "APB",
+      "rqstSysBswrDcd" : "APB",
+      "sttlIntfId" : "ITRO00000035",
+      "syncRspnWaitDcd" : "S",
+      "etahTrnYn" : "N",
+      "inptTmgtDcd" : "0",
+      "sttlRqstTs" : "20181128190124834",
+      "rqstRcvSvcId" : "CBKCOM915000",
+      "rspnRcvSvcId" : "CBKCOM915000",
+      "erorRspnSvcId" : "",
+      "rspnPcrsDcd" : "1",
+      "erocSysDcd" : "GMC",
+      "sttlErcd" : "EGMCGMC00004",
+      "rqstChptDcd" : "APB",
+      "rqstChptDtlsDcd" : "APB",
+      "rqstChbsDcd" : "APB",
+      "lrqnInopTrnGlblId" : "20181128HyunJoui-MacBook-Pro.localre190124834001",
+      "lrqnInopCtntNo" : 0
+    },
+    "sttlTrnCopt" : {
+      "ntcd" : "00",
+      "bncd" : "00",
+      "trnChnlDcd" : "OLT",
+      "trrqBswrDcd" : "APB",
+      "sttlXcd" : "CBKCOM915000",
+      "cnclDcd" : "1",
+      "ctntTrnDcd" : 0,
+      "inptTrnSrn" : "0000000000",
+      "blngFncmCd" : "001"
+    },
+    "sttlAmgcCopt" : {
+      "dtstDcd" : "MC",
+      "dtstLen" : 597,
+      "tln" : "CHFEP000",
+      "acitRnlModeDcd" : "1",
+      "baclDcd" : "1",
+      "ynbkDcd" : "2",
+      "caalDcd" : "2",
+      "bnkbSrn" : 0,
+      "smatInqSrn" : 0,
+      "brcd" : "9301"
+    },
+    "sttlNfchCopt" : {
+      "dtstDcd" : "NC"
+    },
+    "sttlSvatCopt" : { },
+    "sttlMsgCopt" : {
+      "dtstDcd" : "MS",
+      "msgRpsnDcd" : "0",
+      "pnmgInfo" : [ {
+        "pnmgCd" : "EGMCGMC00004",
+        "pnmgDsncPgrsNo" : 1
+      } ],
+      "msgErifItrnNbt" : 1,
+      "msgErrorInfo" : [ {
+        "pnmgInkyVl" : 2
+      } ]
+    },
+    "sttlOpatCopt" : { },
+    "sttlOtfxCopt" : { },
+    "userData" : {
+      "data" : {
+        "TEST_CD" : "TEST",
+        "INQ_YMD" : "20181121",
+        "BASE_CRCD" : "KRW"
+      }
+    },
+    "endSignal" : "@@"
+  }
+}
+2018-11-28 19:03:22 [ERROR] Camel Thread #1291 - NettyClientTCPWorker c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : null,
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : null,
+  "rqstRspnDcd" : null,
+  "rspnPcrsDcd" : null,
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "N",
+  "msg" : null
+}
+2018-11-28 19:06:32 [ERROR] Camel Thread #1417 - NettyClientTCPWorker c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : null,
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : null,
+  "rqstRspnDcd" : null,
+  "rspnPcrsDcd" : null,
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "N",
+  "msg" : null
+}
+2018-11-28 19:09:07 [ERROR] Camel Thread #1484 - NettyClientTCPWorker c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : null,
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : null,
+  "rqstRspnDcd" : null,
+  "rspnPcrsDcd" : null,
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "N",
+  "msg" : null
+}
+2018-11-28 19:12:48 [ERROR] Camel Thread #1905 - NettyClientTCPWorker c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : null,
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : null,
+  "rqstRspnDcd" : null,
+  "rspnPcrsDcd" : null,
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "N",
+  "msg" : null
+}
+2018-11-28 19:13:46 [ERROR] Camel Thread #2090 - NettyClientTCPWorker c.i.i.e.b.m.l.LoggingMCA:34 - {
+  "seq" : "0",
+  "sysCd" : "GCB",
+  "bizCd" : "KR",
+  "intfId" : null,
+  "transTime" : "",
+  "oriRecvTime" : "",
+  "globalId" : null,
+  "rqstRspnDcd" : null,
+  "rspnPcrsDcd" : null,
+  "otptTmgtDcd" : null,
+  "workFlow" : "ERROR",
+  "session" : "",
+  "sttlYn" : "N",
+  "msg" : null
+}

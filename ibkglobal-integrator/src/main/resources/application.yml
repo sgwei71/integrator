@@ -14,8 +14,9 @@ integrator:
     route-base-type : file
     json-file-url   : classpath:json
     instance-type   :
-    - MCA
-    - EAI
+  #  - MCA
+  #  - EAI
+    - API
     custom-loader:
       MCA: 
         - /custom/mca/EtcLoaderMCA.json

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import lombok.Getter;
 
 public enum InstanceType {
-	MCA("M"), FEP("F"), EAI("E"), ETC("C");
+	MCA("M"), FEP("F"), EAI("E"), ETC("C"), API("A");
 	
 	@Getter
 	private String code;

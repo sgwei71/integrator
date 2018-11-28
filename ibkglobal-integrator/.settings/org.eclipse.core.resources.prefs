@@ -38,8 +38,6 @@ encoding//src/main/resources/json/message/fep/message/IGAT/IGAT_IGAT_H0310_30000
 encoding//src/main/resources/json/message/fep/message_loader.json=UTF-8
 encoding//src/main/resources/json/message/mca/interface/ITRO00000025.json=UTF-8
 encoding//src/main/resources/json/message/mca/interface/ITRO00000035.json=UTF-8
-encoding//src/main/resources/json/message/mca/io/MTCHS0000093.json=UTF-8
-encoding//src/main/resources/json/message/mca/io/MTCHT0000092.json=UTF-8
 encoding//src/main/resources/json/message/mca/mapper/ITRO00000035_INBOUND.json=UTF-8
 encoding//src/main/resources/json/message/mca/mapper/ITRO00000035_OUTBOUND.json=UTF-8
 encoding//src/main/resources/json/route/eai/E.EAI0.0000.HC9080.json=UTF-8

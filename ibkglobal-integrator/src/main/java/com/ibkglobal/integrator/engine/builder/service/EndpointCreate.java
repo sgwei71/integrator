@@ -25,6 +25,10 @@ public class EndpointCreate {
 			case DIRECT :
 				result = createDirect(endpointInfo);
 				break;
+			case REST :
+				result = createDirectRest(endpointInfo);
+				break;
+
 			case HTTP :
 				result = createHttp(type, endpointInfo);
 				break;
@@ -46,7 +50,11 @@ public class EndpointCreate {
 		
 		return result;
 	}
-	
+	public static String createDirectRest(EndpointInfo endpointInfo) throws Exception {
+		String base      = EndpointCode.DIRECT + endpointInfo.getEndpointDirect();
+		System.out.println("createDirectRest:"+base);
+		return base;
+	}
 	public static String createDirect(EndpointInfo endpointInfo) throws Exception {
 		String base      = EndpointCode.DIRECT + endpointInfo.getEndpointDirect();
 		
