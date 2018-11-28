@@ -32,36 +32,7 @@ public class ComposingAPI {
 	ConverterServiceAPI converterService;
 	@Autowired
 	ResourceMCA resourceMCA;
-	public void composingFromHost(Exchange exchange)  {
-		
-		
-		Message message = exchange.getIn();
-		IBKMessage ibkMessage = message.getBody(IBKMessage.class);
 	
-		//message.setHeader(ConstantCode.IBK_NORMAL_HEADER, standardTelegram);
-		
-		
-		System.out.println("tele=composingFromHost");
-
-		StandardTelegram telegram = message.getHeader(ConstantCode.IBK_NORMAL_HEADER,StandardTelegram.class);
-				//.getStandardTelegram();
-		System.out.println("tele4=composingFromHost");
-
-		System.out.println("tele="+telegram);
-		byte[] result;
-		try {
-			result = converterService.objectToJson(telegram.getUserData().getData()).getBytes();
-			System.out.println("result="+new String(result));
-			
-			message.setBody(result);
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-	}
 	public void composing(Exchange exchange) throws IBKExceptionMCA {
 		
 		try {
@@ -72,15 +43,11 @@ public class ComposingAPI {
 
 			// MCA에서 최종 전송
 			IBKMessageUtil.replyMessageDefaultSet(ibkMessage.getStandardTelegram(), ConstantCode.MCA_CODE);
-System.out.println("==[type]="+type);
+			System.out.println("==[type]="+type);
 			if (type.equals(EndpointType.HTTP)) {
-	//			byte[] result = converterService.telegramToFlat(ibkMessage.getStandardTelegram(), null);
+				//MCA전송부분 
 				byte[] flatData = dataToFlat(ibkMessage);
 				message.setBody(flatData);
-	
-			//	message.setBody(converterService.objectToJson(result));
-					
-			//	message.setBody(converterService.objectToJson(ibkMessage.getStandardTelegram()));
 			} else if (type.equals(EndpointType.TCP)) {
 				message.setBody(converterService.objectToJson(ibkMessage.getStandardTelegram()).getBytes());
 			} else if(type.equals(EndpointType.REST)) {
@@ -121,22 +88,49 @@ System.out.println("==[type]="+type);
 			throw new IBKExceptionMCA(ErrorType.COMPOSING, e.getMessage(), e);
 		}
 	}
+public void composingFromHost(Exchange exchange)  {
+		
+		
+		Message message = exchange.getIn();
+		IBKMessage ibkMessage = message.getBody(IBKMessage.class);
 	
+		//message.setHeader(ConstantCode.IBK_NORMAL_HEADER, standardTelegram);
+		
+		
+		System.out.println("tele=composingFromHost");
+
+		StandardTelegram telegram = message.getHeader(ConstantCode.IBK_NORMAL_HEADER,StandardTelegram.class);
+				//.getStandardTelegram();
+		System.out.println("tele4=composingFromHost");
+
+		System.out.println("tele="+telegram);
+		byte[] result;
+		try {
+			result = converterService.objectToJson(telegram.getUserData().getData()).getBytes();
+			System.out.println("result="+new String(result));
+			
+			message.setBody(result);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
 	public byte[] dataToFlat(IBKMessage ibkMessage) {
-		System.out.println("ComposingAPI[dataToFlat");
+		System.out.println("ComposingAPI[dataToFlat]");
 
 		UserData userData = ibkMessage.getStandardTelegram().getUserData();
 		
 		List<byte[]> flatList = new LinkedList<>();
-		// 바디 정보
-		ibkMessage.setInterfaceId("ITRO00000035");
 
 		//Object result = null;
 		byte[] resultFlat = null;
 		try {
+			//표준전문만 flat으로 변경 
 			resultFlat = converterService.telegramToFlatAPI(ibkMessage.getStandardTelegram(), getStructList("EAI_PARSING", ibkMessage.getInterfaceId()));
-			System.out.println("result="+new String(resultFlat));
-			System.out.println("result[tele]="+ibkMessage.getStandardTelegram());
+			System.out.println("telegramToFlatAPI result="+new String(resultFlat));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

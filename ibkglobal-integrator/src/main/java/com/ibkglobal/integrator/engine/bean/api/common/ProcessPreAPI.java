@@ -37,7 +37,8 @@ public class ProcessPreAPI {
 	@Autowired
 	CamelConfig camelConfig;
 	
-	
+	//표준전문 헤더 ->setHeader 
+	//body 는 io 기준으로 Map 저장 
 	public void preProcess(Exchange exchange) throws Exception {
 		// 헤더 초기화
 		System.out.println("ProcessPreAPI init");
@@ -48,6 +49,7 @@ public class ProcessPreAPI {
 		init(exchange);
 		System.out.println("init success");
 	}
+	
 	
 	protected void initSetHeader(Exchange exchange) throws CommonException {
 		Message message = exchange.getIn();

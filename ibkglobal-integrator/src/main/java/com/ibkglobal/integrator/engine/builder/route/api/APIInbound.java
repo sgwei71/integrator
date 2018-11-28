@@ -23,31 +23,8 @@ public class APIInbound extends RouteCreateDefault {
 		
 		// 라우터 전 처리 : 헤더 설정 & 파싱 & IBKMessage 생성
 		.bean(com.ibkglobal.integrator.engine.bean.api.common.ProcessPreAPI.class, "preProcess")
-		.process(new Processor() {
-
-			@Override
-			public void process(Exchange exchange) throws Exception {
-				// TODO Auto-generated method stub
-				
-				IBKMessage ibkMessage = exchange.getIn().getBody(IBKMessage.class);
-				System.out.println("log전 "+ibkMessage);
-				
-			}
-			
-		})
-		.bean(com.ibkglobal.integrator.engine.bean.api.log.LoggingAPI.class, "logging")
-		.process(new Processor() {
-
-			@Override
-			public void process(Exchange exchange) throws Exception {
-				// TODO Auto-generated method stub
-				
-				IBKMessage ibkMessage = exchange.getIn().getBody(IBKMessage.class);
-				System.out.println("log후"+ibkMessage);
-			
-			}
-			
-		});
+		.bean(com.ibkglobal.integrator.engine.bean.api.log.LoggingAPI.class, "logging");
+		//-> 
 		
 		// 전 처리 업무
 		//.bean(com.ibkglobal.integrator.engine.bean.mca.work.MCAWorkPreProcess.class, "execute");

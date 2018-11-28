@@ -20,6 +20,8 @@ import com.ibkglobal.integrator.exception.CommonException;
 import com.ibkglobal.integrator.exception.ErrorType;
 import com.ibkglobal.integrator.exception.IBKExceptionEAI;
 import com.ibkglobal.integrator.exception.IBKExceptionMCA;
+import com.ibkglobal.integrator.log.LogManager;
+import com.ibkglobal.integrator.log.LogType;
 import com.ibkglobal.integrator.util.RecoveryUtil;
 import com.ibkglobal.integrator.util.RecoveryUtilAPI;
 import com.ibkglobal.message.IBKMessage;
@@ -30,16 +32,22 @@ import com.ibkglobal.message.converter.service.ConverterService;
 import com.ibkglobal.message.converter.service.ConverterServiceAPI;
 import com.ibkglobal.message.struct.resource.ResourceMCA;
 
+import ch.qos.logback.classic.Logger;
+
 @Component
 public class ParsingAPI {
 
 	@Autowired
 	ResourceMCA resourceMCA;
-
+	Logger logger = LogManager.getLogger(LogType.DYNAMIC);
 	
 	@Autowired
 	ConverterServiceAPI converterService;
-	
+	public String getName() {
+		return super.getClass().getSimpleName();
+	}
+	//표준전문형태로 변환만 수행 
+	//userData 변환은 composing에서 수행 
 	public void parsing(Exchange exchange) throws Exception {
 
 		Message message = exchange.getIn();
@@ -60,8 +68,7 @@ public class ParsingAPI {
 		ByteBuffer messageBuffer = ByteBuffer.wrap(messageData);
 		// 전문 파싱
 		IBKMessage ibkMessage = jsonParsing(message);
-		
-		System.out.println("IBKMessage="+ibkMessage);	
+		logger.info(getName()+"jsonPasing after IBKMessage:"+ibkMessage);
 		
 		return ibkMessage;
 	}
@@ -72,7 +79,6 @@ public class ParsingAPI {
 	
 		//일단 기본값 셋팅makeRequestNormalHeader   
 		String ifid = message.getHeader(ConstantCode.IBK_INTERFACE_ID,String.class);
-		System.out.println("jsonParsing:ifid"+ifid);
 		
 		//불러와야 하는데 일단 기본값 셋팅 한번 수행 
 		String reqSvcID = "CBKCOM915000";
@@ -83,8 +89,9 @@ public class ParsingAPI {
 		
 		//==================================
 		standardTelegram = RecoveryUtilAPI.makeRequestNormalHeaderMCA(ifid,reqSvcID,resSvcID, resSvcIDErr,errorCode,normalTxCode);
-
-		System.out.println("[PHJ]jsonParsing[default StandardTelegram]:"+standardTelegram);
+		logger.info(getName()+"jsonPasing default standardTelegram:"+standardTelegram);
+		
+		//System.out.println("[PHJ]jsonParsing[default StandardTelegram]:"+standardTelegram);
 		
 		try {
 			// 파싱 실행
@@ -95,7 +102,7 @@ public class ParsingAPI {
 				messageData = message.getBody(String.class);
 			}
 
-			//UserData Setting
+			//UserData to Map 
 			LinkedHashMap<String, Object> map = converterService.jsonToMap(message.getBody(String.class));
 			UserData userData = new UserData();
 			userData.setData(map);
@@ -117,62 +124,61 @@ public class ParsingAPI {
 		ibkMessage.setBaseData(message.getBody());
 		ibkMessage.setInterfaceId(ifid);
 		ibkMessage.setStandardTelegram(standardTelegram);
-		ibkMessage.setInterfaceId(ifid);
-
+	
 		InfraType infraType = message.getHeader(ConstantCode.INFRA_TYPE, InfraType.class);
 		
 		//IO 기준으로 메세지 매핑 
-		bodyParsing(ibkMessage);
+		//bodyParsing(ibkMessage);
 		
 		System.out.println("Test:ibkMessage"+ibkMessage);
 		return ibkMessage;
 	}
-
-	private void bodyParsing(IBKMessage ibkMessage) throws Exception {
-
-		LinkedHashMap<String, Object> data = ibkMessage.getStandardTelegram().getUserData().getData();
-		LinkedHashMap<String, Object> body = new LinkedHashMap<>();
-		Io io = null;
-
-		String mpngYn = null;
-
-		try {
-			// bypass 여부(Y / N)
-			System.out.println("[PHJ]bodyParsing:"+data);
-			mpngYn = "Y";
-			String rqstRspnDcd="S";
-			//mpngYn = resourceMCA.getInterface(ibkMessage.getInterfaceId()).getCommon().getAttribute().getMpngYn().getCode();
-			
-			if ("Y".contains(mpngYn)) {
-				// 'S'=요청 , 'R'=응답, 'K'=ACK
-				//String rqstRspnDcd = ibkMessage.getStandardTelegram().getSttlSysCopt().getRqstRspnDcd();
-				if ("S".equals(rqstRspnDcd)) {
-					System.out.println("[PHJ]bodyParsing2:"+ ibkMessage.getStandardTelegram().getSttlSysCopt().getInptTmgtDcd());
-					io = resourceMCA.getSourceIo("ITRO00000035", "IN").getInBound();
-
-//					io = resourceMCA.getSourceIo(ibkMessage.getInterfaceId(), "IN").getInBound();
-				} else if ("R".equals(rqstRspnDcd)) {
-					io = resourceMCA.getTargetIo(ibkMessage.getInterfaceId(), "OUT").getOutBound();
-				}
-			}
-			System.out.println("[PHJ]bodyParsing2.2:"+ ibkMessage.getStandardTelegram().getSttlSysCopt().getInptTmgtDcd());
-
-			if (io != null) {
-				System.out.println("[PHJ]bodyParsing3:"+ ibkMessage.getStandardTelegram().getSttlSysCopt().getInptTmgtDcd());
-				
-				String inptTmgtDcd = ibkMessage.getStandardTelegram().getSttlSysCopt().getInptTmgtDcd();
-				
-				System.out.println("[PHJ]bodyParsing4body:"+ data);
-				
-				body.putAll(converterService.listToMap(data, io.getFieldList(), isNullable(inptTmgtDcd)));
-				System.out.println("[PHJ]bodyParsing4body:"+ body);
-				
-				ibkMessage.setBody(body);
-			}
-		} catch (Exception e) {
-			throw new IBKExceptionMCA(ErrorType.MESSAGE, "Message Search Error : " + ibkMessage.getInterfaceId());
-		}
-	}
+//	//Map 형태로 리턴 됨 ibkMessage.setBody(body)
+//	private void bodyParsing(IBKMessage ibkMessage) throws Exception {
+//
+//		LinkedHashMap<String, Object> data = ibkMessage.getStandardTelegram().getUserData().getData();
+//		LinkedHashMap<String, Object> body = new LinkedHashMap<>();
+//		Io io = null;
+//		String ifid = ibkMessage.getInterfaceId();
+//		String mpngYn = null;
+//
+//		try {
+//			//IO에 선언되어 있는 매핑 여부 필드 값 가져오기 
+//			mpngYn = resourceMCA.getInterface(ifid).getCommon().getAttribute().getMpngYn().getCode();
+//			
+//			if ("Y".contains(mpngYn)) {
+//				// 'S'=요청 , 'R'=응답, 'K'=ACK
+//				String rqstRspnDcd = ibkMessage.getStandardTelegram().getSttlSysCopt().getRqstRspnDcd();
+//				//System.out.println("[PHJ]bodyParsing2:rqstRspnDcd"+ rqstRspnDcd);
+//				
+//				//요청 거래 처리
+//				if ("S".equals(rqstRspnDcd)) {
+//					System.out.println("[PHJ]bodyParsing2:"+ ibkMessage.getStandardTelegram().getSttlSysCopt().getInptTmgtDcd());
+//					io = resourceMCA.getSourceIo(ifid, "IN").getInBound();
+//
+////					io = resourceMCA.getSourceIo(ibkMessage.getInterfaceId(), "IN").getInBound();
+//				} else if ("R".equals(rqstRspnDcd)) {
+//					io = resourceMCA.getTargetIo(ibkMessage.getInterfaceId(), "OUT").getOutBound();
+//				}
+//			}
+////			System.out.println("[PHJ]bodyParsing2.2:"+ ibkMessage.getStandardTelegram().getSttlSysCopt().getInptTmgtDcd());
+//
+//			if (io != null) {
+//			//	System.out.println("[PHJ]bodyParsing3:"+ ibkMessage.getStandardTelegram().getSttlSysCopt().getInptTmgtDcd());
+//				
+//				String inptTmgtDcd = ibkMessage.getStandardTelegram().getSttlSysCopt().getInptTmgtDcd();
+//				
+//				System.out.println("[PHJ]bodyParsing4body:inptTmgtDcd"+ inptTmgtDcd);
+//				
+//				body.putAll(converterService.listToMap(data, io.getFieldList(), isNullable(inptTmgtDcd)));
+//				System.out.println("[PHJ]bodyParsing4body:"+ body);
+//				
+//				ibkMessage.setBody(body);
+//			}
+//		} catch (Exception e) {
+//			throw new IBKExceptionMCA(ErrorType.MESSAGE, "Message Search Error : " + ibkMessage.getInterfaceId());
+//		}
+//	}
 	public void parsingFromHost(Exchange exchange ) throws Exception {
 		Message message = exchange.getIn();
 		byte[] messageData = message.getBody(byte[].class);
