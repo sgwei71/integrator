@@ -61,11 +61,8 @@ public class ProcessPreAPI {
 	}
 	
 	protected void init(Exchange exchange) throws Exception {
-		// 파싱
-
 		
 		parsingAPI.parsing(exchange);
-		System.out.println("pasing success");
 		// ValidCheck
 		IBKMessage ibkMessage = exchange.getIn().getBody(IBKMessage.class);
 	}
