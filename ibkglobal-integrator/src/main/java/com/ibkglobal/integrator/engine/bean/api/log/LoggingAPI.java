@@ -32,7 +32,7 @@ public class LoggingAPI {
 		LogManager.putMdc(logName);
 		Logger logger = LogManager.getLogger(LogType.DYNAMIC);
 		
-		logger.info("[" + seq + "]"+ seqString(seq) + logData);
+		//logger.info("[" + seq + "]"+ seqString(seq) + logData);
 	}
 	
 	public String createLogData(Exchange exchange) throws Exception {
