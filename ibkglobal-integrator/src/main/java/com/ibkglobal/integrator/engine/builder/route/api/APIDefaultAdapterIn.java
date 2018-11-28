@@ -47,7 +47,7 @@ public class APIDefaultAdapterIn extends RouteCreateDefault {
 				 // RouteCreateInfo builderInfo;
 				    @Override
 				    public void configure() throws Exception {
-				    	System.out.println("====");
+				  //  	System.out.println("====");
 				   // 	buillderInfo.endpointInfo.getEndpointIp()
 				   	int port =  builderInfo.getFromEndpoint().getEndpointPort();
 				   	String path = builderInfo.getFromEndpoint().getPathNm();

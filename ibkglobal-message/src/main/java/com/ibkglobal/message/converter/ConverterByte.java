@@ -169,21 +169,21 @@ public class ConverterByte {
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void mapToFlat(List<byte[]> flatData, LinkedHashMap<String, Object> data, List<Tlgr> fieldList) {
-		
 		fieldList.forEach(field -> {
 			if ("ARRAY".equals(field.getDataTypeNm()) && field.getFieldList() != null) {
 				((LinkedList) data.get(field.getEnsnFldNm())).forEach(map -> {
 					mapToFlat(flatData, (LinkedHashMap<String, Object>) map, field.getFieldList());
 				});
 			} else {
+				
 				String value = fieldStringFormat(field.getDataTypeNm(), data.get(field.getEnsnFldNm()), Integer.parseInt(field.getAllDataLenCon()), field.getDcfrDataLen());
+				
 				flatData.add(value.getBytes());
 			}
 		});
 	}
 	
 	public static String fieldStringFormat(String type, Object value, int defaultLength, int scale) {
-		
 		if (value == null) {
 			if ("STRING".equals(type) || "DATASETCODE".equals(type)) value = "";
 			else value = 0;

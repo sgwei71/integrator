@@ -135,13 +135,10 @@ public void composingFromHost(Exchange exchange)  {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		//userData 변환 수행 
+		//	System.out.println("ComposingAPI[dataToFlat]+"+ibkMessage.getInterfaceId());
 
-		
-		
-		
-		System.out.println("ComposingAPI[dataToFlat]+"+ibkMessage.getInterfaceId());
-
-//		IoCacheMCA entity = resourceMCA.getSourceIo(ibkMessage.getInterfaceId(), "IN") ;
+		//		IoCacheMCA entity = resourceMCA.getSourceIo(ibkMessage.getInterfaceId(), "IN") ;
 
 		IoCacheMCA body = resourceMCA.getSourceIo(ibkMessage.getInterfaceId(),"IN");
 				//.getTargetBodyEntity(ibkMessage.getInterfaceId());
@@ -169,35 +166,15 @@ public void composingFromHost(Exchange exchange)  {
 		
 		byte[] lastResult = null;
 		try {
-			//result.add("@@".getBytes("MS949"));
-		//	System.arraycopy(lengthCheck("INTEGER", resultData.length - 6, 6, 0), 0, resultData, 0, 6);
-			System.out.println("=="+new String(lengthCheck("INTEGER", resultData.length, 6, 0)));
+	//		System.out.println("=="+new String(lengthCheck("INTEGER", resultData.length, 6, 0)));
 			byte[] userLength = lengthCheck("INTEGER", resultData.length, 6, 0);
-			
 			lastResult = concatenateByteArrays(userLength,resultData);
-			System.out.println("[last]="+new String(lastResult));
-			
-			//	lastResult = concatenateByteArrays("IO".getBytes("MS949"),resultData);
-			
-		//	System.out.println("[resultData]="+new String(resultData));
-				
 			lastResult = concatenateByteArrays("IO".getBytes("MS949"),lastResult);
-			
-			
-			System.out.println("[last]="+new String(lastResult));
-			
-			
-			
-			//System.arraycopy(lengthCheck("INTEGER", lastResult.length - 6, 6, 0), 0, lastResult, 0, 6);
-			
-			 lastResult = concatenateByteArrays(resultFlat,lastResult);
-				System.out.println("[last]="+new String(lastResult));
-				
+			lastResult = concatenateByteArrays(resultFlat,lastResult);
 			lastResult = concatenateByteArrays(lastResult,"@@".getBytes("MS949"));
-			System.out.println("[last]="+new String(lastResult));
-			
 			System.arraycopy(lengthCheck("INTEGER", lastResult.length - 6, 6, 0), 0, lastResult, 0, 6);
-			System.out.println("[last]="+new String(lastResult));
+
+			System.out.println("[Flat 변환 last]="+new String(lastResult));
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

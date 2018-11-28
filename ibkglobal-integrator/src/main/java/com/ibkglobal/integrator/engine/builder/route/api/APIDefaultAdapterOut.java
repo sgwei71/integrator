@@ -48,7 +48,7 @@ public class APIDefaultAdapterOut extends RouteCreateDefault {
 			public void process(Exchange exchange) throws Exception {
 				// TODO Auto-generated method stub
 				byte[] ibkMessage = exchange.getIn().getBody(byte[].class);
-				System.out.println("composing후1"+ibkMessage);
+				System.out.println("composing후byte[]="+new String(ibkMessage));
 			
 			}
 			
