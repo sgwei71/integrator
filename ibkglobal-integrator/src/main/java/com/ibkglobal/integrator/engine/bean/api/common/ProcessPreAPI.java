@@ -1,5 +1,7 @@
 package com.ibkglobal.integrator.engine.bean.api.common;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,13 +51,19 @@ public class ProcessPreAPI {
 	
 	protected void initSetHeader(Exchange exchange) throws CommonException {
 		Message message = exchange.getIn();
-		
+		HttpServletRequest request = exchange.getIn().getBody(HttpServletRequest.class);
+		//IF ID Setting
+		message.setHeader(ConstantCode.IBK_INTERFACE_ID, request.getHeader("INTERFACEID"));
+	    
 		message.setHeader(ConstantCode.SEQ, "2");
-	    message.setHeader(ConstantCode.INFRA_TYPE, InfraType.FEP);
+	    message.setHeader(ConstantCode.INFRA_TYPE, InfraType.API);
+	    
 	}
 	
 	protected void init(Exchange exchange) throws Exception {
 		// 파싱
+
+		
 		parsingAPI.parsing(exchange);
 		System.out.println("pasing success");
 		// ValidCheck
