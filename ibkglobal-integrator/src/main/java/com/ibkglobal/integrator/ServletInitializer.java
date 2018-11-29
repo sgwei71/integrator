@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		//변경 업데이트 테스트
+		//update 12:51
 		return application.sources(IbkglobalIntegratorApplication.class);
 	}
 
