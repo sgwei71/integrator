@@ -1,0 +1,83 @@
+#Common
+#server.port: 80
+server:
+  address: 127.0.0.1
+  port: 8080
+  
+#Log
+logging:
+  config: classpath:logback-spring.xml
+
+#integrator
+integrator:
+  config:
+    route-base-type : file
+    json-file-url   : classpath:json
+    instance-type   :
+    - API
+
+#Message
+message:
+  config:
+    repository-type: file
+    
+#Camel
+camel:
+  springboot:
+    use-mdc-logging: true      
+  dataformat:
+    json-jackson:
+      enabled: true
+  component:
+    netty4:
+      maximum-pool-size: 100
+    netty4-http:
+      maximum-pool-size: 100
+
+#ActiveMQ
+#spring:
+#  activemq:
+#    broker-url: tcp://dev.mq.ibkglobal.com:61613
+#    user: admin
+#    password: admin
+#    packages:
+#      trusted:
+#      - com.ibkglobal.message
+#      trust-all: true
+    
+#ehcache
+  cache:
+    ehcache:
+      config: classpath:ehcache.xml
+
+#jackson     
+  jackson:
+#    serialization:
+#      indent-output: true
+    deserialization:
+      fail-on-unknown-properties: false
+    default-property-inclusion: non-null
+    
+#thymeleaf
+  thymeleaf:
+    cache: false
+    
+  main:
+    banner-mode: console
+    
+#Rest Configuration
+rest:
+  configuration:
+    host: 0.0.0.0
+    port: 8081
+    biding-mode: json
+    pretty-print: true
+    api-host: 0.0.0.0
+    context-path: /api
+    api-context-path: /api-doc
+
+    api-title: IBK기업은행API
+    api-version: 1.0.0
+    enable-cors: true
+    
+    

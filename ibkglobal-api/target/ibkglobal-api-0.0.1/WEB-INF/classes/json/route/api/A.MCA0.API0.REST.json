@@ -1,0 +1,61 @@
+{
+	"instanceType": "API",
+	"instanceRouteType": "ADAPTER",
+	"parsingType" : "JSON",
+	"sysCd": "api",
+	"bizCd": "api",
+	"orgCd": "api",
+	"routeDescription": "API ADAPTER IN",
+	
+	"routeId": "A.MCA0.API0.REST",
+	"routeType": "API_DEFAULT_ADAPTER_IN",
+	"routeInOut": "IN/OUT",
+	"autoStart": "true",
+	"fromEndpoint": {
+		"endpointType": "REST",
+		"pathNm": "/service1",
+		"httpMehtod" : "POST",
+		"consumes": "application/json",
+		"produces": "application/json",
+		"httpMethod": "POST",
+		"swaggerBodyDescription": "Rest Route body description",
+		"swaggerTag": "Rest Route Tag",
+		"headers": [
+			{
+				"headerName": "Content-Type",
+				"headerDescription": "Content-Type",
+				"headerRequired": true
+			},
+			{
+				"headerName": "Accept",
+				"headerDescription": "Accept",
+				"headerRequired": true
+			},
+			{
+				"headerName": "X-IBM-Client-Id",
+				"headerDescription": "X-IBM-Client-Id",
+				"headerRequired": true
+			},
+			{
+				"headerName": "IF-ID",
+				"headerDescription": "IF-ID",
+				"headerRequired": true
+			},
+			{
+				"headerName": "X-Global-Transaction-Id",
+				"headerDescription": "X-Global-Transaction-Id",
+				"headerRequired": false
+			},
+			{
+				"headerName": "X-IBM-MMS-Id",
+				"headerDescription": "X-IBM-MMS-Id",
+				"headerRequired": false
+			}
+		]
+	},
+	"toEndpoint": {
+		"endpointType": "DIRECT",
+		"endpointDirect": "A.MCA0.API0.DIRECT"
+	},
+	"logName": "API"
+}

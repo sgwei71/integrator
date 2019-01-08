@@ -1,0 +1,78 @@
+{
+	"utInopId": "S00000000055",
+	"utInopIdnNm": "ARSN_KFTC_ECommonHeaderHSB",
+	"common": {
+		"inopDescCon": "순위확인서 발급 대외 타겟",
+		"system": {
+			"code": "CBK",
+			"name": "계정계시스템"
+		},
+		"bwcd": {
+			"code": "AGN"
+		},
+		"wrtnTs": "2018-05-24 14:36:58",
+		"mkrEmn": "S01173"
+	},
+	"processType": {
+		"online": {
+			"mtvCd": {
+				"code": " "
+			},
+			"tcslInfoTrknCd": {
+				"code": "000",
+				"name": "고객X 마케팅X"
+			},
+			"external": {
+				"otisCd": {
+					"code": "KFTC",
+					"name": "금융결제원"
+				},
+				"extBwcd": {
+					"code": "ARSN",
+					"name": "ARS공동망"
+				},
+				"extTlgrIttcdCon": "0210",
+				"extTrnDcdCon": "304000",
+				"extEtcDcdCon": "02",
+				"inaoCd": {
+					"code": "2",
+					"name": "대외기관"
+				},
+				"anenVlCon": "KSC5601"
+			}
+		}
+	},
+	"data": {
+		"utInopId": "S00000000055",
+		"utInopNm": "ARSN_KFTC_ECommonHeaderHSB",
+		"utInopDescCon": "금융결제원 ARS공동망 주택청약 대외 공통 헤더",
+		"utInopIdnNm": "ARSN_KFTC_ECommonHeaderHSB",
+		"fieldList": [
+			{
+				"tlgrSqc": 1,
+				"lvlNo": "1",
+				"fldNm": "텔레뱅킹비밀번호",
+				"ensnFldNm": "TLBN_PWD",
+				"tlgrDescCon": "텔레뱅킹 접속시 필요한 텔레뱅킹이용자비밀 번호",
+				"dataTypeNm": "STRING",
+				"allDataLenCon": "10",
+				"inptMndrYn": "N",
+				"vrfcYn": " ",
+				"dcfrDataLen": 0,
+				"vldtInspYn": "N",
+				"encpYn": "Y",
+				"trcKeyUseYn": " ",
+				"msgKeyUseYn": " ",
+				"extTlgrIttcdUseYn": " ",
+				"trnDcdUseYn": " ",
+				"extEtcDcdUseYn": " ",
+				"rpcdUseYn": " ",
+				"vrbnYn": "N",
+				"mskgUseYn": " ",
+				"logKeyUseYn": " ",
+				"ebccdDIcCdUseYn": " ",
+				"dbCsUseYn": " "
+			}
+		]
+	}
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <interface bound="outbound" id="APBO00062642" version="2" />
+    <src_io id="MAPBS0123018" />
+    <target_io id="MCBKT0123017" />
+    <mapping>
+        <source path="/EDPS_CSN" />
+        <target path="/EDPS_CSN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/KRN_CSM" />
+        <target path="/KRN_CSM" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/ENSN_CSM" />
+        <target path="/ENSN_CSM" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/INDV_CORP_DTL_DCD" />
+        <target path="/INDV_CORP_DTL_DCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/PSML_SNPL_DCD" />
+        <target path="/PSML_SNPL_DCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/TEL_NFPL_DCD" />
+        <target path="/TEL_NFPL_DCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/FAX_SNPL_DCD" />
+        <target path="/FAX_SNPL_DCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/NTCD" />
+        <target path="/NTCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/RSDN_NTCD" />
+        <target path="/RSDN_NTCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/INDV_ITBK_JNNG_YN" />
+        <target path="/INDV_ITBK_JNNG_YN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/ENPR_ITBK_JNNG_YN" />
+        <target path="/ENPR_ITBK_JNNG_YN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/VLNT_ORGA_YN" />
+        <target path="/VLNT_ORGA_YN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/TRSG_YN" />
+        <target path="/TRSG_YN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/MNGM_BRCD" />
+        <target path="/MNGM_BRCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/CSMN_TEAM_CD" />
+        <target path="/CSMN_TEAM_CD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/CSMN_TEAM_DLCD" />
+        <target path="/CSMN_TEAM_DLCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/CSMN_TEAM_NM" />
+        <target path="/CSMN_TEAM_NM" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/CSIN_DSTU_TGT_YN" />
+        <target path="/CSIN_DSTU_TGT_YN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/CSIN_DSTU_INQ_ABL_YN" />
+        <target path="/CSIN_DSTU_INQ_ABL_YN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/CSIN_DSTU_RSN_DCD" />
+        <target path="/CSIN_DSTU_RSN_DCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/CSIN_DSTU_TRN_YMD" />
+        <target path="/CSIN_DSTU_TRN_YMD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/CSIN_DSTU_LSTR_YMD" />
+        <target path="/CSIN_DSTU_LSTR_YMD" />
+        <function ref="move" />
+    </mapping>
+</map>

@@ -1,0 +1,24 @@
+{
+ "instanceType"      : "MCA",
+ "instanceRouteType" : "ADAPTER",
+ "sysCd"             : "GCB",
+ "bizCd"             : "KR",
+ "orgCd"             : "",
+ "description"       : "계정계 BID PROCESS",
+ 
+ "routeId"           : "M.BID0.GCB0.KR00.Q",
+ "routeType"         : "MCA_BID_PROCESS",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"      : 
+ {
+ 	"endpointType"  : "QUEUE",
+ 	"endpointQueue" : "M.BID0.GCB0.KR00.QQ"
+ },
+ "toEndpoint"        : 
+ {
+ },
+ 
+ "logName"           : "BID.KR"
+}

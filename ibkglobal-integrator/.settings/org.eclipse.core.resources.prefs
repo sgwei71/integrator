@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
 encoding//src/main/resources=UTF-8
+encoding//src/main/resources/M.BID0.GCB0.KR00.Q.json=UTF-8
 encoding//src/main/resources/json/custom/fep/RouteLoaderFEP.json=UTF-8
 encoding//src/main/resources/json/custom/mca/EtcLoaderMCA.json=UTF-8
 encoding//src/main/resources/json/message/fep/header/ARSN/ARSN_KFTC_ECommonHeaderHSB.json=UTF-8
@@ -49,7 +50,6 @@ encoding//src/main/resources/json/route/fep/SIM/EXT/F.SIM0.SIM0.HC8090.json=UTF-
 encoding//src/main/resources/json/route/fep/SIM/EXT/F.SIM0.SIM0.HS30200.json=UTF-8
 encoding//src/main/resources/json/route/fep/SIM/HOST/F.SIM0.SIM0.HC8080.json=UTF-8
 encoding//src/main/resources/json/route/fep/SIM/HOST/F.SIM0.SIM0.HS30100.json=UTF-8
-encoding//src/main/resources/json/route/mca/GCB/M.BID0.GCB0.KR00.Q.json=UTF-8
 encoding//src/main/resources/json/route/mca/GCB/M.GCB0.BID0.HS30600.json=UTF-8
 encoding//src/main/resources/json/route/mca/GCB/M.GCB0.KR00.HC9080.json=UTF-8
 encoding//src/main/resources/json/route/mca/GCB/M.GCB0.KR00.HS18080.json=UTF-8

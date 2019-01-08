@@ -1,0 +1,27 @@
+{
+ "instanceType"      : "MCA",
+ "instanceRouteType" : "ADAPTER",
+ "parsingType"       : "JSON",
+ "sysCd"             : "GCB",
+ "bizCd"             : "KR",
+ "orgCd"             : "",
+ "description"       : "계정계 비드",
+ 
+ "routeId"           : "M.GCB0.BID0.HS30600",
+ "routeType"         : "MCA_BID_ADAPTER",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+ 	"endpointType" : "HTTP",
+ 	"endpointIp"   : "{{server.address}}",
+ 	"endpointPort" : "30600",
+ 	"pathNm"       : "/httpin"
+ },
+ "toEndpoint"                : 
+ {
+ },
+ 
+ "logName"           : "GCB.BID"
+}

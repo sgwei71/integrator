@@ -1,0 +1,300 @@
+{
+	"modified": "2010/12/20 11:22:460:056",
+	"interfaceInfo": [
+		{
+			"clazz": "ITRO00060088",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "ITRO00060088"
+		},
+		{
+			"clazz": "APBO00062463",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062463"
+		},
+		{
+			"clazz": "APBO00062525",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062525"
+		},
+		{
+			"clazz": "APBO00062539",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062539"
+		},
+		{
+			"clazz": "APBO00062642",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062642"
+		},
+		{
+			"clazz": "APBO00062653",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062653"
+		},
+		{
+			"clazz": "APBO00062659",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062659"
+		},
+		{
+			"clazz": "APBO00062661",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062661"
+		},
+		{
+			"clazz": "APBO00062677",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062677"
+		},
+		{
+			"clazz": "APBO00062679",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062679"
+		},
+		{
+			"clazz": "APBO00062680",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062680"
+		},
+		{
+			"clazz": "APBO00062682",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062682"
+		},
+		{
+			"clazz": "APBO00062683",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062683"
+		},
+		{
+			"clazz": "APBO00062690",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062690"
+		},
+		{
+			"clazz": "APBO00062698",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062698"
+		},
+		{
+			"clazz": "APBO00062735",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062735"
+		},
+		{
+			"clazz": "APBO00062830",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062830"
+		},
+		{
+			"clazz": "APBO00062834",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062834"
+		},
+		{
+			"clazz": "APBO00062849",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062849"
+		},
+		{
+			"clazz": "APBO00062878",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062878"
+		},
+		{
+			"clazz": "APBO00062890",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062890"
+		},
+		{
+			"clazz": "APBO00062930",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062930"
+		},
+		{
+			"clazz": "APBO00062931",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062931"
+		},
+		{
+			"clazz": "APBO00062932",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062932"
+		},
+		{
+			"clazz": "APBO00062937",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062937"
+		},
+		{
+			"clazz": "APBO00062969",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062969"
+		},
+		{
+			"clazz": "APBO00062982",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062982"
+		},
+		{
+			"clazz": "APBO00063044",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063044"
+		},
+		{
+			"clazz": "APBO00063086",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063086"
+		},
+		{
+			"clazz": "APBO00063087",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063087"
+		},
+		{
+			"clazz": "APBO00063099",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063099"
+		},
+		{
+			"clazz": "APBO00063100",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063100"
+		},
+		{
+			"clazz": "APBO00063101",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063101"
+		},
+		{
+			"clazz": "APBO00063102",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063102"
+		},
+		{
+			"clazz": "APBO00063103",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063103"
+		},
+		{
+			"clazz": "APBO00063114",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063114"
+		},
+		{
+			"clazz": "APBO00063151",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063151"
+		},
+		{
+			"clazz": "APBO00063156",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00063156"
+		},
+		{
+			"clazz": "APBO00062529",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062529"
+		},
+		{
+			"clazz": "APBO00062556",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062556"
+		},
+		{
+			"clazz": "APBO00062590",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062590"
+		},
+		{
+			"clazz": "APBO00062812",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "APBO00062812"
+		}
+	]
+
+}

@@ -1,0 +1,72 @@
+{
+	"intfId": "ITRO00000035",
+	"intfVrsnVl": 1,
+	"intfNm": "IBK io등록시 I/F 자동생서 테스트",
+	"common": {
+		"intfDescCon": "IBK 타겟IO 테스트 입니다.",
+		"system": {
+			"code": "TCH",
+			"name": "2채널인증시스템"
+		},
+		"bswr": {
+			"code": "CCH",
+			"name": "ARS인증(2채널인증)"
+		},
+		"wrtnTs": "2018-05-28 15:01:05",
+		"mkrEmn": "S01174",
+		"attribute": {
+			"infra": {
+				"code": "1",
+				"name": "MCA"
+			},
+			"process": {
+				"code": "1",
+				"name": "온라인(대내온라인)"
+			},
+			"mpngYn": {
+				"code": "Y",
+				"name": "매핑함"
+			},
+			"online": {
+				"internal": {
+					"method": {
+						"content": "",
+						"code": "1",
+						"name": "요청/응답"
+					},
+					"svcId": ""
+				},
+				"external": {
+					
+				}
+			}
+		}
+	},
+	"interfaceType": {
+		"source": {
+			"inopId": "MTCHS0000093",
+			"system": {
+				"code": "TCH",
+				"name": "2채널인증시스템"
+			},
+			"bswr": {
+				"code": "CCH",
+				"name": "ARS인증(2채널인증)"
+			},
+			"mkrEmn": "S01174",
+			"inndSvcId": "TCHCCH388014"
+		},
+		"target": {
+			"inopId": "MTCHT0000092",
+			"system": {
+				"code": "TCH",
+				"name": "2채널인증시스템"
+			},
+			"bswr": {
+				"code": "CCH",
+				"name": "ARS인증(2채널인증)"
+			},
+			"mkrEmn": "S01174"
+		}
+	}
+}

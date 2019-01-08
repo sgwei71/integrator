@@ -1,0 +1,64 @@
+{
+	"inopId": "ECBKS0000008",
+	"inopIdnNm": "ARSN_KFTC_H0210_304000_02",
+	"inopVrsnVl": "1",
+	"inopNm": "순위확인서 발급 대내 소스",
+	"common": {
+		"inopDescCon": "순위확인서 발급 대내 소스",
+		"system": {
+			"code": "CBK",
+			"name": "계정계시스템"
+		},
+		"bwcd": {
+			"code": "AGN"
+		},
+		"wrtnTs": "2018-05-24 14:36:59",
+		"mkrEmn": "S01173"
+	},
+	"processType": {
+		"online": {
+			"mtvCd": {
+				"code": " "
+			},
+			"tcslInfoTrknCd": {
+				"code": "000",
+				"name": "고객X 마케팅X"
+			},
+			"external": {
+				"otisCd": {
+					"code": "KFTC",
+					"name": "금융결제원"
+				},
+				"extBwcd": {
+					"code": "ARSN",
+					"name": "ARS공동망"
+				},
+				"extTlgrIttcdCon": "0210",
+				"extTrnDcdCon": "304000",
+				"extEtcDcdCon": "02",
+				"inaoCd": {
+					"code": "1",
+					"name": "대내기관"
+				},
+				"anenVlCon": "KSC5601"
+			}
+		}
+	},
+	"data": {
+		"name": "ARSN_KFTC_H0210_304000_02",
+		"sequence": [
+			{
+				"seq": 1,
+				"name": "Header1",
+				"elementCd": "HEADER",
+				"type": "ARSN_KFTC_HCommonHeaderHSB"
+			},
+			{
+				"seq": 2,
+				"name": "Entity1",
+				"elementCd": "ENTITY",
+				"type": "ARSN_KFTC_H0200_304000_02"
+			}
+		]
+	}
+}

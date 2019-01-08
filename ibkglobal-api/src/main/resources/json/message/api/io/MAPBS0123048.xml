@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<io xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MAPBS0123048" version="3">
+    <common>
+        <description><![CDATA[박스플랫폼 대출 이자조회]]></description>
+        <system code="APB" name="어플리케이션시스템" />
+        <!--시스템코드, 시스템명-->
+        <work code="APB" name="어플리케이션시스템" />
+        <!--업무구분코드-->
+        <datetime>2018-11-20 13:13:46</datetime>
+        <!--작성 시간-->
+        <writer>F15572</writer>
+        <!--소유자-->
+    </common>
+    <process_type>
+        <online>
+            <service_in id="CBKAPB320001" />
+            <!--Input 서비스 ID-->
+            <service_out />
+            <!--Output 서비스 ID-->
+            <syn-asyn code="1" name="동기" />
+            <!--동기 / 비동기 여부-->
+            <bizhub code="000" name="고객X 마케팅X" />
+            <!--비즈허브 접촉정보거래종류-->
+            <trncd_in />
+            <!--Input 거래 코드-->
+            <trncd_out />
+            <!--Output 거래 코드-->
+            <external>
+                <system />
+                <!--대외 기관 구분 코드-->
+                <work />
+                <!--대외 업무 코드-->
+                <msg />
+                <!--대외 전문 종별 코드-->
+                <tx />
+                <!--대외 거래 구분 코드-->
+                <inao code="1" />
+                <!--대내외 구분 코드 : 1 대내, 2 대외-->
+                <etc />
+                <!--대외 기타 구분 코드-->
+            </external>
+        </online>
+        <eai>
+            <service />
+            <!--DB 서비스명-->
+            <table />
+            <!--DB 테이블 명-->
+        </eai>
+    </process_type>
+    <inbound><![CDATA[<?xml version="1.0" encoding="EUC-KR"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://schemas.ibk.com/mms/io/">
+    <xs:complexType name="MAPBS0123048_inbound">
+        <xs:sequence>
+            <xs:element name="ICN">
+                <xs:annotation>
+                    <xs:documentation>내부계약번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="15" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LOAN_ACN">
+                <xs:annotation>
+                    <xs:documentation>대출계좌번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="30" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ARR_TOB_NO">
+                <xs:annotation>
+                    <xs:documentation>계약회차번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="10" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ITRV_BASE_YMD">
+                <xs:annotation>
+                    <xs:documentation>이자수입기준년월일</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="8" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ITRV_EXPI_YMD">
+                <xs:annotation>
+                    <xs:documentation>이자수입만기년월일</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="8" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ENAM_PLRP_YN">
+                <xs:annotation>
+                    <xs:documentation>전액원금상환여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="FRCY_AMT">
+                <xs:annotation>
+                    <xs:documentation>외화금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="RPSC_AMT">
+                <xs:annotation>
+                    <xs:documentation>상환예정금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="TRHS_PCSN_SRN">
+                <xs:annotation>
+                    <xs:documentation>거래내역처리일련번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="7" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NTAR_ITRV_YN">
+                <xs:annotation>
+                    <xs:documentation>미도래이자수입여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>]]></inbound>
+    <outbound><![CDATA[<?xml version="1.0" encoding="EUC-KR"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://schemas.ibk.com/mms/io/">
+    <xs:complexType name="MAPBS0123048_outbound">
+        <xs:sequence>
+            <xs:element name="ICN">
+                <xs:annotation>
+                    <xs:documentation>내부계약번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="15" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LOAN_ACN">
+                <xs:annotation>
+                    <xs:documentation>대출계좌번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="30" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ARR_TOB_NO">
+                <xs:annotation>
+                    <xs:documentation>계약회차번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="10" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="TLAC_ABNM_NM">
+                <xs:annotation>
+                    <xs:documentation>계정과목약칭명</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="50" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ATAG_MNDP_ACN">
+                <xs:annotation>
+                    <xs:documentation>자동이체약정예금계좌번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="16" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DROT_ABL_AMT">
+                <xs:annotation>
+                    <xs:documentation>출금가능금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="OVDU_YN">
+                <xs:annotation>
+                    <xs:documentation>연체여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="OVDU_NBT">
+                <xs:annotation>
+                    <xs:documentation>연체횟수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="INT_PRPA_DCD">
+                <xs:annotation>
+                    <xs:documentation>이자선취후취구분코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="CRCD">
+                <xs:annotation>
+                    <xs:documentation>통화코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ARR_AMT">
+                <xs:annotation>
+                    <xs:documentation>계약금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="TLBZ_BAL">
+                <xs:annotation>
+                    <xs:documentation>총여신잔액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="TLBZ_WON_BAL">
+                <xs:annotation>
+                    <xs:documentation>총여신원화잔액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LARV_AGRM_IRT">
+                <xs:annotation>
+                    <xs:documentation>최종수입약정이율</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="12" />
+                        <xs:fractionDigits value="7" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="EXCD_RSN_CON">
+                <xs:annotation>
+                    <xs:documentation>제외사유내용</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="50" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PRPN_INT">
+                <xs:annotation>
+                    <xs:documentation>내입이자</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="UNCC_INT">
+                <xs:annotation>
+                    <xs:documentation>미수이자</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="VNIR_ADS_VL">
+                <xs:annotation>
+                    <xs:documentation>임의이자법수값</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="15" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="BF_INT_FRCT_AMT">
+                <xs:annotation>
+                    <xs:documentation>전이자우수리금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="AF_INT_FRCT_AMT">
+                <xs:annotation>
+                    <xs:documentation>후이자우수리금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PRPN_RPMT_INT">
+                <xs:annotation>
+                    <xs:documentation>내입환출이자</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="IPIN_AMT">
+                <xs:annotation>
+                    <xs:documentation>수입이자금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="RCVE_PRNC_AMT">
+                <xs:annotation>
+                    <xs:documentation>수입원금금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="RCVE_PIA_AMT">
+                <xs:annotation>
+                    <xs:documentation>수입원리금금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="RCVE_FGCP_AMT">
+                <xs:annotation>
+                    <xs:documentation>수입외화원금금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="AGRM_INT">
+                <xs:annotation>
+                    <xs:documentation>약정이자</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="OVDU_INT">
+                <xs:annotation>
+                    <xs:documentation>연체이자</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="SUND_INT">
+                <xs:annotation>
+                    <xs:documentation>잡이자</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="TRN_BASE_YMD">
+                <xs:annotation>
+                    <xs:documentation>거래기준년월일</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="8" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="WLST_ITRV_YMD">
+                <xs:annotation>
+                    <xs:documentation>전최종이자수입년월일</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="8" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="WHL_ITPM_SCDL_YMD">
+                <xs:annotation>
+                    <xs:documentation>전이자납입예정년월일</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="8" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NEXT_ITPM_YMD">
+                <xs:annotation>
+                    <xs:documentation>다음이자납입년월일</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="8" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="OVDU_IRT">
+                <xs:annotation>
+                    <xs:documentation>연체이율</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="12" />
+                        <xs:fractionDigits value="7" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="TRN_HST_ROWCOUNT">
+                <xs:annotation>
+                    <xs:documentation>거래내역_배열</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element maxOccurs="unbound" name="TRN_HST" type="TRN_HST_TYPE">
+                <xs:annotation>
+                    <xs:documentation>거래내역</xs:documentation>
+                    <xs:appinfo>
+                        <p:adjustLength category="variableField" lengthFieldURL="TRN_HST_ROWCOUNT" />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TRN_HST_TYPE">
+        <xs:sequence>
+            <xs:element name="ADIN_TGT_AMT">
+                <xs:annotation>
+                    <xs:documentation>부리대상금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ADIN_RCKN_YMD">
+                <xs:annotation>
+                    <xs:documentation>부리기산년월일</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="8" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ADIN_EXPI_YMD">
+                <xs:annotation>
+                    <xs:documentation>부리만기년월일</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="8" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ADIN_NDD">
+                <xs:annotation>
+                    <xs:documentation>부리일수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="10" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ADIN_IRT">
+                <xs:annotation>
+                    <xs:documentation>부리이율</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="18" />
+                        <xs:fractionDigits value="11" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="APLY_XRT">
+                <xs:annotation>
+                    <xs:documentation>적용환율</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="12" />
+                        <xs:fractionDigits value="6" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="WON_INT_AMT">
+                <xs:annotation>
+                    <xs:documentation>원화이자금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="FINT_AMT">
+                <xs:annotation>
+                    <xs:documentation>외화이자금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="CRCD">
+                <xs:annotation>
+                    <xs:documentation>통화코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="XRT_DCD">
+                <xs:annotation>
+                    <xs:documentation>환율구분코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="2" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="XRT_KCD">
+                <xs:annotation>
+                    <xs:documentation>환율종류코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="2" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="BLTN_TOB">
+                <xs:annotation>
+                    <xs:documentation>고시회차</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PRPT_INT_APLY_NDD">
+                <xs:annotation>
+                    <xs:documentation>선납이자적용일수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="10" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="FRCY_AMT">
+                <xs:annotation>
+                    <xs:documentation>외화금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="RPSC_AMT">
+                <xs:annotation>
+                    <xs:documentation>상환예정금액</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="19" />
+                        <xs:fractionDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>]]></outbound>
+</io>

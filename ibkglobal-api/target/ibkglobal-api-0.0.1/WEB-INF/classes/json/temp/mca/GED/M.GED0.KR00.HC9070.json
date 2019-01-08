@@ -1,0 +1,31 @@
+{
+ "instanceType"      : "MCA",
+ "instanceRouteType" : "ADAPTER",
+ "parsingType"       : "JSON",
+ "sysCd"             : "GED",
+ "bizCd"             : "KR",
+ "orgCd"             : "",
+ "routeDescription"  : "정보계 ADAPTER OUT",
+ 
+ "routeId"           : "M.GED0.KR00.HC9070",
+ "routeType"         : "MCA_DEFAULT_ADAPTER_OUT",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+ 	"endpointType"   : "DIRECT",
+ 	"endpointDirect" : "GED0.KR00.HC9070"
+ },
+ "toEndpoint"                : 
+ {
+ 	"endpointType"   : "HTTP",
+ 	"endpointIp"     : "dev.ged.ibkglobal.com",
+ 	"endpointPort"   : "9070",
+ 	"pathNm"         : "/service/test",
+ 	"disconnect"     : "true",
+ 	"reqTimeOut"     : "60000"
+ },
+ 
+ "logName"           : "GCB.KR"
+}

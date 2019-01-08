@@ -1,0 +1,31 @@
+{
+ "instanceType"      : "API",
+ "instanceRouteType" : "ADAPTER",
+ "parsingType"       : "FLAT",
+ "sysCd"             : "api",
+ "bizCd"             : "api",
+ "orgCd"             : "api",
+ "routeDescription"  : "MCA ADAPTER OUT",
+ 
+ "routeId"           : "A.MCA0.API0.HC9080",
+ "routeType"         : "API_DEFAULT_ADAPTER_OUT",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+ 	"endpointType"   : "DIRECT",
+ 	"endpointDirect" : "MCA0.API0.HC9080"
+ },
+ "toEndpoint"                : 
+ {
+ 	"endpointType"   : "HTTP",
+ 	"endpointIp"     : "dev.gcb.ibkglobal.com",
+ 	"endpointPort"   : "9080",
+ 	"pathNm"         : "/service/test",
+ 	"disconnect"     : "true",
+ 	"reqTimeOut"     : "60000"
+ },
+ 
+ "logName"           : "MCA0.API0"
+}

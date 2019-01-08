@@ -64,8 +64,10 @@ public class IbkglobalIntegratorApplicationTests {
 	
 	@Test
 	public void test1() {
-		
+		TlgrMapping mapping = new TlgrMapping();
 	}
+	
+
 	@Test
 	public void endpointCreate() throws Exception {
 		
@@ -194,4 +196,5 @@ public class IbkglobalIntegratorApplicationTests {
 		routeTest.routeAdd(routeCreateTest.createRouteInfo());
 		//routeTest.routeRemove("");
 	}
+
 }

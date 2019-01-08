@@ -1,0 +1,25 @@
+{
+ "instanceType"      : "MCA",
+ "instanceRouteType" : "ADAPTER",
+ "parsingType"       : "JSON",
+ "sysCd"             : "GCB",
+ "bizCd"             : "KR",
+ "orgCd"             : "",
+ "routeDescription"  : "LOCAL ADAPTER OUT",
+ 
+ "routeId"           : "M.LOCAL.LOCAL.HC",
+ "routeType"         : "MCA_LOCAL_ADAPTER_OUT",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+ 	"endpointType"   : "DIRECT",
+ 	"endpointDirect" : "LOCAL.LOCAL.ADAPTER.OUT"
+ },
+ "toEndpoint"                : 
+ {
+ },
+ 
+ "logName"           : "GCB.KR"
+}

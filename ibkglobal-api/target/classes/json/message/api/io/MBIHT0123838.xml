@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<io xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MBIHT0123838" version="1">
+    <common>
+        <description><![CDATA[BOX플랫폼용 비대면상품추천(TOP10) SVO]]></description>
+        <system code="BIH" name="BIZ-HUB시스템" />
+        <!--시스템코드, 시스템명-->
+        <work code="APB" name="어플리케이션 뱅킹 시스템" />
+        <!--업무구분코드-->
+        <datetime>2018-12-20 14:26:01</datetime>
+        <!--작성 시간-->
+        <writer>F15571</writer>
+        <!--소유자-->
+    </common>
+    <process_type>
+        <online>
+            <service_in id="BIHAPB050002" />
+            <!--Input 서비스 ID-->
+            <service_out />
+            <!--Output 서비스 ID-->
+            <syn-asyn code="1" name="동기" />
+            <!--동기 / 비동기 여부-->
+            <bizhub code="000" name="고객X 마케팅X" />
+            <!--비즈허브 접촉정보거래종류-->
+            <trncd_in />
+            <!--Input 거래 코드-->
+            <trncd_out />
+            <!--Output 거래 코드-->
+            <external>
+                <system />
+                <!--대외 기관 구분 코드-->
+                <work />
+                <!--대외 업무 코드-->
+                <msg />
+                <!--대외 전문 종별 코드-->
+                <tx />
+                <!--대외 거래 구분 코드-->
+                <inao code="1" />
+                <!--대내외 구분 코드 : 1 대내, 2 대외-->
+                <etc />
+                <!--대외 기타 구분 코드-->
+            </external>
+        </online>
+        <eai>
+            <service />
+            <!--DB 서비스명-->
+            <table />
+            <!--DB 테이블 명-->
+        </eai>
+    </process_type>
+    <inbound><![CDATA[<?xml version="1.0" encoding="EUC-KR"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://schemas.ibk.com/mms/io/">
+    <xs:complexType name="MBIHT0123838_inbound">
+        <xs:sequence>
+            <xs:element name="RQST_SYS_DCD">
+                <xs:annotation>
+                    <xs:documentation>요청시스템구분코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="RQST_SYS_BSWR_DCD">
+                <xs:annotation>
+                    <xs:documentation>요청시스템업무구분코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_MENU_SYST_ID">
+                <xs:annotation>
+                    <xs:documentation>비대면채널메뉴체계ID</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PUSH_TKN_CON">
+                <xs:annotation>
+                    <xs:documentation>푸시토큰내용</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="512" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="EDPS_CSN">
+                <xs:annotation>
+                    <xs:documentation>전산고객번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="10" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="BSWR_CLCD">
+                <xs:annotation>
+                    <xs:documentation>업무분류코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="MXMM_NBI">
+                <xs:annotation>
+                    <xs:documentation>최대건수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="10" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LIST_PAGE_NMB">
+                <xs:annotation>
+                    <xs:documentation>LIST페이지개수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ROW_CNT">
+                <xs:annotation>
+                    <xs:documentation>행수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LIST_NEXTKEY_ROW_CNT">
+                <xs:annotation>
+                    <xs:documentation>리스트NextKey행수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>]]></inbound>
+    <outbound><![CDATA[<?xml version="1.0" encoding="EUC-KR"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://schemas.ibk.com/mms/io/">
+    <xs:complexType name="MBIHT0123838_outbound">
+        <xs:sequence>
+            <xs:element name="EDPS_CSN">
+                <xs:annotation>
+                    <xs:documentation>전산고객번호</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="10" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DBTO_RGSN_YN">
+                <xs:annotation>
+                    <xs:documentation>차주등록여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="CTLG_LIST_ROWCOUNT">
+                <xs:annotation>
+                    <xs:documentation>추천상품목록카운트</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element maxOccurs="unbound" name="CTLG_LIST" type="CTLG_LIST_TYPE">
+                <xs:annotation>
+                    <xs:documentation>추천상품목록</xs:documentation>
+                    <xs:appinfo>
+                        <p:adjustLength category="variableField" lengthFieldURL="CTLG_LIST_ROWCOUNT" />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="DATA_CNTI_YN">
+                <xs:annotation>
+                    <xs:documentation>데이터계속여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LIST_NEXTKEY_ROW_CNT">
+                <xs:annotation>
+                    <xs:documentation>리스트NextKey행수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="1" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="CTLG_LIST_TYPE">
+        <xs:sequence>
+            <xs:element name="BSWR_CLCD">
+                <xs:annotation>
+                    <xs:documentation>업무분류코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PDRC_DATA_DCD">
+                <xs:annotation>
+                    <xs:documentation>상품추천데이터구분코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PDLN_CD">
+                <xs:annotation>
+                    <xs:documentation>상품라인코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="2" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PDGR_CD">
+                <xs:annotation>
+                    <xs:documentation>상품그룹코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="2" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PDTM_CD">
+                <xs:annotation>
+                    <xs:documentation>상품템플릿코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PDCD">
+                <xs:annotation>
+                    <xs:documentation>상품코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="4" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PDF_INTCD">
+                <xs:annotation>
+                    <xs:documentation>상품내부코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="6" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ALL_PDCD">
+                <xs:annotation>
+                    <xs:documentation>전체상품코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="11" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_OFR_PDM">
+                <xs:annotation>
+                    <xs:documentation>비대면채널제공상품명</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PHRS_CON">
+                <xs:annotation>
+                    <xs:documentation>문구내용</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="2000" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="JNNG_CHNL_INFO_CON">
+                <xs:annotation>
+                    <xs:documentation>가입채널정보내용</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="MXAP_ABL_INR">
+                <xs:annotation>
+                    <xs:documentation>최대적용가능금리</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:DECIMAL">
+                        <xs:totalDigits value="12" />
+                        <xs:fractionDigits value="7" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PDIF_LINK_URL_ADR">
+                <xs:annotation>
+                    <xs:documentation>상품정보링크URL주소</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="200" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_NWPR_NTTN_YN">
+                <xs:annotation>
+                    <xs:documentation>비대면채널신상품표기여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_PPLR_PDF_NTTN_YN">
+                <xs:annotation>
+                    <xs:documentation>비대면채널인기상품표기여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_CHTT_CNSL_YN">
+                <xs:annotation>
+                    <xs:documentation>비대면채널채팅상담여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_PICT_CNSL_YN">
+                <xs:annotation>
+                    <xs:documentation>비대면채널영상상담여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_PRSA_YN">
+                <xs:annotation>
+                    <xs:documentation>비대면채널상품판매여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_PDF_INDV_JNNG_YN">
+                <xs:annotation>
+                    <xs:documentation>비대면채널상품개인가입여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_PDF_CORP_JNNG_YN">
+                <xs:annotation>
+                    <xs:documentation>비대면채널상품법인가입여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_PDF_INDV_BSNN_JNNG_YN">
+                <xs:annotation>
+                    <xs:documentation>비대면채널상품개인사업자가입여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DPR_PTCT_YN">
+                <xs:annotation>
+                    <xs:documentation>예금자보호여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="RPRS_PDF_YN">
+                <xs:annotation>
+                    <xs:documentation>대표상품여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NTAX_CMSG_ABL_YN">
+                <xs:annotation>
+                    <xs:documentation>비과세종합저축가능여부</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="JNNG_TRM">
+                <xs:annotation>
+                    <xs:documentation>가입기간</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_PRCF_GRP_CD">
+                <xs:annotation>
+                    <xs:documentation>비대면채널상품분류그룹코드</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NFCH_PRCF_GRP_CD_NM">
+                <xs:annotation>
+                    <xs:documentation>비대면채널상품분류그룹코드명</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="30" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LOLM_NM">
+                <xs:annotation>
+                    <xs:documentation>대출한도명</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="CNTE_CON">
+                <xs:annotation>
+                    <xs:documentation>계약기간내용</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LNLM_AGDD_CON">
+                <xs:annotation>
+                    <xs:documentation>여신한도약정기일내용</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LOIN_DSNC_NM">
+                <xs:annotation>
+                    <xs:documentation>대출금리구분명</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LOFN_DSNC_NM">
+                <xs:annotation>
+                    <xs:documentation>대출자금구분명</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="PRWY_KCD_NM">
+                <xs:annotation>
+                    <xs:documentation>원금상환방법종류코드명</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="LON_KIND_DCD_NM">
+                <xs:annotation>
+                    <xs:documentation>여신종류구분코드명</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="JNNG_MTDT_CON">
+                <xs:annotation>
+                    <xs:documentation>가입방법상세내용</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:STRING">
+                        <xs:maxLength value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ARR_NBI">
+                <xs:annotation>
+                    <xs:documentation>계약건수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="10" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ROW_CNT">
+                <xs:annotation>
+                    <xs:documentation>행수</xs:documentation>
+                    <xs:appinfo>
+                        <p:description />
+                        <p:mandatory value="N" />
+                        <p:level value="2" />
+                        <p:encryption />
+                    </xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:LONG">
+                        <xs:totalDigits value="5" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>]]></outbound>
+</io>

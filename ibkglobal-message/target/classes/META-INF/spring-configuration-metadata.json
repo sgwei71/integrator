@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.ibkglobal.message.IBKMessageProperties",
+      "name": "message.config",
+      "type": "com.ibkglobal.message.IBKMessageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.ibkglobal.message.IBKMessageProperties",
+      "name": "message.config.repository-type",
+      "type": "java.lang.String"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+	"intfId": "FEPO00000595",
+	"intfVrsnVl": 1,
+	"intfIdnNm": "IGAT_IGAT_H0310_300000",
+	"intfNm": "ATM잔액조회응답",
+	"common": {
+		"system": {
+			"code": "GCB",
+			"name": "계정계시스템"
+		},
+		"bswr": {
+			"code": "CHC",
+			"name": "채널"
+		},
+		"wrtnTs": "2018-06-07 15:50:03",
+		"mkrEmn": "S01252",
+		"attribute": {
+			"infra": {
+				"code": "3",
+				"name": "FEP(대외)"
+			},
+			"process": {
+				"code": "2",
+				"name": "온라인(대외온라인)"
+			},
+			"mpngYn": {
+				"code": "Y",
+				"name": "매핑함"
+			},
+			"online": {
+				"internal": {
+					
+				},
+				"external": {
+					"otisCd": {
+						"code": "IGAT"
+					},
+					"extBswr": {
+						"code": "IGAT",
+						"name": "인니 Prima (ATM)망"
+					},
+					"htdspCd": {
+						"code": "1",
+						"name": "타발거래"
+					},
+					"svcId": "TEST01",
+					"extTlgrIttcdCon": "0310",
+					"extTrnDcdCon": "300000",
+					"extPrwaCd": {
+						"content": ""
+					},
+					"safYn": {
+						"code": "N",
+						"name": "SAF미사용"
+					},
+					"netrccHECKYn": {
+						"code": "N",
+						"name": "체크안함"
+					},
+					"hgrnIntfIdCon": "",
+					"extEtcDcdCon": "",
+					"snrcCd": "H",
+					"onlXcd": "onlXcd test"
+				}
+			}
+		}
+	},
+	"interfaceType": {
+		"source": {
+			"inopId": "EGCBS0002180",
+			"inopIdnNm": "IGAT_IGAT_H0310_300000",
+			"system": {
+				"code": "CBK",
+				"name": "계정계시스템"
+			},
+			"bswr": {
+				"code": "AGN",
+				"name": "대행"
+			},
+			"mkrEmn": "S01173",
+			"inndSvcId": "TEST01"
+		},
+		"target": {
+			"inopId": "EFEPT0002181",
+			"inopIdnNm": "IGAT_IGAT_E0310_300000",
+			"system": {
+				"code": "CBK",
+				"name": "계정계시스템"
+			},
+			"bswr": {
+				"code": "AGN",
+				"name": "대행"
+			},
+			"mkrEmn": "S01173"
+		}
+	}
+}

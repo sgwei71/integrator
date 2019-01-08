@@ -1,0 +1,97 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.ibkglobal.integrator.manager.RouteProperties",
+      "name": "integrator.config",
+      "type": "com.ibkglobal.integrator.manager.RouteProperties"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration",
+      "type": "com.ibkglobal.integrator.config.RestConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.ibkglobal.integrator.manager.RouteProperties",
+      "name": "integrator.config.custom-loader",
+      "type": "java.util.Map<com.ibkglobal.integrator.manager.instance.InstanceType,java.util.List<java.lang.String>>"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.manager.RouteProperties",
+      "name": "integrator.config.instance-type",
+      "type": "java.util.List<com.ibkglobal.integrator.manager.instance.InstanceType>"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.manager.RouteProperties",
+      "name": "integrator.config.json-file-url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.manager.RouteProperties",
+      "name": "integrator.config.route-base-type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.api-context-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.api-host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.api-title",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.api-version",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.backlog",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.biding-mode",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.component",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.context-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.enable-cors",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.ibkglobal.integrator.config.RestConfigProperties",
+      "name": "rest.configuration.pretty-print",
+      "type": "java.lang.Boolean"
+    }
+  ]
+}

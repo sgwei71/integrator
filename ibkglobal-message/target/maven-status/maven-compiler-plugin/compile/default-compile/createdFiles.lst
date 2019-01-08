@@ -42,6 +42,7 @@ com\ibkglobal\message\struct\io\IoMCA.class
 com\ibkglobal\message\struct\loader\model\MessageLoader.class
 com\ibkglobal\message\struct\loader\model\MappingLoader.class
 com\ibkglobal\message\struct\itface\InterfaceFEP.class
+com\ibkglobal\IbkglobalmessageApplication.class
 com\ibkglobal\common\repository\controller\CacheController.class
 com\ibkglobal\message\common\normal\copt\SttlOpatCopt$OpatMsgInfo.class
 com\ibkglobal\common\repository\CacheType.class

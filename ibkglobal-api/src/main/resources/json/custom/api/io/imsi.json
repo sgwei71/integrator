@@ -1,0 +1,233 @@
+{"xs:schema": {
+    "xmlns:p": "http://schemas.ibk.com/mms/io/",
+    "xs:complexType": {
+        "xs:sequence": {"xs:element": [
+            {
+                "xs:annotation": {
+                    "xs:documentation": "조회구분코드",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "INQ_DCD",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 1},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "부점코드시작번호",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "BRCD_STTG_NO",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 4},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "부점코드종료번호",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "BRCD_FNSH_NO",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 4},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "시작년월일",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "STTG_YMD",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 8},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "종료년월일",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "FNSH_YMD",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 8},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "신청번호",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "APLC_NO",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:totalDigits": {"value": 12},
+                    "base": "xs:LONG"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "송금고객계좌번호",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "RMTN_CUS_ACN",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 16},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "착오송금내부계약번호",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "MTRM_ICN",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 15},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "입금고객계좌번호",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "MNRC_CUS_ACN",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 16},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "입금내부계약번호",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "MNRC_ICN",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 15},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "LIST_NextKey_부점코드",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "LIST_NEXTKEY_BRCD",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 4},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "LIST_NextKey_신청년월일",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "LIST_NEXTKEY_APLC_YMD",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:maxLength": {"value": 8},
+                    "base": "xs:STRING"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "LIST_NextKey_신청번호",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "LIST_NEXTKEY_APLC_NO",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:totalDigits": {"value": 12},
+                    "base": "xs:LONG"
+                }}
+            },
+            {
+                "xs:annotation": {
+                    "xs:documentation": "LIST_페이지번호",
+                    "xs:appinfo": {
+                        "p:encryption": "",
+                        "p:description": "",
+                        "p:mandatory": {"value": "N"},
+                        "p:level": {"value": 1}
+                    }
+                },
+                "name": "LIST_PAGENO",
+                "xs:simpleType": {"xs:restriction": {
+                    "xs:totalDigits": {"value": 5},
+                    "base": "xs:LONG"
+                }}
+            }
+        ]},
+        "name": "MITRS0118295_inbound"
+    },
+    "xmlns:xs": "http://www.w3.org/2001/XMLSchema-instance"
+}}

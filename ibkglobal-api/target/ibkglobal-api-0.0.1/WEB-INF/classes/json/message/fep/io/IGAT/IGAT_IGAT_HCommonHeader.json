@@ -1,0 +1,125 @@
+{
+	"utInopId": "H00000004316",
+	"utInopIdnNm": "IGAT_IGAT_HCommonHeader",
+	"common": {
+		"inopDescCon": "대외 헤더 전문",
+		"system": {
+			"code": "GCB",
+			"name": "계정계시스템"
+		},
+		"bwcd": {
+			"code": "CHC"
+		},
+		"wrtnTs": "2018-05-24 14:36:59",
+		"mkrEmn": "S01173"
+	},
+	"processType": {
+		"online": {
+			"mtvCd": {
+				"code": " "
+			},
+			"tcslInfoTrknCd": {
+				"code": "000",
+				"name": "고객X 마케팅X"
+			},
+			"external": {
+				"otisCd": {
+					"code": "IGAT",
+					"name": "인니 Prima (ATM)망"
+				},
+				"extBwcd": {
+					"code": "IGAT",
+					"name": "인니 Prima (ATM)망"
+				},
+				"extTlgrIttcdCon": "0210",
+				"extTrnDcdCon": "304000",
+				"extEtcDcdCon": "02",
+				"inaoCd": {
+					"code": "1",
+					"name": "대내기관"
+				},
+				"anenVlCon": "KSC5601"
+			}
+		}
+	},
+	"data": {
+		"utInopId": "H00000004316",
+		"utInopNm": "IGAT_IGAT_HCommonHeader",
+		"utInopDescCon": "대외 헤더 전문",
+		"utInopIdnNm": "IGAT_IGAT_HCommonHeader",
+		"fieldList": [
+			{
+				"tlgrSqc": 1,
+				"lvlNo": "1",
+				"fldNm": "정상취소거래구분코드",
+				"ensnFldNm": "NRCN_TRN_DCD",
+				"dataTypeNm": "STRING",
+				"allDataLenCon": "4",
+				"inptMndrYn": "N",
+				"vrfcYn": " ",
+				"dcfrDataLen": 0,
+				"vldtInspYn": "Y",
+				"encpYn": " ",
+				"trcKeyUseYn": " ",
+				"msgKeyUseYn": " ",
+				"extTlgrIttcdUseYn": " ",
+				"trnDcdUseYn": " ",
+				"extEtcDcdUseYn": " ",
+				"rpcdUseYn": " ",
+				"vrbnYn": "N",
+				"mskgUseYn": " ",
+				"logKeyUseYn": " ",
+				"ebccdDIcCdUseYn": " ",
+				"dbCsUseYn": " "
+			},
+			{
+				"tlgrSqc": 2,
+				"lvlNo": "1",
+				"fldNm": "MSG_CODE",
+				"ensnFldNm": "MSG_CODE",
+				"dataTypeNm": "STRING",
+				"allDataLenCon": "4",
+				"inptMndrYn": "N",
+				"vrfcYn": " ",
+				"dcfrDataLen": 0,
+				"vldtInspYn": "Y",
+				"encpYn": " ",
+				"trcKeyUseYn": " ",
+				"msgKeyUseYn": " ",
+				"extTlgrIttcdUseYn": " ",
+				"trnDcdUseYn": " ",
+				"extEtcDcdUseYn": " ",
+				"rpcdUseYn": " ",
+				"vrbnYn": "N",
+				"mskgUseYn": " ",
+				"logKeyUseYn": " ",
+				"ebccdDIcCdUseYn": " ",
+				"dbCsUseYn": " "
+			},
+			{
+				"tlgrSqc": 3,
+				"lvlNo": "1",
+				"fldNm": "TX_CODE",
+				"ensnFldNm": "TX_CODE",
+				"dataTypeNm": "STRING",
+				"allDataLenCon": "6",
+				"inptMndrYn": "N",
+				"vrfcYn": " ",
+				"dcfrDataLen": 0,
+				"vldtInspYn": "Y",
+				"encpYn": " ",
+				"trcKeyUseYn": " ",
+				"msgKeyUseYn": " ",
+				"extTlgrIttcdUseYn": " ",
+				"trnDcdUseYn": " ",
+				"extEtcDcdUseYn": " ",
+				"rpcdUseYn": " ",
+				"vrbnYn": "N",
+				"mskgUseYn": " ",
+				"logKeyUseYn": " ",
+				"ebccdDIcCdUseYn": " ",
+				"dbCsUseYn": " "
+			}
+		]
+	}
+}

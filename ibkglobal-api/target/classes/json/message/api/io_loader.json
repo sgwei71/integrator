@@ -1,0 +1,593 @@
+{
+	"modified": "2010/12/20 11:22:335:051",
+	"ioInfo": [
+	    {
+			"clazz": "MCBKT0118294",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "MCBKT0118294"
+		},
+	    {
+			"clazz": "MITRS0118295",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "MITRS0118295"
+		},
+	    {
+		"clazz": "MAPBS0122684",
+		"comment": "",
+		"jlid": "",
+		"trid": "",
+		"xcid": "MAPBS0122684"
+	    },
+		{
+	        "clazz": "MCBKT0122683",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0122683"
+	    },
+		{
+	        "clazz": "MAPBS0122796",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0122796"
+	    },
+		{
+	        "clazz": "MCBKT0122795",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0122795"
+	    },		
+		{
+			"clazz": "MAPBS0122822",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "MAPBS0122822"
+		},
+		{
+	        "clazz": "MCBKT0122821",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0122821"
+	    },
+		{
+	        "clazz": "MAPBS0123018",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123018"
+	    },
+		{
+	        "clazz": "MCBKT0123017",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123017"
+	    },	    
+		{
+	        "clazz": "MAPBS0123036",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123036"
+	    },
+		{
+	        "clazz": "MCBKT0123035",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123035"
+	    },	    
+		{
+	        "clazz": "MAPBS0123048",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123048"
+	    },
+		{
+	        "clazz": "MCBKT0123047",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123047"
+	    },	    
+		{
+	        "clazz": "MAPBS0123052",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123052"
+	    },
+		{
+	        "clazz": "MCBKT0123051",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123051"
+	    },	    
+		{
+	        "clazz": "MAPBS0123083",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123083"
+	    },
+		{
+	        "clazz": "MCBKT0123082",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123082"
+	    },	    
+		{
+	        "clazz": "MAPBS0123087",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123087"
+	    },
+		{
+	        "clazz": "MCBKT0123086",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123086"
+	    },	    
+		{
+	        "clazz": "MAPBS0123089",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123089"
+	    },
+		{
+	        "clazz": "MCBKT0123088",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123088"
+	    },	    
+		{
+	        "clazz": "MAPBS0123093",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123093"
+	    },
+		{
+	        "clazz": "MCBKT0123092",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123092"
+	    },	    
+		{
+	        "clazz": "MAPBS0123095",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123095"
+	    },
+		{
+	        "clazz": "MCBKT0123094",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123094"
+	    },	    
+		{
+	        "clazz": "MAPBS0123110",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123110"
+	    },
+		{
+	        "clazz": "MCBKT0123109",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123109"
+	    },	    
+		{
+	        "clazz": "MAPBS0123126",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123126"
+	    },
+		{
+	        "clazz": "MCBKT0123125",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123125"
+	    },	    
+		{
+	        "clazz": "MAPBS0123180",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123180"
+	    },
+		{
+	        "clazz": "MCBKT0123179",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123179"
+	    },	    
+		{
+	        "clazz": "MAPBS0123363",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123363"
+	    },
+		{
+	        "clazz": "MCBKT0123362",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123362"
+	    },	    
+		{
+	        "clazz": "MAPBS0123371",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123371"
+	    },
+		{
+	        "clazz": "MCBKT0123370",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123370"
+	    },	    
+		{
+	        "clazz": "MAPBS0123395",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123395"
+	    },
+		{
+	        "clazz": "MCBKT0123394",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123394"
+	    },	    
+		{
+	        "clazz": "MAPBS0123456",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123456"
+	    },
+		{
+	        "clazz": "MCBKT0123455",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123455"
+	    },	    
+		{
+	        "clazz": "MAPBS0123481",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123481"
+	    },
+		{
+	        "clazz": "MCBKT0123480",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123480"
+	    },	    
+		{
+	        "clazz": "MAPBS0123549",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123549"
+	    },
+		{
+	        "clazz": "MCBKT0123548",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123548"
+	    },	    
+		{
+	        "clazz": "MAPBS0123551",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123551"
+	    },
+		{
+	        "clazz": "MCBKT0123550",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123550"
+	    },	    
+		{
+	        "clazz": "MAPBS0123553",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123553"
+	    },
+		{
+	        "clazz": "MCBKT0123552",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123552"
+	    },	    
+		{
+	        "clazz": "MAPBS0123560",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123560"
+	    },
+		{
+	        "clazz": "MCBKT0123559",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123559"
+	    },	    
+		{
+	        "clazz": "MAPBS0123623",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123623"
+	    },
+		{
+	        "clazz": "MCBKT0123622",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123622"
+	    },	    
+		{
+	        "clazz": "MAPBS0123642",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123642"
+	    },
+		{
+	        "clazz": "MCBKT0123641",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123641"
+	    },	    
+		{
+	        "clazz": "MAPBS0123745",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123745"
+	    },
+		{
+	        "clazz": "MCBKT0123744",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123744"
+	    },	    
+		{
+	        "clazz": "MAPBS0123811",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123811"
+	    },
+		{
+	        "clazz": "MCBKT0123810",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123810"
+	    },	    
+		{
+	        "clazz": "MAPBS0123813",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123813"
+	    },
+		{
+	        "clazz": "MCBKT0123812",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123812"
+	    },	    
+		{
+	        "clazz": "MAPBS0123837",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123837"
+	    },
+		{
+	        "clazz": "MBIHT0123836",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MBIHT0123836"
+	    },	    
+		{
+	        "clazz": "MAPBS0123839",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123839"
+	    },
+		{
+	        "clazz": "MBIHT0123838",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MBIHT0123838"
+	    },	    
+		{
+	        "clazz": "MAPBS0123841",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123841"
+	    },
+		{
+	        "clazz": "MBIHT0123840",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MBIHT0123840"
+	    },	    
+		{
+	        "clazz": "MAPBS0123843",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123843"
+	    },
+		{
+	        "clazz": "MBIHT0123842",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MBIHT0123842"
+	    },	    
+		{
+	        "clazz": "MAPBS0123845",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123845"
+	    },
+		{
+	        "clazz": "MBIHT0123844",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MBIHT0123844"
+	    },	    
+		{
+	        "clazz": "MAPBS0123863",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123863"
+	    },
+		{
+	        "clazz": "MCBKT0123862",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123862"
+	    },	    
+		{
+	        "clazz": "MAPBS0123928",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123928"
+	    },
+		{
+	        "clazz": "MCBKT0123926",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123926"
+	    },	    
+	    {
+	        "clazz": "MAPBS0123936",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123936"
+	    },
+		{
+	        "clazz": "MCBKT0123935",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123935"
+	    },	 
+	    {
+	        "clazz": "MAPBS0122803",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0122803"
+	    },
+	    {
+	        "clazz": "MCBKT0122802",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0122802"
+	    },
+	    {
+	        "clazz": "MAPBS0122847",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0122847"
+	    },
+	    {
+	        "clazz": "MCBKT0122846",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0122846"
+	    },
+	    {
+	        "clazz": "MAPBS0122913",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0122913"
+	    },
+	    {
+	        "clazz": "MCBKT0122912",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0122912"
+	    },
+	    {
+	        "clazz": "MAPBS0123329",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MAPBS0123329"
+	    },
+	    {
+	        "clazz": "MCBKT0123328",
+	        "comment": "",
+	        "jlid": "",
+	        "trid": "",
+	        "xcid": "MCBKT0123328"
+	    }   
+	]
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+<!-- 	<property name="LOG_PATH" value="C:/channelLog" /> -->
+	<property name="LOG_PATH" value="/log/api" />
+
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%4p] %t %C{2}:%L - %m%n</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="saveRootLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_PATH}/root/channelLog_%d{yyyy-MM-dd}.log</FileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%4p] %t %C{2}:%L - %m%n</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="saveDynamicLog" class="ch.qos.logback.classic.sift.SiftingAppender">
+		<discriminator>
+			<key>logFileName</key>
+			<defaultValue>defaultLog</defaultValue>
+		</discriminator>
+
+		<sift>
+			<appender name="FILE-${logFileName}" class="ch.qos.logback.core.rolling.RollingFileAppender">
+				<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+					<FileNamePattern>${LOG_PATH}/${logFileName}/${logFileName}.%d{yyyy-MM-dd}.log</FileNamePattern>
+				</rollingPolicy>
+				<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+					<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%4p] %m%n</Pattern>
+					<!-- <Pattern>%d{yyyy-MM-dd HH:mm:ss} %mdc [%thread] %level %logger{35} - %msg%n</Pattern> -->
+				</encoder>
+
+				<!-- 갯수 제한 및 파일 크기 제한 -->
+				<!-- <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy"> -->
+				<!-- <FileNamePattern>${LOG_PATH}/${logFileName}.%i.log.zip</FileNamePattern> -->
+				<!-- <MinIndex>1</MinIndex> -->
+				<!-- <MaxIndex>10</MaxIndex> -->
+				<!-- </rollingPolicy> -->
+				<!-- <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy"> -->
+				<!-- <MxFileSize>10MB</MxFileSize> -->
+				<!-- </triggeringPolicy> -->
+			</appender>
+		</sift>
+	</appender>
+
+	<appender name="saveDynamicTracerLog" class="ch.qos.logback.classic.sift.SiftingAppender">
+		<discriminator>
+			<key>logFileName</key>
+			<defaultValue>defaultLog</defaultValue>
+		</discriminator>
+
+		<sift>
+			<appender name="FILE-${logFileName}" class="ch.qos.logback.core.rolling.RollingFileAppender">
+				<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+					<FileNamePattern>${LOG_PATH}/${logFileName}/${logFileName}-tracer.%d{yyyy-MM-dd}.log</FileNamePattern>
+				</rollingPolicy>
+				<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+					<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%4p] %m%n</Pattern>
+				</encoder>
+			</appender>
+		</sift>
+	</appender>
+
+	<appender name="errorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_PATH}/error/errorLog_%d{yyyy-MM-dd}.log</FileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%4p] %t %C{2}:%L - %m%n</Pattern>
+		</encoder>
+	</appender>
+
+	<!-- 기본 로그 -->
+	<root name="root">
+		<level value="INFO" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="saveRootLog" />
+	</root>
+
+	<!-- 파일명 다이나믹 로그 -->
+	<logger name="dynamicLog" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="saveDynamicLog" />
+	</logger>
+
+	<!-- Tracer 파일명 다이나믹 로그 -->
+	<logger name="dynamicTracerLog" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="saveDynamicTracerLog" />
+	</logger>
+
+	<!-- 오류 로그 -->
+	<logger name="exceptionLog" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="errorLog" />
+	</logger>
+
+</configuration>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <interface bound="inbound" id="ITRO00060088" version="8" />
+    <src_io id="MITRS0118295" />
+    <target_io id="MCBKT0118294" />
+    <mapping>
+        <source path="/INQ_DCD" />
+        <target path="/INQ_DCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/BRCD_STTG_NO" />
+        <target path="/BRCD_STTG_NO" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/BRCD_FNSH_NO" />
+        <target path="/BRCD_FNSH_NO" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/STTG_YMD" />
+        <target path="/STTG_YMD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/FNSH_YMD" />
+        <target path="/FNSH_YMD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/APLC_NO" />
+        <target path="/APLC_NO" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/RMTN_CUS_ACN" />
+        <target path="/RMTN_CUS_ACN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/MTRM_ICN" />
+        <target path="/MTRM_ICN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/MNRC_CUS_ACN" />
+        <target path="/MNRC_CUS_ACN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/MNRC_ICN" />
+        <target path="/MNRC_ICN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/LIST_NEXTKEY_BRCD" />
+        <target path="/LIST_NEXTKEY_BRCD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/LIST_NEXTKEY_APLC_YMD" />
+        <target path="/LIST_NEXTKEY_APLC_YMD" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/LIST_NEXTKEY_APLC_NO" />
+        <target path="/LIST_NEXTKEY_APLC_NO" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/LIST_PAGENO" />
+        <target path="/LIST_PAGENO" />
+        <function ref="move" />
+    </mapping>
+</map>

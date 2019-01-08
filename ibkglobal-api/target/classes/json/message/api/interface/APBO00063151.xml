@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="APBO00063151" name="비대면기업대출상담심사" version="1">
+    <common>
+        <description />
+        <system code="APB" name="어플리케이션시스템" />
+        <!--대내 시스템코드-->
+        <work code="APB" name="어플리케이션시스템" />
+        <!--대내 업무구분코드-->
+        <datetime>2018-12-26 13:21:52</datetime>
+        <!--작성일-->
+        <writer>F15360</writer>
+        <!--소유자-->
+        <attribute>
+            <infra code="1" name="MCA" />
+            <!--연계구분 - 1:MCA / 2:EAI / 3:FEP-->
+            <process code="1" name="온라인(대내온라인)" />
+            <!--처리유형 - 1:온라인(대내) / 2:온라인(대외) / 3:배치(DB2DB) / 4:배치(FILE2FILE) / 5:디퍼드(DB2DB) / 6:기타-->
+            <mapping code="Y" name="매핑함" />
+            <!--매핑여부-->
+            <occur_cycle code="1" name="일별 1회" />
+            <!--발생주기 - 1:일별1회 / 2:일별 수시 / 3:주별1회 / 4:주별 수시 / 5:월별1회 / 6:월별수시-->
+            <frequency />
+            <!--예상건수-->
+            <online>
+                <internal>
+                    <method code="1" name="요청/응답" />
+                    <!--처리방법 - 1:요청/응답 / 2:요청 / 3:단말BID-->
+                    <sorcInptLogYn code="N" name="출발지요청전문로깅여부" />
+                    <!--필드로깅여부 - Y / N-->
+                    <sorcOtptLogYn code="N" name="출발지응답전문로깅여부" />
+                    <!--필드로깅여부 - Y / N-->
+                    <trgtInptLogYn code="N" name="목적지요청전문로깅여부" />
+                    <!--필드로깅여부 - Y / N-->
+                    <trgtOtptLogYn code="N" name="목적지응답전문로깅여부" />
+                    <!--필드로깅여부 - Y / N-->
+                </internal>
+                <external>
+                    <system />
+                    <!--대외 기관 구분코드 / 대외 기관 명-->
+                    <work />
+                    <!--대외 업무 코드 / 대외 업무 명-->
+                    <htdsp />
+                    <!--당타발 구분코드 / 1:당발 / 2:타발-->
+                    <service />
+                    <!--서비스ID-->
+                    <msg />
+                    <!--대외 전문 종별 코드-->
+                    <tx />
+                    <!--대외 거래 구분 코드-->
+                    <method />
+                    <!--처리 방법 - 1:요청응답 / 2:요청-->
+                    <saf />
+                    <!--SAF여부 - Y:SAF사용 / N:SAF미사용-->
+                    <netcheck />
+                    <!--NETCECK구분 - Y:체크함 / N:체크안함-->
+                    <timeout />
+                    <!--Timer값-->
+                    <parent_interface />
+                    <!--상위인터페이스 ID-->
+                    <etc_work />
+                    <!--대외 기타 구분 코드-->
+                    <send_receive />
+                    <!--대외 송수신 구분 코드-->
+                </external>
+            </online>
+        </attribute>
+    </common>
+    <interface_type>
+        <source>
+            <ioid>MAPBS0123928</ioid>
+            <!--소스 관리 I/O ID-->
+            <system code="APB" name="어플리케이션시스템" />
+            <!--소스 I/O 시스템 구분 코드 / 시스템 명-->
+            <work code="APB" />
+            <!--소스 I/O 업무 코드-->
+            <person>김성수</person>
+            <!--소스 I/O 소유자-->
+            <process_type>
+                <eai>
+                    <cctn_info_dsnc>00</cctn_info_dsnc>
+                    <batch>
+                        <db2db>
+                            <service />
+                            <!--DB 서비스명-->
+                            <sql />
+                            <!--DB2DB SQL문-->
+                        </db2db>
+                        <file2file>
+                            <path />
+                            <!--FILE2FILE 경로-->
+                            <rule />
+                            <!--FILE명 규칙-->
+                            <process_method />
+                            <!--처리 방법-->
+                        </file2file>
+                    </batch>
+                    <deferred>
+                        <db2db>
+                            <service />
+                            <!--DB 서비스명-->
+                            <sql />
+                            <!--DB2DB SQL문-->
+                        </db2db>
+                    </deferred>
+                </eai>
+            </process_type>
+        </source>
+        <target>
+            <ioid>MCBKT0123926</ioid>
+            <!--타겟 I/O ID-->
+            <system code="CBK" name="계정계시스템" />
+            <!--타겟 I/O 시스템 구분 코드 / 시스템 명-->
+            <work code="APB" />
+            <!--타겟 I/O 업무 코드-->
+            <person>김성수</person>
+            <!--타겟 I/O 소유자-->
+            <process_type>
+                <online>
+                    <internal>
+                        <request_receive id="CBKAPB160080" />
+                        <!--수신 서비스 ID-->
+                    </internal>
+                </online>
+                <eai>
+                    <cctn_info_dsnc>00</cctn_info_dsnc>
+                    <batch>
+                        <db2db>
+                            <service />
+                            <!--DB 서비스명-->
+                            <apply />
+                            <!--데이터 적용 방식-->
+                            <table />
+                            <!--DB 테이블 명-->
+                        </db2db>
+                        <file2file>
+                            <path />
+                            <!--FILE2FILE 경로-->
+                            <rule />
+                            <!--FILE명 규칙-->
+                            <rslt_file_trnf_yn />
+                            <!--결과파일전달여부-->
+                            <rslt_file_path />
+                            <!--결과파일경로-->
+                            <rslt_file_nm />
+                            <!--결과파일명-->
+                        </file2file>
+                    </batch>
+                    <deferred>
+                        <db2db>
+                            <service />
+                            <!--DB 서비스명-->
+                            <apply />
+                            <!--DB 데이터 적용 방식-->
+                            <table />
+                            <!--DB 테이블 명-->
+                        </db2db>
+                    </deferred>
+                </eai>
+            </process_type>
+        </target>
+        <etc />
+    </interface_type>
+</interface>

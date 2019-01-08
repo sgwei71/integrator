@@ -1,0 +1,191 @@
+[
+	{
+		"seq"       : 0,
+ 		"name"      : "interfaceType",
+ 		"fieldName" : "INTERFACE_TYPE",
+ 		"type"      : "CHAR",
+ 		"length"    : 6,
+ 		"desc"      : "",
+ 		"etc"       : "FOCUS"
+ 	},
+ 	{
+ 		"seq"       : 1,
+ 		"name"      : "messageType",
+ 		"fieldName" : "MESSAGE_TYPE",
+ 		"type"      : "CHAR",
+ 		"length"    : 10,
+ 		"desc"      : "",
+ 		"etc"       : "CALLCENTER"
+ 	},
+ 	{
+ 	    "seq"       : 2,
+ 		"name"      : "messageWay",
+ 		"fieldName" : "MESSAGE_WAY",
+ 		"type"      : "CHAR",
+ 		"length"    : 2,
+ 		"desc"      : "",
+ 		"etc"       : "RQ"
+ 	},
+ 	{
+ 	    "seq"       : 3,
+ 		"name"      : "bteDate",
+ 		"fieldName" : "BTE_DATE",
+ 		"type"      : "CHAR",
+ 		"length"    : 8,
+ 		"desc"      : "",
+ 		"etc"       : "YYYYMMDD"
+ 	},
+ 	{
+ 	    "seq"       : 4,
+ 		"name"      : "qfrnno",
+ 		"fieldName" : "QFRNNO",
+ 		"type"      : "CHAR",
+ 		"length"    : 8,
+ 		"desc"      : "",
+ 		"etc"       : "FOCUS"
+ 	},
+ 	{
+ 	    "seq"       : 5,
+ 		"name"      : "qfrnseq",
+ 		"fieldName" : "QFRNSEQ",
+ 		"type"      : "CHAR",
+ 		"length"    : 7,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 6,
+ 		"name"      : "ptrmdat",
+ 		"fieldName" : "PTRMDAT",
+ 		"type"      : "CHAR",
+ 		"length"    : 8,
+ 		"desc"      : "",
+ 		"etc"       : "YYYYMMDD"
+ 	},
+ 	{
+ 	    "seq"       : 7,
+ 		"name"      : "hostRefNo",
+ 		"fieldName" : "HOST_REF_NO",
+ 		"type"      : "CHAR",
+ 		"length"    : 20,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 8,
+ 		"name"      : "qftxcod",
+ 		"fieldName" : "QFTXCOD",
+ 		"type"      : "CHAR",
+ 		"length"    : 6,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 9,
+ 		"name"      : "qtxbrc",
+ 		"fieldName" : "QTXBRC",
+ 		"type"      : "CHAR",
+ 		"length"    : 9,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 10,
+ 		"name"      : "qtxtel",
+ 		"fieldName" : "QTXTEL",
+ 		"type"      : "CHAR",
+ 		"length"    : 10,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 11,
+ 		"name"      : "qdevid",
+ 		"fieldName" : "QDEVID",
+ 		"type"      : "CHAR",
+ 		"length"    : 15,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 12,
+ 		"name"      : "qaracod",
+ 		"fieldName" : "QARACOD",
+ 		"type"      : "CHAR",
+ 		"length"    : 4,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 13,
+ 		"name"      : "qdevseq",
+ 		"fieldName" : "QDEVSEQ",
+ 		"type"      : "CHAR",
+ 		"length"    : 7,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 14,
+ 		"name"      : "qdevdate",
+ 		"fieldName" : "QDEVDATE",
+ 		"type"      : "CHAR",
+ 		"length"    : 8,
+ 		"desc"      : "",
+ 		"etc"       : "YYYYMMDDD"
+ 	},
+ 	{
+ 	    "seq"       : 15,
+ 		"name"      : "qdevdatetime",
+ 		"fieldName" : "QDEVDATETIME",
+ 		"type"      : "CHAR",
+ 		"length"    : 14,
+ 		"desc"      : "",
+ 		"etc"       : "YYYYMMDDDHHMMSS"
+ 	},
+ 	{
+ 	    "seq"       : 16,
+ 		"name"      : "qchnid",
+ 		"fieldName" : "QCHNID",
+ 		"type"      : "CHAR",
+ 		"length"    : 2,
+ 		"desc"      : "",
+ 		"etc"       : "99:BTE(IBPS)"
+ 	},
+ 	{
+ 	    "seq"       : 17,
+ 		"name"      : "messageBizSize",
+ 		"fieldName" : "MESSAGE_BIZ_SIZE",
+ 		"type"      : "CHAR",
+ 		"length"    : 5,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 18,
+ 		"name"      : "prspcod",
+ 		"fieldName" : "PRSPCOD",
+ 		"type"      : "CHAR",
+ 		"length"    : 8,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 19,
+ 		"name"      : "prspmsg",
+ 		"fieldName" : "PRSPMSG",
+ 		"type"      : "CHAR",
+ 		"length"    : 120,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	},
+ 	{
+ 	    "seq"       : 20,
+ 		"name"      : "filler",
+ 		"fieldName" : "FILLER",
+ 		"type"      : "CHAR",
+ 		"length"    : 23,
+ 		"desc"      : "",
+ 		"etc"       : ""
+ 	}
+]

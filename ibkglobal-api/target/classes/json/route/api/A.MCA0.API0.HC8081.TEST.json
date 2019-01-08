@@ -1,0 +1,30 @@
+{
+ "instanceType"      : "API",
+ "instanceRouteType" : "ADAPTER",
+ "sysCd"             : "API",
+ "bizCd"             : "API",
+ "orgCd"             : "API",
+ "routeDescription"  : "ADAPTER OUT",
+ 
+ "routeId"           : "A.MCA0.API0.HC8081.TEST",
+ "routeType"         : "API_DEFAULT_ADAPTER_OUT",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"      : 
+ {
+ 	"endpointType"   : "DIRECT",
+ 	"endpointDirect" : "A.MCA0.API0.HC8081.TEST"
+ },
+ "toEndpoint"        : 
+ {
+	 	"endpointType"   : "CAMEL_HTTP",
+	 	"endpointIp"     : "127.0.0.1",
+	 	"endpointPort"   : "8081",
+	 	"pathNm"         : "/api/virtual",
+	 	"disconnect"     : "true",
+	 	"reqTimeOut"     : "60000"
+ },
+ 
+ "logName"           : "GCB.KR"
+}

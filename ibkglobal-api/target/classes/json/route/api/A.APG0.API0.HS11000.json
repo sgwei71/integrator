@@ -1,0 +1,30 @@
+{
+ "instanceType"      : "API",
+ "instanceRouteType" : "ADAPTER",
+ "sysCd"             : "API",
+ "bizCd"             : "API",
+ "orgCd"             : "API",
+ "routeDescription"  : "계정계 ADAPTER OUT",
+ 
+ "routeId"           : "A.APG0.API0.HS11000",
+ "routeType"         : "API_DEFAULT_ADAPTER_IN",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"      : 
+ {
+	 	"endpointType"   : "HTTP",
+	 	"endpointIp"     : "127.0.0.1",
+	 	"endpointPort"   : "8082",
+	 	"pathNm"         : "/echo",
+	 	"disconnect"     : "true",
+	 	"reqTimeOut"     : "60000"
+ },
+ "toEndpoint"        : 
+ {
+	 	"endpointType"   : "DIRECT",
+	 	"endpointDirect" : "A.APG0.API0.RT001"
+ },
+ 
+ "logName"           : "APG0.API0"
+}

@@ -1,0 +1,31 @@
+{
+ "instanceType"      : "MCA",
+ "instanceRouteType" : "ADAPTER",
+ "parsingType"       : "JSON",
+ "sysCd"             : "GCB",
+ "bizCd"             : "KR",
+ "orgCd"             : "",
+ "routeDescription"  : "계정계 ADAPTER OUT",
+ 
+ "routeId"           : "M.GCB0.KR00.HC9080",
+ "routeType"         : "MCA_DEFAULT_ADAPTER_OUT",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+ 	"endpointType"   : "DIRECT",
+ 	"endpointDirect" : "GCB0.KR00.HC9080"
+ },
+ "toEndpoint"                : 
+ {
+ 	"endpointType"   : "HTTP",
+ 	"endpointIp"     : "dev.gcb.ibkglobal.com",
+ 	"endpointPort"   : "9080",
+ 	"pathNm"         : "/service/test",
+ 	"disconnect"     : "true",
+ 	"reqTimeOut"     : "60000"
+ },
+ 
+ "logName"           : "GCB.KR"
+}

@@ -1,0 +1,29 @@
+{
+ "instanceType"      : "API",
+ "instanceRouteType" : "ROUTER",
+ "parsingType"       : "JSON",
+ "fromFormat"        : "FLAT",
+ "toFormat"       	 : "JSON",	 
+ "sysCd"             : "api",
+ "bizCd"             : "api",
+ "orgCd"             : "api",
+ "routeDescription"  : "API ROUTE",
+ 
+ "routeId"           : "A.APG0.API0.RT001",
+ "routeType"         : "API_INBOUND",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+    "endpointType"   : "DIRECT",
+ 	"endpointDirect" : "A.APG0.API0.RT001"
+ },
+ "toEndpoint"                : 
+ {
+		"endpointType": "DIRECT",
+		"endpointDirect": "A.APG0.API0.HC20000"
+ },
+ 
+ "logName"           : "APG0.API0"
+}

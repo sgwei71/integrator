@@ -23,5 +23,8 @@ public enum CacheType {
 	IBK_FEP_MAPPING,
 	
 	// FEPADMIN
-	IBK_FEP_RECV_MSG
+	IBK_FEP_RECV_MSG,
+	
+	//API
+	IBK_API_INTERFACE,
 }

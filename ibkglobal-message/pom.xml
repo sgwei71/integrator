@@ -21,17 +21,22 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<lib.location>C:/work/dev/workspaces/integrator</lib.location>
+		<lib.location>C:/Users/growman/git/integrator</lib.location>
 	</properties>
 
 	<dependencies>
+<!-- 		<dependency> -->
+<!-- 	      <groupId>com.ibk.ibkglobal</groupId> -->
+<!-- 	      <artifactId>ibkglobal-mms</artifactId> -->
+<!-- 	      <version>0.0.1-SNAPSHOT</version> -->
+<!-- 	      <systemPath>${lib.location}/ibkglobal-mms/target/ibkglobal-mms-0.0.1-SNAPSHOT.jar</systemPath> -->
+<!-- 	      <scope>system</scope> -->
+<!-- 	    </dependency> -->
 		<dependency>
-	      <groupId>com.ibk.ibkglobal</groupId>
-	      <artifactId>ibkglobal-mms</artifactId>
-	      <version>0.0.1-SNAPSHOT</version>
-	      <systemPath>${lib.location}/ibkglobal-mms/target/ibkglobal-mms-0.0.1-SNAPSHOT.jar</systemPath>
-	      <scope>system</scope>
-	    </dependency>
+			<groupId>com.ibk.ibkglobal</groupId>
+			<artifactId>ibkglobal-mms</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	    
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -80,7 +85,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
 		</dependency>
-		
+		<!-- xml2Json -->
+		<dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20140107</version>
+        </dependency>
+
 		<!-- ISO-8583 -->
 		<dependency>
 			<groupId>org.jpos</groupId>
@@ -96,23 +107,23 @@
 		
 	</dependencies>
 
-	<repositories>
-		<repository>
-			<id>ibk-repository-release</id>
-			<name>Anyframe for IBK Kolumbus - RELEASE</name>
-			<layout>default</layout>
-			<url>http://172.18.116.27:9011/nexus/content/groups/public/</url>
-		</repository>
-		<repository>
-			<id>ibk-repository-snapshot</id>
-			<name>Anyframe for IBK Kolumbus - SNAPSHOT</name>
-			<layout>default</layout>
-			<url>http://172.18.116.27:9011/nexus/content/groups/public-snapshots/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+<!-- 	<repositories> -->
+<!-- 		<repository> -->
+<!-- 			<id>ibk-repository-release</id> -->
+<!-- 			<name>Anyframe for IBK Kolumbus - RELEASE</name> -->
+<!-- 			<layout>default</layout> -->
+<!-- 			<url>http://172.18.116.27:9011/nexus/content/groups/public/</url> -->
+<!-- 		</repository> -->
+<!-- 		<repository> -->
+<!-- 			<id>ibk-repository-snapshot</id> -->
+<!-- 			<name>Anyframe for IBK Kolumbus - SNAPSHOT</name> -->
+<!-- 			<layout>default</layout> -->
+<!-- 			<url>http://172.18.116.27:9011/nexus/content/groups/public-snapshots/</url> -->
+<!-- 			<snapshots> -->
+<!-- 				<enabled>true</enabled> -->
+<!-- 			</snapshots> -->
+<!-- 		</repository> -->
+<!-- 	</repositories> -->
 
 <!-- 	<pluginRepositories> -->
 <!-- 		<pluginRepository> -->
@@ -129,19 +140,19 @@
 <!-- 		</pluginRepository> -->
 <!-- 	</pluginRepositories> -->
 
-	<distributionManagement>
-		<repository>
-			<id>ibkglobal-nexus</id>
-			<name>Anyframe for IBK Kolumbus - RELEASE</name>
-			<url>http://172.18.116.27:9011/nexus/content/repositories/ibkglobal-nexus</url>
-		</repository>
+<!-- 	<distributionManagement> -->
+<!-- 		<repository> -->
+<!-- 			<id>ibkglobal-nexus</id> -->
+<!-- 			<name>Anyframe for IBK Kolumbus - RELEASE</name> -->
+<!-- 			<url>http://172.18.116.27:9011/nexus/content/repositories/ibkglobal-nexus</url> -->
+<!-- 		</repository> -->
 		<!-- use the following if you ARE using a snapshot version. -->
-		<snapshotRepository>
-			<id>ibkglobal-nexus-snapshots</id>
-			<name>Anyframe for IBK Kolumbus - SNAPSHOT</name>
-			<url>http://172.18.116.27:9011/nexus/content/repositories/ibkglobal-nexus-snapshots</url>
-			<uniqueVersion>true</uniqueVersion>
-		</snapshotRepository>
-	</distributionManagement>
+<!-- 		<snapshotRepository> -->
+<!-- 			<id>ibkglobal-nexus-snapshots</id> -->
+<!-- 			<name>Anyframe for IBK Kolumbus - SNAPSHOT</name> -->
+<!-- 			<url>http://172.18.116.27:9011/nexus/content/repositories/ibkglobal-nexus-snapshots</url> -->
+<!-- 			<uniqueVersion>true</uniqueVersion> -->
+<!-- 		</snapshotRepository> -->
+<!-- 	</distributionManagement> -->
 
 </project>

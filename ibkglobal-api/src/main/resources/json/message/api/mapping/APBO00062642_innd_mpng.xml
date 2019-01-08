@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <interface bound="inbound" id="APBO00062642" version="2" />
+    <src_io id="MAPBS0123018" />
+    <target_io id="MCBKT0123017" />
+    <mapping>
+        <source path="/EDPS_CSN" />
+        <target path="/EDPS_CSN" />
+        <function ref="move" />
+    </mapping>
+    <mapping>
+        <source path="/RNN" />
+        <target path="/RNN" />
+        <function ref="move" />
+    </mapping>
+</map>

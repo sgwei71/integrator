@@ -1,0 +1,96 @@
+{
+	"intfId": "FEPO00000595",
+	"intfIdnNm": "IGAT_IGAT_H0310_300000",
+	"inndOtbnCd": "I",
+	"sorcInopId": "EGCBS0002180",
+	"sorcInopNm": "IGAT_IGAT_H0310_300000",
+	"tgtInopId": "EFEPT0002181",
+	"tgtInopNm": "IGAT_IGAT_E0310_300000",
+	"mappingList": [
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "NRCN_TRN_DCD",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "NRCN_TRN_DCD",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			]
+		},
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "MSG_CODE",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "MSG_CODE",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			]
+		},
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "TX_CODE",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "TX_CODE",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			]
+		},
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "CARD_NO",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "CARD_NO",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			]
+		},
+		{
+			"fnctNm": "MOVE",
+			"sourceNm": [
+				{
+					"fldNm": "GMT_TS_CON",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			],
+			"targetNm": [
+				{
+					"fldNm": "GMT_TS_CON",
+					"fldPara": "0",
+					"lvlNo": "1"
+				}
+			]
+		}
+	]
+}

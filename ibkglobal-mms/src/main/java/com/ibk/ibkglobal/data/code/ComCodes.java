@@ -16,4 +16,8 @@ public class ComCodes {
   private String                    COM_CD_NM;
   private Map<String, List<String>> COM_INST_CD;
 
+  public static void main(String args[]) {
+	  System.out.println("afafafaf");
+  }
+  
 }

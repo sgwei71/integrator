@@ -1,0 +1,26 @@
+{
+ "instanceType"      : "MCA",
+ "instanceRouteType" : "ADAPTER",
+ "sysCd"             : "GCB",
+ "bizCd"             : "KR",
+ "orgCd"             : "",
+ "routeDescription"  : "계정계 단말 Health",
+ 
+ "routeId"           : "M.GCB0.KR00.TS20000",
+ "routeType"         : "MCA_HEALTH_CHECK",
+ "routeInOut"        : "IN/OUT",
+ "autoStart"         : "true",
+ 
+ "fromEndpoint"              : 
+ {
+ 	"endpointType" : "TCP",
+ 	"endpointIp"   : "{{server.address}}",
+ 	"endpointPort" : "20000",
+ 	"encoding"     : "healthCheck"
+ },
+ "toEndpoint"                : 
+ {
+ },
+ 
+ "logName"           : "HEALTH.KR"
+}

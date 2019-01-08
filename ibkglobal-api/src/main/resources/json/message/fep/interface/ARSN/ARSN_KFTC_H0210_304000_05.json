@@ -1,0 +1,97 @@
+{
+	"intfId": "FEPO00000033",
+	"intfVrsnVl": 1,
+	"intfIdnNm": "ARSN_KFTC_H0210_304000_05",
+	"intfNm": "주택청약특별공급신청고객정보조회",
+	"common": {
+		"system": {
+			"code": "CBK",
+			"name": "계정계시스템"
+		},
+		"bswr": {
+			"code": "AGN",
+			"name": "대행"
+		},
+		"wrtnTs": "2018-06-07 15:50:03",
+		"mkrEmn": "S01173",
+		"attribute": {
+			"infra": {
+				"code": "3",
+				"name": "FEP(대외)"
+			},
+			"process": {
+				"code": "2",
+				"name": "온라인(대외온라인)"
+			},
+			"mpngYn": {
+				"code": "Y",
+				"name": "매핑함"
+			},
+			"online": {
+				"internal": {
+					
+				},
+				"external": {
+					"otisCd": {
+						"code": "KFTC"
+					},
+					"extBswr": {
+						"code": "ARSN",
+						"name": "ARS공동망"
+					},
+					"htdspCd": {
+						"code": "1",
+						"name": "당발거래"
+					},
+					"svcId": "TEST01",
+					"extTlgrIttcdCon": "0210",
+					"extTrnDcdCon": "304000",
+					"extPrwaCd": {
+						"content": ""
+					},
+					"safYn": {
+						"code": "N",
+						"name": "SAF미사용"
+					},
+					"netrccHECKYn": {
+						"code": "N",
+						"name": "체크안함"
+					},
+					"hgrnIntfIdCon": "hgrnIntfId",
+					"extEtcDcdCon": "05",
+					"snrcCd": "H",
+					"onlXcd": "onlXcd test"
+				}
+			}
+		}
+	},
+	"interfaceType": {
+		"source": {
+			"inopId": "ECBKS0000008",
+			"inopIdnNm": "ARSN_KFTC_H0210_304000_02",
+			"system": {
+				"code": "CBK",
+				"name": "계정계시스템"
+			},
+			"bswr": {
+				"code": "AGN",
+				"name": "대행"
+			},
+			"mkrEmn": "S01173",
+			"inndSvcId": "TEST01"
+		},
+		"target": {
+			"inopId": "EFEPT0000009",
+			"inopIdnNm": "ARSN_KFTC_E0210_304000_02",
+			"system": {
+				"code": "CBK",
+				"name": "계정계시스템"
+			},
+			"bswr": {
+				"code": "AGN",
+				"name": "대행"
+			},
+			"mkrEmn": "S01173"
+		}
+	}
+}

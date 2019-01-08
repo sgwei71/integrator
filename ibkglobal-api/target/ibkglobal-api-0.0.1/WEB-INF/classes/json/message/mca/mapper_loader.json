@@ -1,0 +1,19 @@
+{
+	"modified": "2010/12/20 11:23:319:051",
+	"mapperInfo": [
+		{
+			"clazz": "ITRO00000035_INBOUND",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "ITRO00000035"
+		},
+		{
+			"clazz": "ITRO00000035_OUTBOUND",
+			"comment": "",
+			"jlid": "",
+			"trid": "",
+			"xcid": "ITRO00000035"
+		}
+	]
+}
