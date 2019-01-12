@@ -137,11 +137,11 @@ public class RestInbound  extends RouteCreateDefault {
 	 * @param seq
 	 */
 	protected void setDefaultHeader(String seq) {
-		this.setHeader(ConstantCode.SEQ, Builder.constant(seq));
-		this.setHeader(ConstantCode.LOGGER_KEY, Builder.constant(createInfo.getLogName()));
-		this.setHeader(ConstantCode.ORG_CODE, Builder.constant(createInfo.getOrgCd()));
-		this.setHeader(ConstantCode.BIZ_CODE, Builder.constant(createInfo.getBizCd()));
-		this.setHeader(ConstantCode.SYS_CODE, Builder.constant(createInfo.getSysCd()));
+		this.setHeader(ConstantCodeAPI.SEQ, Builder.constant(seq));
+		this.setHeader(ConstantCodeAPI.LOGGER_KEY, Builder.constant(createInfo.getLogName()));
+		this.setHeader(ConstantCodeAPI.ORG_CODE, Builder.constant(createInfo.getOrgCd()));
+		this.setHeader(ConstantCodeAPI.BIZ_CODE, Builder.constant(createInfo.getBizCd()));
+		this.setHeader(ConstantCodeAPI.SYS_CODE, Builder.constant(createInfo.getSysCd()));
 	}
 
 	protected EndpointType getEndpointType(EndpointInfo endpointInfo) {

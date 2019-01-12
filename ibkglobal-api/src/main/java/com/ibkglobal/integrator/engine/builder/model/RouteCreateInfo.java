@@ -18,8 +18,6 @@ public class RouteCreateInfo {
 	private InstanceRouteType instanceRouteType; // 라우트 타입(ADAPTER, ROUTER, ...)
 	private RouteType routeType; // 라우트 타입(업무별 default 라우트)
 	private ParsingType parsingType; // Protocol 타입(JSON, FLAT, ISO, ...)
-	private ParsingType fromFormat; // Inbound Protocol 타입(JSON, FLAT, ISO, ...) //FIXED 20190108 추가
-	private ParsingType toFormat; // OutBound Protocol 타입(JSON, FLAT, ISO, ...)  //FIXED 20190108 추가
 	private String routeDescription; // 라우트 세부내용
 	private String routeInOut; // 라우트 In / Out 구분
 	private boolean autoStart; // 기동 시 자동 실행 유무

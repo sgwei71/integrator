@@ -25,13 +25,17 @@ import com.ibkglobal.message.common.normal.copt.SttlMsgCopt.PnmgInfo;
 import com.ibkglobal.message.converter.service.ConverterServiceAPI;
 import com.ibkglobal.message.struct.resource.ResourceAPI;
 
+import lombok.Getter;
+
 @Component
 public class RestMsgParser {
 
-	@Autowired
+	@Autowired 
+	@Getter
 	ResourceAPI	resourceAPI;
 	
 	@Autowired
+	@Getter
 	ConverterServiceAPI converterService;
 	
 	private Logger logger = LoggerFactory.getLogger(RestMsgParser.class);

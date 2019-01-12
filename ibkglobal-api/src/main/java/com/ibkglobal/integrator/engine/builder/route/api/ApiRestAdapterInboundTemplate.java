@@ -35,7 +35,8 @@ public class ApiRestAdapterInboundTemplate extends RouteCreateDefault{
 		restDefinition.setTag(fromEndpoint.getSwaggerTag());
 		restDefinition.description(super.getRouteCreateInfo().getRouteDescription());
 		restDefinition.setId(getRouteCreateInfo().getRouteDescription());
-		restDefinition.verb(fromEndpoint.getHttpMehtod(), fromEndpoint.getPathNm()+"@requestTimeout=1000&serverInitializerFactory=#ibkHttpServerInitializerFactory"); //from
+//		restDefinition.verb(fromEndpoint.getHttpMehtod(), fromEndpoint.getPathNm()+"@requestTimeout=1000&serverInitializerFactory=#ibkHttpServerInitializerFactory"); //fromrestDefinition.verb(fromEndpoint.getHttpMehtod(), fromEndpoint.getPathNm()+"@requestTimeout=1000&serverInitializerFactory=#ibkHttpServerInitializerFactory"); //from
+		restDefinition.verb(fromEndpoint.getHttpMehtod(), fromEndpoint.getPathNm()); //from
 		
 		restDefinition.to("direct:"+toEndpoint.getEndpointDirect());
 		restDefinition.setConsumes(fromEndpoint.getConsumes());

@@ -8,7 +8,7 @@
 	"routeDescription": "API ADAPTER IN",
 	
 	"routeId": "A.MCA0.API0.RS_service1",
-	"routeType": "API_DEFAULT_ADAPTER_IN",
+	"routeType": "API_REST_ADAPTER_IN",
 	"routeInOut": "IN/OUT",
 	"autoStart": "true",
 	"fromEndpoint": {

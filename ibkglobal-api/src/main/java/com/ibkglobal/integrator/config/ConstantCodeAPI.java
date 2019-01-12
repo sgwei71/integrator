@@ -14,4 +14,8 @@ public class ConstantCodeAPI extends ConstantCode{
 	  public final static String API_CODE = "API".toString();
 	  
 	  public final static String STATUS = "STATUS".toString();
+	  
+	  public final static String FROM_PARSING_TYPE = "FROM_PARSING_TYPE".toString();
+	  
+	  public final static String TO_PARSING_TYPE = "TO_PARSING_TYPE".toString();
 }

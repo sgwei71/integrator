@@ -15,7 +15,7 @@
  {
 	 	"endpointType"   : "HTTP",
 	 	"endpointIp"     : "127.0.0.1",
-	 	"endpointPort"   : "8082",
+	 	"endpointPort"   : "11000",
 	 	"pathNm"         : "/echo",
 	 	"disconnect"     : "true",
 	 	"reqTimeOut"     : "60000"

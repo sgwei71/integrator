@@ -2,20 +2,13 @@ package com.ibkglobal.integrator.engine.builder.route.api;
 
 import org.apache.camel.builder.Builder;
 
-import com.ibkglobal.integrator.config.ConstantCode;
 import com.ibkglobal.integrator.config.ConstantCodeAPI;
 import com.ibkglobal.integrator.engine.bean.log.LoggerBean;
 import com.ibkglobal.integrator.engine.bean.rest.common.ComposingAPI;
 import com.ibkglobal.integrator.engine.bean.rest.common.PostProcess;
 import com.ibkglobal.integrator.engine.bean.rest.common.PreProcess;
 import com.ibkglobal.integrator.engine.builder.model.RouteCreateInfo;
-import com.ibkglobal.integrator.engine.builder.model.endpoint.EndpointInfo;
-import com.ibkglobal.integrator.engine.builder.model.endpoint.EndpointType;
 import com.ibkglobal.integrator.engine.builder.route.RouteCreateDefault;
-import com.ibkglobal.integrator.engine.builder.service.EndpointCreate;
-
-import lombok.Getter;
-import lombok.Setter;
 
 public class ApiDefaultLogicTemplate  extends RouteCreateDefault {
 	
@@ -28,18 +21,20 @@ public class ApiDefaultLogicTemplate  extends RouteCreateDefault {
 
 	@Override
 	public void create() {
+		
 		createEndpoint("from");
 		
 		this.routeId(getBuilderInfo().getRouteId());
-		
-		this.setHeader(ConstantCodeAPI.PARSING_TYPE, Builder.constant(getBuilderInfo().getParsingType()));
 		
 		setDefaultHeader("1");
 		
 		this.bean(LoggerBean.class,"logging");	
 		
 		this.bean(PreProcess.class, "execute");
-
+//
+//		Decoder
+//		
+//		Transformer
 		//라우터 전처리 : 헤더 설정 & Valid Check & Body 스키마 생성
 		// 라우터 전 처리 : 헤더 설정 & Valid Check & Body 스키마 생성
 		//json 변환 -> 객체화 ParsinMCA-parsing RouteProperties의 instanceRouteType -> AdapterIn(IBKMEssage)
@@ -56,11 +51,12 @@ public class ApiDefaultLogicTemplate  extends RouteCreateDefault {
 		//2.2 flat -> json변경 
 		//2.3 setOut(IBKMessage) 
 		//MCADEfaultSA
-		this.bean(PostProcess.class, "execute");
+
 		this.setHeader(ConstantCodeAPI.COMPOSING_HEADER, Builder.constant(getEndpointType(getBuilderInfo().getFromEndpoint())));
 		this.bean(ComposingAPI.class,"composing");
 		this.bean(ComposingAPI.class, "composingFromHost");
 		setDefaultHeader("4");
 		this.bean(LoggerBean.class,"logging");	
+		this.bean(PostProcess.class, "execute");
 	}
 }

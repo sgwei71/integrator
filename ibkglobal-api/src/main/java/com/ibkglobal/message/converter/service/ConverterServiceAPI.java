@@ -12,10 +12,11 @@ import com.ibkglobal.message.converter.telegram.TelegramToFlatAPI;
 @Service
 @SuppressWarnings("deprecation")
 public class ConverterServiceAPI extends ConverterService{
-	public byte[] telegramToFlatAPI(StandardTelegram standardTelegram, List<Tlgr> fieldList) throws Exception {
+	
+	public static byte[] telegramToFlatAPI(StandardTelegram standardTelegram, List<Tlgr> fieldList) throws Exception {
 		return TelegramToFlatAPI.telegramToFlatAPI(standardTelegram, fieldList);
 	}
-	public StandardTelegram flatToTelegramAPI(byte[] data, List<Tlgr> fieldList) throws Exception {
+	public static StandardTelegram flatToTelegramAPI(byte[] data, List<Tlgr> fieldList) throws Exception {
 		return FlatToTelegramAPI.flatToTelegramAPI(data, fieldList);
 	}
 }
